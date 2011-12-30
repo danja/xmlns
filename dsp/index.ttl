@@ -1,0 +1,53 @@
+# Digital Signal Processing vocabulary
+# first draft 2011-12-30
+# basic abstract components only so far
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:      <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dsp:       <http://purl.org/stuff/dsp> .
+
+#
+# top-level constructs
+#
+dsp:System a rdfs:Class ;
+   dc:description "A DSP system" .
+
+dsp:Component a rdfs:Class ;
+   dc:description "A part of a DSP system" .
+
+dsp:Signal a rdfs:Class ;
+   dc:description "An ordered set of numeric data." .
+
+#
+# processors
+#
+dsp:Processor a rdfs:Class ;
+   rdfs:subClassOf dsp:Component ;
+   dc:description "A component which applies a process to an input to produce an output" .
+
+dsp:Pipeline a rdfs:Class ;
+   rdfs:subClassOf dsp:Component ;
+   dc:description "An ordered set of processors" .
+
+dsp:Converter a rdfs:Class ;
+   rdfs:subClassOf dsp:Processor ;
+   dc:description "A processor with differing input and output data types." .
+
+#
+# parameters
+#
+dsp:Parameter a rdfs:Class ;
+   dc:description "A characteristic (named, datatyped value) associated with a component" .
+
+dsp:name a rdf:Property ;
+   dc:description "A simple name" .
+
+dsp:value a rdf:Property ;
+   dc:description "A value" .
+
+dsp:datatype a rdf:Property ;
+   dc:description "The datatype of a Parameter's value" .
