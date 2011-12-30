@@ -1,0 +1,29 @@
+
+<project name="w6" basedir="." default="pretty">
+
+<target name="to-rdf" >
+<xslt basedir="." destdir="."  in="w6.html" out="output.rdf" style="xow.xsl">
+</xslt>
+</target>
+
+<target name="pretty" depends="to-rdf">
+<xslt basedir="." destdir="."  in="output.rdf" out="pretty.rdf" style="prettyprinter.xsl">
+</xslt>
+</target>
+
+<target name="xo-to-rdf" >
+<xslt basedir="." destdir="."  in="xo.xml" out="xo-raw.rdf" style="xow.xsl">
+</xslt>
+</target>
+
+<target name="xo" depends="xo-to-rdf">
+<xslt basedir="." destdir="."  in="xo-raw.rdf" out="xo.rdf" style="prettyprinter.xsl">
+</xslt>
+</target>
+
+<target name="xml" >
+<xslt basedir="." destdir="."  in="w6.xml" out="pretty\xml-view.html" style="c:\xslt\xml-view.xsl">
+</xslt>
+</target>
+
+</project>

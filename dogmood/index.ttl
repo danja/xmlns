@@ -1,0 +1,64 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <http://purl.org/stuff/dogmood#> .
+
+<http://purl.org/stuff/dogmood>     a owl:Ontology;
+	dc:creator "Danny Ayers";
+        dct:creator <http://danny.ayers.name/#me>;
+        dct:description "An RDF vocabulary for describing the mood of a dog (or other agent) based on the classification found in the book The Curious Incident of the Dog in the Night-Time by Mark Haddon."@en;
+        dct:title "Dog Mood Vocabulary"@en;
+        rdfs:seeAlso <http://dbpedia.org/resource/The_Curious_Incident_of_the_Dog_in_the_Night-Time> .
+
+:Mood a owl:Class;
+	rdfs:isDefinedBy <http://purl.org/stuff/dogmood> ;
+	rdfs:label "Moods" ;
+	dc:description "a narrow enumeration of the states of mind or emotions experienced by agents, typically dogs" ;
+	skos:prefLabel "Moods"@en ; 
+	owl:oneOf (
+		:Happy 
+		:Sad
+		:Cross
+		:Concentrating ) .
+
+:currentMood a rdf:Property ;
+	rdfs:label "mood" ;
+	skos:prefLabel "mood"@en ; 
+	dc:description "associates an agent with its current state of mind or emotion" ;
+	rdfs:isDefinedBy <http://purl.org/stuff/dogmood> ;
+	rdfs:domain foaf:Agent ;
+	rdfs:range :Mood .
+
+:Happy	a :Mood ; 
+	a skos:Concept ;
+	rdfs:isDefinedBy <http://purl.org/stuff/dogmood> ;
+	rdfs:label "Happy" ;
+	skos:prefLabel "Happy"@en ; 
+	dc:description "a state of mind or feeling characterized by contentment, love, satisfaction, pleasure, or joy" .
+
+:Sad	a :Mood ;  
+	a skos:Concept ;
+	rdfs:isDefinedBy <http://purl.org/stuff/dogmood> ;
+	rdfs:label "Sad" ;
+	skos:prefLabel "Sad"@en ; 
+	dc:description "an emotion characterized by feelings of disadvantage, loss, and helplessness" .
+
+:Cross	a :Mood ;
+  	a skos:Concept ;
+	rdfs:isDefinedBy <http://purl.org/stuff/dogmood> ;
+	rdfs:label "Cross" ;
+	skos:prefLabel "Sad"@en ; 
+	dc:description "bad-tempered, angry or annoyed, a feeling that is usually oriented toward some real or supposed grievance" .
+
+:Concentrating	a :Mood ;
+  	a skos:Concept ;
+	rdfs:isDefinedBy <http://purl.org/stuff/dogmood> ;
+	rdfs:label "Concentrating" ;
+	skos:prefLabel "Concentrating"@en ; 
+	dc:description "having attention directed on something" .
+
+	

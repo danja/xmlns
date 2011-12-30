@@ -1,0 +1,256 @@
+<html>
+<head>
+<title>SSR : Supporting Modules</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK 
+media=screen href="../../css/spec-rec.css" 
+type=text/css rel=stylesheet>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1>SSR-Enabling an RSS 2.0 Module</h1>
+<p align="right">2003-05-05 <a href="http://dannyayers.com">Danny Ayers</a></p>
+<p>This document describes by example how an RSS module developer can use the 
+  <a href="index.htm">Simple Semantics Resolution</a> module to minimise the ambiguity 
+  in their RSS 2.0 module definition, and thus make feeds using it suitable for 
+  use on the Semantic Web. It is a straightforward process and the amount of work 
+  required will depend on the complexity of the module. A simple RSS 2.0 module 
+  will need very little effort indeed . The example used in this document (a module 
+  for media reviews), is relatively simple but has been designed to demonstrate 
+  the all the operations that may be required.</p>
+<p><i>Existing module specifications don't need to change at all, you can just 
+  skip the first step of the process described below.</i></p>
+<p>It's worth noting right away that for many RSS 2.0 modules it won't be necessary 
+  to write any XSLT or RDF at all : the base <b><a href="source/rss2rdf.xsl">rss2rdf.xsl</a></b> 
+  transformation (courtesy <a href="http://w3future.com">Sjoerd Visscher</a>) 
+  may suffice for the transformation; its handling of simple structures within 
+  the XML can provide the required RDF mapping. It is however essential that this 
+  is confirmed by the module developer, and the module developer must provide 
+  the RDF definition, but this may simply consist of an example of the RSS 2.0 
+  together with the RDF/XML produced using the base transformation. </p>
+<p><b>Tools Required</b> : any standard XSLT engine; RDF validator</p>
+<p>There are command-line processors for XSLT available for all the common platforms, 
+  and several integrated tools are available such as <a href="http://www.xmlcooktop.com">Cooktop</a> 
+  for MS Windows (free). There is an online RDF validator available at W3C @@URL 
+  and the IsaViz @@URL RDF graphic visualization tool carries out validation too.</p>
+<p>The process can be broken down into 5 steps:</p>
+<ol>
+  <li><a href="#rss2">Define RSS 2.0 syntax with human-readable semantics</a></li>
+  <li><a href="#rdf">Define RDF interpretation</a></li>
+  <li><a href="#rdfs">Define RDF Schema</a> (optional)</li>
+  <li><a href="#xslt">Define XSLT for module</a></li>
+  <li><a href="#combo">Define XSLT for likely module combinations</a> (optional)</li>
+  <li><a href="#complete">Provide complete RSS 2.0 example using SSR</a> (optional)</li>
+</ol>
+<p>Each of these steps generates a deliverable, and an SSR-enabled RSS 2.0 module 
+  specification will contain at least three of these. </p>
+<h2>1. RSS 2.0 Review Module Definition<a name="rss2"></a></h2>
+
+<p>The example used here will be a module that may be used to syndicate reviews 
+  of media called the <i>RSS 2.0 Review Module</i>. As an RSS 2.0 module it inherits 
+  the definitions contained in the XML specification.</p>
+<p><b>Namespace Definitions</b></p>
+<p>The <i>RSS 2.0 Review Module</i> uses material from the Dublin Core namespace 
+  as well as its own :</p>
+<p><code>xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;<br>
+  </code><code><br>
+  xmlns:rev=&quot;http://www.purl.org/stuff/rev/&quot;</code></p>
+<p><b>Elements and Attributes</b></p>
+<p>The work under review will be identified by the RSS 2.0 <code>&lt;link&gt;</code> 
+  element.</p>
+<p>The RSS 2.0 <code>&lt;description&gt;</code> element will contain the review 
+  itself.</p>
+<p>The media type (Book, Film, Music etc) will be given in a <code>&lt;rev:type&gt;</code> 
+  element.</p>
+<p>The rating of the work will be an integer value 1 - 10, in a <code>&lt;rev:rating&gt;</code> 
+  element scaled with 1 for <i>Truly, Madly, Deeply</i> and 10 for <i>Terminator</i>.</p>
+<p>The creator of the work (author, director...) will be expressed using the Dublin 
+  Core vocabulary's <code>&lt;dc:creator&gt;</code> element.</p>
+<p>The reviewer will be named in a <code>&lt;rev:reviewer&gt;</code> element.</p>
+<p><b>Example</b><code><br>
+  <br>
+  ...<br>
+  &lt;item&gt;<br>
+  ...<br>
+  &lt;description&gt;A great SF thriller set in a future DisneyWorld.&lt;/description&gt;</code><br>
+  <code>&lt;rev:type&gt;Book&lt;/rev:type&gt;<br>
+  &lt;rev:rating&gt;9&lt;/rev:rating&gt;<br>
+  &lt;dc:creator&gt;Cory Doctorow&lt;/dc:creator&gt;<br>
+  &lt;rev:reviewer&gt;danja&lt;/rev:reviewer&gt;</code></p>
+<p> <code>&lt;/item&gt;</code></p>
+<p><code>...</code><br>
+</p>
+<p>Full listing : <a href="source/review-rss2.xml">review-rss2.xml</a></p>
+<h2>2. Define RDF interpretation<a name="rdf"></a></h2>
+<p>It should be possible to to obtain a formal RDF interpretation of the new module 
+  by combining the the RSS 2.0 definition (above) with the XSLT and RDF Schema 
+  definitions (below). However it is strongly recommended that a human-readable 
+  version is provided.</p>
+<p>We could make a trivial mapping from <i>RSS 2.0 Review Module</i> to RDF, with 
+  all the properties pointing towards the URI of the item, but this could be inviting 
+  interpretation problems, especially with the <code>&lt;description&gt;</code> 
+  (which is the review) and <code>&lt;dc:creator&gt;</code> elements. To remove 
+  all ambiguity, we'll define a tidily encapsulated set of RDF terms, defining 
+  a <i>Review</i> class. </p>
+<p>In human terms then a work can have a review. The review will have various 
+  properties as defined in the RSS 2.0 definition.</p>
+<p>The identification of the work under review is provided as the content of the 
+  <code>&lt;link&gt;</code> element in the <i>RSS 2.0 Review Module</i>. In the 
+  RDF interpretation this URL will used as the URI of the resource being described, 
+  the resource being an RSS item.</p>
+<p>We then need to define a relationship between the work (<code>item</code>) 
+  and the review (<code>Review</code>) . This is easily achieved by defining a 
+  <i>hasReview</i> property that can apply to items.</p>
+<p>The text of the review in the RDF version will be contained in a literal element 
+  <code> &lt;rev:text&gt;. </code>The <code>&lt;description&gt;</code> element 
+  within the <i>RSS 2.0 Review Module</i> will thus be mapped to <code>&lt;rev:text&gt;</code>. 
+  The <code>&lt;description&gt;</code> element is still valid as a description 
+  of the item so this is also carried through into <code>&lt;dc:description&gt;</code> 
+  in the RDF version. </p>
+<p><i>[@@should ditch content:encoded]</i></p>
+<p>The creator specified in the <i>RSS 2.0 Review Module</i> is the creator of 
+  the <code>&lt;item&gt;</code> resource, not the <code>Review</code>, and this 
+  potential ambiguity is avoided by the <i>striping</i> of the RDF syntax (class-property-&gt;class-property-&gt;class...).</p>
+<p><br>
+  <code>&lt;item rdf:about=&quot;http://www.craphound.com/down/&quot;&gt;<br>
+  ... <br>
+  &lt;rev:hasReview&gt;<br>
+  &lt;rev:Review&gt;<br>
+  &lt;rev:type&gt;Book&lt;/rev:type&gt;<br>
+  &lt;rev:rating&gt;9&lt;/rev:rating&gt;<br>
+  &lt;rev:reviewer&gt;danja&lt;/rev:reviewer&gt;<br>
+  &lt;rev:text&gt;A great SF thriller set in a future DisneyWorld.&lt;/rev:text&gt;<br>
+  &lt;/rev:Review&gt;<br>
+  &lt;/rev:hasReview&gt;<br>
+  ...<br>
+  </code><code>&lt;dc:creator&gt;Cory Doctorow&lt;/dc:creator&gt;<br>
+  &lt;/item&gt;</code><br>
+  ... </p>
+<p>Full example : <a href="source/review.rdf">review.rdf</a></p>
+<h2>3. Define RDF Schema<a name="rdfs"></a><br>
+</h2>
+<p>The RDF version of the <i>RSS 2.0 Review Module</i> has one class: <i>Review</i> 
+  and the properties<i> type</i>, <i>rating</i>, <i>text</i>,<i> hasReview</i> 
+  and <i>reviewer</i>. It's pretty easy to express this formally in an RDF Schema 
+  : </p>
+<p><code>&lt;?xml version=&quot;1.0&quot;?&gt;<br>
+  &lt;rdf:RDF<br>
+  xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; <br>
+  xmlns:rdfs=&quot;http://www.w3.org/2000/01/rdf-schema#&quot; <br>
+  xmlns=&quot;http://purl.org/stuff/rev&quot;&gt;</code></p>
+<p><code>&lt;rdfs:Class rdf:ID=&quot;Review&quot;&gt;<br>
+  &lt;rdfs:comment&gt;A review of an artistic work&lt;/rdfs:comment&gt;<br>
+  &lt;/rdfs:Class&gt;<br>
+  <br>
+  &lt;rdf:Property rdf:ID=&quot;type&quot;&gt;<br>
+  &lt;rdfs:comment&gt;The type of media of a work under review&lt;/rdfs:comment&gt;<br>
+  &lt;/rdf:Property&gt;</code></p>
+<p><code>&lt;rdf:Property rdf:ID=&quot;rating&quot;&gt;<br>
+  &lt;rdfs:comment&gt;A mark out of 10&lt;/rdfs:comment&gt;<br>
+  &lt;/rdf:Property&gt;</code></p>
+<p><code>&lt;rdf:Property rdf:ID=&quot;text&quot;&gt;<br>
+  &lt;rdfs:comment&gt;The review itself&lt;/rdfs:comment&gt;<br>
+  &lt;/rdf:Property&gt;</code></p>
+<p>The definitions above are really minimal, it is possible to be a lot more descriptive 
+  in RDF Schema. For example in this module we have said that the <i>hasReview</i> 
+  property is applied to an RSS<i> item</i> and has as a value a <i>Review</i> 
+  :</p>
+<p><code>&lt;rdf:Property rdf:ID=&quot;hasReview&quot;&gt;<br>
+  &lt;rdfs:comment&gt;Used to associate a work of art with a a review&lt;/rdfs:comment&gt;<br>
+  &lt;rdfs:domain rdf:resource=&quot;http://purl.org/rss/1.0/item&quot;/&gt;<br>
+  &lt;rdfs:range rdf:resource=&quot;#Review&quot;/&gt;<br>
+  &lt;/rdf:Property&gt;</code></p>
+<p>We can add a bit more information about the <i>reviewer</i> property too - 
+  the creator of a review can been described as a specialised kind of <i>dc:creator</i> 
+  :</p>
+<p><code>&lt;rdf:Property rdf:ID=&quot;reviewer&quot;&gt;<br>
+  &lt;rdfs:comment&gt;The person that has written the review&lt;/rdfs:comment&gt;<br>
+  &lt;rdfs:subPropertyOf rdf:resource=&quot;http://purl.org/dc/elements/1.1/creator&quot; 
+  /&gt;<br>
+  &lt;/rdf:Property&gt;</code></p>
+<p>Full schema : <a href="source/review.rdfs">review.rdfs</a></p>
+<h2>4. Define XSLT<a name="xslt"></a> </h2>
+<p>Our aim here is to be able to convert RSS 2.0 source to valid RDF that has 
+  semantics as specified in the module definition. At this stage we only need 
+  to look at the parts of the RSS 2.0 source that appear in our module. The following 
+  is the required transformation to get the parts of the <i>RSS 2.0 Review Module</i> 
+  into the appropriate form for RDF interpretation.</p>
+<p><code>&lt;?xml version=&quot;1.0&quot;?&gt;<br>
+  &lt;xsl:transform<br>
+  xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;<br>
+  xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;<br>
+  xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;<br>
+  xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot;<br>
+  xmlns:r=&quot;http://backend.userland.com/rss2&quot;<br>
+  xmlns=&quot;http://purl.org/rss/1.0/&quot;<br>
+  xmlns:rev=&quot;http://www.purl.org/stuff/rev/&quot;<br>
+  version=&quot;1.0&quot;&gt;</code></p>
+<p><code>&lt;xsl:template match=&quot;item/rev:type&quot;&gt;<br>
+  &lt;rev:hasReview&gt;<br>
+  &lt;rev:Review&gt;<br>
+  &lt;xsl:copy-of select=&quot;.|../rev:rating|../dc:creator&quot; /&gt;<br>
+  &lt;/rev:Review&gt;<br>
+  &lt;/rev:hasReview&gt;<br>
+  &lt;/xsl:template&gt;</code></p>
+<p><code>&lt;xsl:template match=&quot;rev:type&quot; /&gt;<br>
+  &lt;xsl:template match=&quot;rev:rating&quot; /&gt;<br>
+  &lt;xsl:template match=&quot;dc:creator&quot; /&gt;</code></p>
+<p><code>&lt;/xsl:transform&gt;</code></p>
+<p> <a href="source/rev2rdf.xsl">rev2rss.xsl</a></p>
+<h2>5. XSLT Combinations<a name="combo"></a></h2>
+<p>The language combination that anyone using the <i>RSS 2.0 Review Module</i> 
+  will need is RSS 2.0 Core <b>plus</b> the <i>RSS 2.0 Review Module</i>. The 
+  core can be transformed using Sjoerd's <a href="source/rev2rdf.xsl">rss2rdf</a> 
+  stylesheet, and handling of the additional elements is defined above. These 
+  can be combined using<code> &lt;xsl:include&gt; </code>:</p>
+<p><code>&lt;?xml version=&quot;1.0&quot;?&gt;<br>
+  &lt;xsl:transform<br>
+  xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;<br>
+  xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</code></p>
+<p><code> xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot;<br>
+  xmlns:r=&quot;http://backend.userland.com/rss2&quot;<br>
+  xmlns=&quot;http://purl.org/rss/1.0/&quot;</code></p>
+<p><code> xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;<br>
+  xmlns:rev=&quot;http://www.purl.org/stuff/rev/&quot;</code></p>
+<p><code> version=&quot;1.0&quot;&gt;</code></p>
+<p><code>&lt;xsl:include href=&quot;http://ideagraph.net/xmlns/ssr/source/rss2rdf.xsl&quot; 
+  /&gt;<br>
+  &lt;xsl:include href=&quot;http://ideagraph.net/xmlns/ssr/source/rev2rdf.xsl&quot; 
+  /&gt;</code></p>
+<p><code>&lt;/xsl:transform&gt;</code></p>
+<p><a href="source/rev%2Brss2rdf.xsl">rev+rss2rdf.xsl</a></p>
+<p>Other modules made be used in the same fashion, but<i><b> it is essential to 
+  check</b></i> that the result of the combined transformation is valid RDF that 
+  expresses the intended semantics. </p>
+<h2>6. Complete RSS 2.0 Example<a name="complete"></a></h2>
+<p>Anyone can now use the SSR module together with the review module :</p>
+<p><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-16&quot;?&gt;</code></p>
+<p><code>&lt;rss version=&quot;2.0&quot;<br>
+  xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;<br>
+  xmlns:ssr=&quot;http://purl.org/stuff/ssr&quot;</code><code><br>
+  xmlns:rev=&quot;http://www.purl.org/stuff/rev/&quot; &gt;</code></p>
+<p><code><b>&lt;ssr:rdf transform=&quot;http://ideagraph.net/xmlns/ssr/source/rev+rss2rdf.xsl&quot; 
+  /&gt;</b></code></p>
+<p> <code>&lt;channel&gt;<br>
+  &lt;title&gt;A Reviews Feed&lt;/title&gt;<br>
+  &lt;link&gt;http://www.example.org/reviews&lt;/link&gt;<br>
+  &lt;description&gt;For demonstration purposes&lt;/description&gt;<br>
+  <br>
+  &lt;item&gt;<br>
+  &lt;title&gt;Down and Out in the Magic Kingdom&lt;/title&gt;<br>
+  &lt;link&gt;http://www.craphound.com/down/&lt;/link&gt;<br>
+  &lt;guid&gt;http://www.example.org/reviews/2003/05/04.html&lt;/guid&gt;<br>
+  &lt;pubDate&gt;Tue, 08 Apr 2003 10:28:59 GMT&lt;/pubDate&gt;<br>
+  &lt;description&gt;A great SF thriller set in a future DisneyWorld.&lt;/description&gt;</code></p>
+<p> <code>&lt;rev:type&gt;Book&lt;/rev:type&gt;<br>
+  &lt;rev:rating&gt;9&lt;/rev:rating&gt;<br>
+  &lt;dc:creator&gt;Cory Doctorow&lt;/dc:creator&gt;<br>
+  &lt;rev:reviewer&gt;danja&lt;/rev:reviewer&gt;</code></p>
+<p> <code>&lt;/item&gt;<br>
+  &lt;/channel&gt;<br>
+  &lt;/rss&gt;</code></p>
+<p><a href="source/review-rss2.xml">review-rss2.xml</a><br>
+</p>
+</body>
+</html>

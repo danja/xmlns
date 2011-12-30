@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="600" viewBox="0 0 2216 697" width="800"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g style="font-family:Dialog;font-style:normal;font-weight:normal;font-size:10">
+        <ellipse cx="1473" cy="295" rx="130" ry="24" style="fill:rgb(115,191,115);stroke:rgb(66,105,66)"/>
+        <text style="stroke:rgb(66,105,66);fill:rgb(66,105,66)"
+            text-anchor="start" x="1365" y="298">http://www.example.org/something.html</text>
+        <path
+            d="M1504 272C1567 235 1591 230 1667 210 1786 179 1925 164 2037 157" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="2043,157 2034,162 2034,152" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="1679" y="155">content:encoded</text>
+        <rect height="48"
+            style="fill:rgb(255,223,123);stroke:rgb(132,117,66)"
+            width="176" x="2037" y="199"/>
+        <text style="stroke:rgb(132,117,66);fill:rgb(132,117,66)"
+            text-anchor="start" x="2052" y="226">Here is the descriptive text.</text>
+        <path
+            d="M1574 281C1610 276 1639 272 1667 268 1787 255 1926 242 2037 233" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="2043,232 2034,238 2034,228" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="1698" y="231">dc:description</text>
+        <rect height="48"
+            style="fill:rgb(255,223,123);stroke:rgb(132,117,66)"
+            width="92" x="2079" y="271"/>
+        <text style="stroke:rgb(132,117,66);fill:rgb(132,117,66)"
+            text-anchor="start" x="2087" y="298">A Simple Item</text>
+        <ellipse cx="2125" cy="367" rx="83" ry="24" style="fill:rgb(115,191,115);stroke:rgb(66,105,66)"/>
+        <text style="stroke:rgb(66,105,66);fill:rgb(66,105,66)"
+            text-anchor="start" x="2056" y="370">http://purl.org/rss/1.0/item</text>
+        <path
+            d="M1574 310C1609 315 1639 319 1667 322 1790 335 1930 350 2046 360" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="2053,361 2041,366 2043,354" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="1669" y="316">rdf:type</text>
+        <rect height="48"
+            style="fill:rgb(255,223,123);stroke:rgb(132,117,66)"
+            width="142" x="2054" y="415"/>
+        <text style="stroke:rgb(132,117,66);fill:rgb(132,117,66)"
+            text-anchor="start" x="2066" y="442">2003-04-08T10:28:59</text>
+        <path
+            d="M1510 318C1562 331 1595 296 1643 332 1665 348 1647 370 1667 384 1778 464 1945 462 2054 449" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="2060,448 2052,454 2050,444" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="1721" y="379">dc:date</text>
+        <ellipse cx="810" cy="331" rx="36" ry="24" style="fill:rgb(115,191,115);stroke:rgb(66,105,66)"/>
+        <path d="M845 329C948 323 1173 312 1350 303" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="1357,303 1346,309 1346,297" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="947" y="302">rdf:_1</text>
+        <ellipse cx="1473" cy="367" rx="158" ry="24" style="fill:rgb(115,191,115);stroke:rgb(66,105,66)"/>
+        <text style="stroke:rgb(66,105,66);fill:rgb(66,105,66)"
+            text-anchor="start" x="1341" y="370">http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq</text>
+        <path
+            d="M844 338C876 344 910 348 939 351 1055 363 1186 367 1316 367" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="1322,367 1313,372 1313,362" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="940" y="346">rdf:type</text>
+        <ellipse cx="226" cy="439" rx="78" ry="24" style="fill:rgb(115,191,115);stroke:rgb(66,105,66)"/>
+        <text style="stroke:rgb(66,105,66);fill:rgb(66,105,66)"
+            text-anchor="start" x="161" y="442">http://www.example.org/</text>
+        <path
+            d="M260 417C284 404 314 391 342 383 486 343 663 334 775 331" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="781,331 772,336 772,326" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="421" y="331">rss:items</text>
+        <ellipse cx="810" cy="403" rx="95" ry="24" style="fill:rgb(115,191,115);stroke:rgb(66,105,66)"/>
+        <text style="stroke:rgb(66,105,66);fill:rgb(66,105,66)"
+            text-anchor="start" x="731" y="406">http://purl.org/rss/1.0/channel</text>
+        <path d="M302 434C418 427 583 418 719 409" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="725,409 716,414 716,404" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="343" y="404">rdf:type</text>
+        <rect height="48"
+            style="fill:rgb(255,223,123);stroke:rgb(132,117,66)"
+            width="100" x="760" y="451"/>
+        <text style="stroke:rgb(132,117,66);fill:rgb(132,117,66)"
+            text-anchor="start" x="768" y="478">A Sample Feed</text>
+        <path
+            d="M295 449C316 454 330 455 342 456 483 470 648 474 760 475" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="766,475 757,480 757,470" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="397" y="447">dc:title</text>
+        <rect height="48"
+            style="fill:rgb(255,223,123);stroke:rgb(132,117,66)"
+            width="188" x="716" y="523"/>
+        <text style="stroke:rgb(132,117,66);fill:rgb(132,117,66)"
+            text-anchor="start" x="732" y="550">For demonstration purposes</text>
+        <path
+            d="M249 461C282 483 299 486 342 499 462 531 603 542 716 546" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="722,546 713,551 713,541" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="372" y="490">dc:description</text>
+        <path d="M1602 295C1753 295 1954 295 2079 295" style="fill:none;stroke:rgb(90,89,206)"/>
+        <polygon points="2085,295 2076,300 2076,290" style="fill:rgb(90,89,206);stroke:none"/>
+        <text style="stroke:rgb(90,89,206);fill:rgb(90,89,206)"
+            text-anchor="start" x="1722" y="290">dc:title</text>
+        <rect height="48"
+            style="fill:rgb(255,223,123);stroke:rgb(132,117,66)"
+            width="176" x="2037" y="127"/>
+        <text style="stroke:rgb(132,117,66);fill:rgb(132,117,66)"
+            text-anchor="start" x="2052" y="154">Here is the descriptive text.</text>
+    </g>
+</svg>
+<!-- Generated by ZVTM (Zoomable Visual Transformation Machine) v0.8.2 http://zvtm.sourceforge.net-->

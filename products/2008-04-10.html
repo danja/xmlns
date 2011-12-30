@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Products Vocabulary</title>
+  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+</head>
+
+<body>
+<h1>Product Vocabulary</h1>
+
+<p><em>Version 2008-04-10, first explorations</em></p>
+
+<p>Other formats (incomplete - this doc is the latest): <a
+href="2008-04-10.n3">turtle/n3</a>, <a href="2008-04-10.rdf">rdfxml</a></p>
+
+<h2><a name="Overview" id="Overview">Overview</a></h2>
+
+<p>An RDF vocabulary for describing manufactured artifacts and their commercial
+aspects.</p>
+
+<p>The vocabulary aims to cover the core terms needed for three conceptual
+areas: description of products themselves, commercial aspects (branding etc),
+part-whole relationships. </p>
+
+<p>The design of the vocabulary will initially be driven by a specific use case
+- describing the equipment found in a home studio (starting with instruments
+&amp; hardware - software applications may complicate matters). Domain-specific
+terms will be expressed using a custom auxiliary vocabulary. Terms from
+well-known vocabularies (e.g. DC, FOAF) will be used where obviously
+applicable, but no effort will be made to discover definitions for more obscure
+terms (alignment with such vocabularies may be attempted after several
+iterations of testing the design against real data).</p>
+
+<p>A key requirement is to distinguish between individual physical instances of
+products (my Epiphone D100 guitar has Martin FX .011 strings), specific product
+types (Epiphone D100 guitars presumably ship with Epiphone strings) and generic
+product types (the Epiphone D100 is an acoustic guitar). It is anticipated that
+using RDFS instance/class relations directly will limit what can be said across
+these layers. </p>
+
+<p>A model that does capture these kinds of distinction in a flexible fashion
+is FRBR, Functional Requirements for Bibliographic Records (in particular see
+<a href="http://vocab.org/frbr/core">Expression of Core FRBR Concepts in
+RDF</a>). However initial investigation suggests it's a little <em>too</em>
+rich, and isn't appropriate for direct use. </p>
+
+<p>For a first pass a model loosely derived from that of FRBR will be used,
+along with a mix of regular RDFS/OWL and SKOS constructs.</p>
+
+<h3>Target Application Areas</h3>
+<ul>
+  <li>Product Catalogues</li>
+  <li>Knowledgebases for equipment-heavy domains </li>
+  <li>Product servicing management, repairs etc.</li>
+</ul>
+
+<h3><a name="Relationsh" id="Relationsh">Relationship to Existing
+Vocabularies</a></h3>
+
+<h4>FRBR</h4>
+
+<p>Several of the terms are related to concepts found in FRBR.</p>
+
+<table border="1">
+  <caption></caption>
+  <tbody>
+    <tr>
+      <td><strong>Products</strong></td>
+      <td><strong>FRBR</strong></td>
+    </tr>
+    <tr>
+      <td>Item</td>
+      <td>Item</td>
+    </tr>
+    <tr>
+      <td>Kind</td>
+      <td>Manifestation</td>
+    </tr>
+    <tr>
+      <td>Pattern</td>
+      <td>Expression</td>
+    </tr>
+    <tr>
+      <td>exemplar</td>
+      <td>exemplar</td>
+    </tr>
+    <tr>
+      <td>embodiment</td>
+      <td>embodiment</td>
+    </tr>
+    <tr>
+      <td>realization</td>
+      <td>realization</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Mapping between generic products and FRBR breaks down somewhat around
+Expression/Work (there may be a relationship between these terms and product
+patents and IP, but for present purposes that seems out of scope).</p>
+
+<p>Perhaps Kind/Pattern/Product should be related by skos:broader..?</p>
+
+<h2><a name="Classes" id="Classes">Classes</a></h2>
+
+<h4><a name="Item" id="Item">Item</a></h4>
+
+<p>dc:description "physical object, instance of a particular product" .</p>
+
+<p><em>Example:</em> my old strat</p>
+
+<h4><a name="Kind" id="Kind">Kind</a></h4>
+
+<p>dc:description "specific model or version of product, identifiable by
+brand/model number etc." .</p>
+
+<p><em>Example:</em> Black &amp; White Squier Strat</p>
+
+<h4><a name="Pattern" id="Pattern">Pattern</a></h4>
+
+<p>dc:description "type of product, design" ;</p>
+
+<p><em>Example:</em> Stratocaster Guitar</p>
+
+<h4><a name="Product" id="Product">Product</a></h4>
+
+<p>dc:description "generic concept of the product" .</p>
+
+<p><em>Example:</em> Guitar</p>
+
+<p></p>
+
+<h2><a name="Properties" id="Properties">Properties</a></h2>
+
+<h4><a name="componentO" id="componentO">componentOf</a></h4>
+
+<p>dc:description "discrete part of" </p>
+
+<p><em>Example:</em> Pickup <strong>componentOf</strong> Guitar</p>
+
+<p><em>leaving domain &amp; range open for now, but if possible should later
+put in a check to make sure that for a particular statement the domain &amp;
+range are consistent - an Item can be a componentOf another Item but not of a
+Product (mutex the classes?)</em></p>
+
+<h4><a name="similar" id="similar">similar</a></h4>
+
+<p>dc:description "is functionally similar to, may be substituted in most
+circumstances without significant system degradation"</p>
+
+<p><em>Example:</em> Mexican built strat <strong>similar</strong> US built
+strat</p>
+
+<p>This either needs a bunch of subproperties or other way of qualifying it:</p>
+
+<p>X similar design Y</p>
+
+<p>X similar build Y</p>
+
+<p>X similar performance Y</p>
+
+<p>X similar price Y</p>
+
+<p>X similar popularity Y</p>
+
+<p>...</p>
+
+<h4><a name="exemplar" id="exemplar">exemplar</a></h4>
+
+<p>domain: Kind</p>
+
+<p>range: Item</p>
+
+<p><em>Example:</em> Black &amp; White Squier Strat <strong>exemplar</strong>
+my old strat </p>
+
+<p><em>reusing the word from FRBR but not the term directly as undesirable
+inferences likely. Would be better with a different word...(with reversed
+domain &amp; range?)</em></p>
+
+<h4><a name="embodiment" id="embodiment">embodiment</a></h4>
+
+<p>domain: Pattern</p>
+
+<p>range: Kind</p>
+
+<p><em>Example:</em> Stratocaster Guitar <strong>embodiment</strong> Black
+&amp; White Squier Strat </p>
+
+<p><em>reusing the word from FRBR but not the term directly as undesirable
+inferences likely. Would be better with a different word...(with reversed
+domain &amp; range for convenience) - or skos:broader..?</em></p>
+
+<h4><a name="realizatio" id="realizatio">realization</a></h4>
+
+<p>domain: Product</p>
+
+<p>range: Pattern</p>
+
+<p><em>Example:</em> Guitar <strong>realization</strong> Stratocaster Guitar</p>
+
+<p><em>reusing the word from FRBR but not the term directly as undesirable
+inferences likely. Would be better with a different word...(with reversed
+domain &amp; range for convenience) - or skos:broader..?</em></p>
+
+<h2><strong><em>Later...</em></strong></h2>
+
+<p>Brand <em>[ask Laurian about this stuff]</em></p>
+
+<p>brandName</p>
+
+<p>necessaryComponentOf..?</p>
+
+<p style="text-align:right;">Danny Ayers 2008
+http://creativecommons.org/licenses/by/2.0/uk/ </p>
+</body>
+</html>

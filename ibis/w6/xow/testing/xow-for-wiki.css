@@ -1,0 +1,80 @@
+
+/* general list items */
+ul {
+	padding: .5m 0 0 0;
+	margin-left: 1em; 
+	/*list-style-type: none; */
+	/* margin: 0; */
+	list-style: none outside;
+
+}
+
+li {
+	padding-left: .6em; 
+	margin-left: 1em; 
+	list-style-image: url("images/li.gif");
+	position: relative; 
+	margin-left: 1.5em; 
+	font-weight: normal; 
+}
+
+
+.title {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+
+/* w6-specific classes */
+li.subject { 
+	list-style-image: url("images/subject.gif");
+	font-weight: bold; 
+}
+
+li.who { 
+	list-style-image: url("images/who.gif");
+	font-weight: normal; 
+}
+
+li.what { 
+	list-style-image: url("images/what.gif");
+	font-weight: normal; 
+}
+
+li.why { 
+	list-style-image: url("images/why.gif");
+	font-weight: normal; 
+}
+
+li.when { 
+	list-style-image: url("images/when.gif");
+	font-weight: normal; 
+}
+
+li.where { 
+	list-style-image: url("images/where.gif");
+	font-weight: normal; 
+}
+
+li.how { 
+	list-style-image: url("images/how.gif");
+	font-weight: normal; 
+}
+
+p.subject { 
+	font-weight: bold; 
+ 	margin-bottom: -3px; 
+ 	/* -1em; didn't work in Moz */
+ 	margin-left: 3em; 
+}
+
+img {
+	border: 0px none; 
+}
+
+
+
+// Later???
+abbr, acronym, .help {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}

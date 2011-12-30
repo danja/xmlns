@@ -1,0 +1,311 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Schema Documentation</title>
+<style type="text/css">
+body { margin: 1em; font-family: Georgia, sans-serif; }
+h1 { font-family: Tahoma, sans-serif; }
+h2, h3, h4, h5, h6 { font-family: Arial, sans-serif; }
+a { font-weight: bold; color: #036; }
+dt.class { margin-top: 0.75em; }
+dt.property { margin-top: 0.75em; }
+address { padding-top: 0.35em; border-top: 2px solid #369; }
+</style>
+</head>
+<body>
+<h1>Schema Documentation</h1>
+
+<h2>Classes</h2>
+<ul>
+<li>
+<dl>
+<dt class="class">
+0.1:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+</dt>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+0.1:<a href="http://xmlns.com/foaf/0.1/Person">Person</a>
+</dt>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>
+</dt>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+</dt>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#hasReview">hasReview</a>
+ => rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rev:<a href="http://www.purl.org/stuff/rev#Comment">Comment</a>
+</dt>
+<dd>
+A comment on a review
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#commenter">commenter</a>
+ => 0.1:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+</dd>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rev:<a href="http://www.purl.org/stuff/rev#Comment">Comment</a>
+</dt>
+<dd>
+A comment on a review
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#commenter">commenter</a>
+ => 0.1:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+</dd>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rev:<a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a>
+</dt>
+<dd>
+Feedback on the review. Expresses whether the review was useful or not
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#commenter">commenter</a>
+ => 0.1:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+</dd>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rev:<a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a>
+</dt>
+<dd>
+Feedback on the review. Expresses whether the review was useful or not
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#commenter">commenter</a>
+ => 0.1:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+</dd>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dt>
+<dd>
+A review of an work
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#hasComment">hasComment</a>
+ => rev:<a href="http://www.purl.org/stuff/rev#Comment">Comment</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#hasFeedback">hasFeedback</a>
+ => rev:<a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#positiveVotes">positiveVotes</a>
+ => rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#reviewer">reviewer</a>
+ => 0.1:<a href="http://xmlns.com/foaf/0.1/Person">Person</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#title">title</a>
+ => rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#totalVotes">totalVotes</a>
+ => rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+</dt>
+</li>
+<li>
+<dl>
+<dt class="class">
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dt>
+<dd>
+A review of an work
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#hasComment">hasComment</a>
+ => rev:<a href="http://www.purl.org/stuff/rev#Comment">Comment</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#hasFeedback">hasFeedback</a>
+ => rev:<a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#positiveVotes">positiveVotes</a>
+ => rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#reviewer">reviewer</a>
+ => 0.1:<a href="http://xmlns.com/foaf/0.1/Person">Person</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#title">title</a>
+ => rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+<dd>
+   rev:<a href="http://www.purl.org/stuff/rev#totalVotes">totalVotes</a>
+ => rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+</dt>
+</li>
+</ul>
+<h2>Properties</h2>
+<dl>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#commenter">commenter</a> (rdf:Property)
+</dt>
+<dd>
+The commenter on the review
+</dd>
+<dd>domain: 
+rev:<a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a>, rev:<a href="http://www.purl.org/stuff/rev#Comment">Comment</a>
+</dd>
+<dd>range: 
+0.1:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#hasComment">hasComment</a> (rdf:Property)
+</dt>
+<dd>
+Used to associate a review with a comment on the review
+</dd>
+<dd>domain: 
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+<dd>range: 
+rev:<a href="http://www.purl.org/stuff/rev#Comment">Comment</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#hasFeedback">hasFeedback</a> (rdf:Property)
+</dt>
+<dd>
+Associates a review with a feedback on the review
+</dd>
+<dd>domain: 
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+<dd>range: 
+rev:<a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#hasReview">hasReview</a> (rdf:Property)
+</dt>
+<dd>
+Associates a work with a a review
+</dd>
+<dd>domain: 
+rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+</dd>
+<dd>range: 
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#maxRating">maxRating</a> (rdf:Property)
+</dt>
+<dd>
+A numeric value
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#minRating">minRating</a> (rdf:Property)
+</dt>
+<dd>
+A numeric value
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#positiveVotes">positiveVotes</a> (rdf:Property)
+</dt>
+<dd>
+Number of positive usefulness votes (integer)
+</dd>
+<dd>domain: 
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+<dd>range: 
+rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#rating">rating</a> (rdf:Property)
+</dt>
+<dd>
+A numeric value
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#reviewer">reviewer</a> (rdf:Property)
+</dt>
+<dd>
+The person that has written the review
+</dd>
+<dd>domain: 
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+<dd>range: 
+0.1:<a href="http://xmlns.com/foaf/0.1/Person">Person</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#text">text</a> (rdf:Property)
+</dt>
+<dd>
+The text of the review
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#title">title</a> (rdf:Property)
+</dt>
+<dd>
+The title of the review
+</dd>
+<dd>domain: 
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+<dd>range: 
+rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#totalVotes">totalVotes</a> (rdf:Property)
+</dt>
+<dd>
+Number of usefulness votes (integer)
+</dd>
+<dd>domain: 
+rev:<a href="http://www.purl.org/stuff/rev#Review">Review</a>
+</dd>
+<dd>range: 
+rdfs:<a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+</dd>
+<dt class="property">
+rev:<a href="http://www.purl.org/stuff/rev#type">type</a> (rdf:Property)
+</dt>
+<dd>
+The type of media of a work under review
+</dd>
+</dl>
+<address>
+Generated by <a href="http://inamidst.com/proj/sdoc/"
+>Schemadoc</a>
+</address>
+</body>
+</html>

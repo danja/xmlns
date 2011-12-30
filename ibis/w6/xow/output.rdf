@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:w6="http://purl.org/ibis/w6#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<rdf:Description rdf:about="">
+<dc:title>Testing W6</dc:title>
+</rdf:Description>
+<dc:title>Question Garland</dc:title>
+<w6:subject>li<dc:title>Question Garland</dc:title>
+<w6:who>li</w6:who>
+<w6:what>li</w6:what>
+<w6:why>li</w6:why>
+<w6:when>li</w6:when>
+<w6:where>li</w6:where>
+<w6:how>li<dc:title>Using an OWL Ontulogy</dc:title>
+<w6:who>li</w6:who>
+<w6:what>li</w6:what>
+<w6:why>li</w6:why>
+<w6:when>li</w6:when>
+<w6:where>li</w6:where>
+<w6:how>li</w6:how>
+</w6:how>
+</w6:subject>
+</rdf:RDF>

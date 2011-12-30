@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<?xml-stylesheet href="pet-rdf.css" type="text/css"?>
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:pet="http://purl.org/stuff/pets/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:admin="http://webns.net/mvcb/">
+<pet:PetProfileDocument rdf:about="">
+   <foaf:maker>
+<foaf:Person>
+<foaf:mbox_sha1sum>735f47b25a2da12e70139976cc105d014de3051f</foaf:mbox_sha1sum>
+
+<foaf:name>Danny Ayers</foaf:name></foaf:Person>
+    </foaf:maker>
+  <foaf:primaryTopic rdf:nodeID="me"/>
+  <admin:generatorAgent rdf:resource="http://purl.org/stuff/pets/pet-a-matic"/>
+  <admin:errorReportsTo rdf:resource="mailto:danny666@virgilio.it"/>
+</pet:PetProfileDocument>
+<pet:Pet rdf:nodeID="me">    
+<foaf:name>Sambuca</foaf:name>
+<pet:gender>Female</pet:gender>
+<pet:fedBy>
+<foaf:Person>
+<foaf:mbox_sha1sum>735f47b25a2da12e70139976cc105d014de3051f</foaf:mbox_sha1sum>
+
+<foaf:name>Danny Ayers</foaf:name></foaf:Person>
+</pet:fedBy>
+<foaf:depiction rdf:resource="sambuca-face.jpg"/>
+<pet:inPack>
+<pet:Pack>
+<foaf:name>Pet Universe</foaf:name></pet:Pack></pet:inPack>
+<pet:primaryColor>Brown</pet:primaryColor>
+<pet:secondaryColors>White, Black</pet:secondaryColors>
+<pet:species rdf:resource="http://purl.org/stuff/pets/Cat"/>
+<pet:order rdf:resource="http://purl.org/stuff/pets/Mammal"/>
+<pet:breed>Common Tabby</pet:breed>
+<pet:furStyle>short-haired</pet:furStyle>
+<pet:neutered>true</pet:neutered>
+<pet:favoriteFood>dry stuff</pet:favoriteFood>
+<pet:likes>Warm Places</pet:likes>
+<pet:dislikes>Cold Places</pet:dislikes>
+<pet:peculiarities>fussy</pet:peculiarities>
+</pet:Pet>
+
+</rdf:RDF>

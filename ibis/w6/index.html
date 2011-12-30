@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>W6 Vocabulary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link 
+media="screen" href="../spec-rec.css" 
+type="text/css" rel="stylesheet" />
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>W6 Vocabulary</h1>
+<p><b><i>an ontology to allow resource descriptions and reasoning based on the 
+  6 questions : who, why, what, when, where, how</i></b></p>
+<p>Status: very early experiments</p>
+<p>see also : <a href="http://semtext.org/2004-02/index.htm">XOW</a> (XHTML Outlines 
+  for W6) <a href="xow/w6.html">(older material)</a> </p>
+<p>Latest update: 2004-02-12</p>
+<p><a href="http://66.70.191.189/cgi-bin/mt-comments.cgi?entry_id=2142">comments</a></p>
+<p>OWL ontology: <a href="w6.owl">w6.owl</a></p>
+<p>Protege project file: <a href="w6.pprj">w6.pprj</a></p>
+<p>Protege-generated <a href="protege-html/index.html">HTML description</a></p>
+<p><a href="images/garland1.png">Class diagram</a></p>
+<p><b>In brief</b> : a small and intuitive set of terms for recording key facets 
+  of a resource : <i>who, what, why, when, where, how</i>.</p>
+<p><b>Motivation</b> : initial blog post : <a href="http://dannyayers.com/archives/002135.html">http://dannyayers.com/archives/002135.html</a></p>
+<h2>Description</h2>
+<p><b><i>in lieu of a proper write-up...</i></b></p>
+<ul>
+  <li>Expressed in OWL to provide constraints</li>
+  <li>Work well in locally-closed world with additional rules (Prolog?) - bind 
+    a stray Person to an empty<i> who</i> ????</li>
+  <li>Resource type for each property, e.g. <code>w6:who</code> -&gt; <code>w6:Agent</code></li>
+  <li>W6 resource types (optionally) mapped to well-known types : <code>w6:Agent 
+    = foaf:Agent</code></li>
+  <li>Null type for each e.g. <code>w6:who -&gt; w6:NoOne????</code></li>
+  <li>Usable alongside <a href="../index.htm">IBIS</a> vocab - central resource 
+    <code>rdf:type = ibis:Idea</code></li>
+</ul>
+<p>See also: <a href="http://66.70.191.189/cgi-bin/mt-search.cgi?IncludeBlogs=1&search=xhtml+outlines">XHTML 
+  Outlines</a> and <a href="http://66.70.191.189/cgi-bin/mt-search.cgi?IncludeBlogs=1&search=w6">W6</a> 
+  blog notes, also <a href="http://developers.technorati.com/wiki/xhtmloutlines">XO</a> 
+  and <a href="http://www.w3.org/2004/01/rdxh/spec">GRDDL</a> </p>
+<h2>Use Cases</h2>
+<h3>Assertion Processor</h3>
+<p>Tracking/accumulating assertions made by politians, bloggers etc. (so they 
+  can later be petard-hoist). </p>
+<p>See <a href="http://www.benhammersley.com/dparchives/007958.html#comments">http://www.benhammersley.com/dparchives/007958.html#comments</a></p>
+<h3>Universal Story ID</h3>
+<p>Identifying different versions of the same (news) story.</p>
+<p>See <a href="http://blogs.law.harvard.edu/MikeWalsh/2003/11/28#a161">http://blogs.law.harvard.edu/MikeWalsh/2003/11/28#a161</a></p>
+<h3>Brainstorming</h3>
+<p>Idea in the centre, prompt for who, what, where etc.</p>
+<h2>Related Work</h2>
+<p>The idea behind w6 is very similar to evector's <a href="http://www.evectors.com/itkcollector/story$num=2&sec=1">W4</a>, 
+  only incremented a little to take advantage of the Semantic Web.</p>
+<h2>Misc Refs.</h2>
+<p><a href="http://poorbuthappy.com/ease/archives/002455.html">http://poorbuthappy.com/ease/archives/002455.html</a></p>
+<p><a href="http://doc.weblogs.com/2003/12/27#sayWhere">http://doc.weblogs.com/2003/12/27#sayWhere</a></p>
+<p>Previous versions</p>
+<p><a href="w6_2004-01-01.owl">w6_2004-01-01.owl</a></p>
+<p>&nbsp;</p>
+</body>
+</html>

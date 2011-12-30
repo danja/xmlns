@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns="http://purl.org/ibis#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+<owl:Ontology rdf:about="http://purl.org/ibis">
+    <rdfs:label>IBIS</rdfs:label>
+    <rdfs:comment>IBIS Dialogue Vocabulary</rdfs:comment>
+</owl:Ontology>   
+  
+<rdfs:Class rdf:ID="Idea">
+         <rdfs:label>Idea</rdfs:label>
+         <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"          />
+         <rdfs:comment>An idea</rdfs:comment>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />
+         </rdfs:Class>
+
+<rdfs:Class rdf:ID="Argument">
+         <rdfs:label>Argument</rdfs:label>
+         <rdfs:subClassOf rdf:resource="#Idea" />
+         <rdfs:comment>An argument</rdfs:comment>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdfs:Class>
+
+<rdfs:Class rdf:ID="Question">
+         <rdfs:label>Question</rdfs:label>
+         <rdfs:subClassOf rdf:resource="#Idea" />
+         <rdfs:comment>A question</rdfs:comment>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdfs:Class>
+
+<rdfs:Class rdf:ID="Decision">
+         <rdfs:label>Decision</rdfs:label>
+         <rdfs:subClassOf rdf:resource="#Idea" />
+         <rdfs:comment>A decision</rdfs:comment>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdfs:Class>
+
+<rdfs:Class rdf:ID="Reference">
+         <rdfs:label>Reference</rdfs:label>
+         <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso" />
+         <rdfs:comment>A reference</rdfs:comment>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdfs:Class>
+
+<rdfs:Class rdf:ID="Note">
+         <rdfs:label>Note</rdfs:label>
+         <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso" />
+         <rdfs:comment>An annotation</rdfs:comment>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdfs:Class>
+
+<rdfs:Class rdf:ID="Map">
+         <rdfs:label>Map</rdfs:label>
+         <rdfs:subClassOf rdf:resource="#Idea" />
+         <rdfs:comment>A collection of Ideas</rdfs:comment>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdfs:Class>
+
+
+<rdf:Property rdf:ID="pro">
+         <rdfs:label>pro</rdfs:label>
+         <rdfs:comment>Used to denote that an argument supports a proposition</rdfs:comment>
+         <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+         <rdfs:range rdf:resource="#Argument"/>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdf:Property>
+
+<rdf:Property rdf:ID="con">
+         <rdfs:label>con</rdfs:label>
+         <rdfs:comment>Used to denote that an argument counters a proposition</rdfs:comment>
+         <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+         <rdfs:range rdf:resource="#Argument"/>
+         <rdfs:isDefinedBy rdf:resource="http://purl.org/ibis" />          
+         </rdf:Property>
+
+</rdf:RDF>

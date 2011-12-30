@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE model SYSTEM "Compendium.dtd">
+<model rootview="192168011074708765936">
+	<views>
+		<view viewref="192168011074708765936" noderef="192168011074708823429" XPosition="218" YPosition="152">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074709295828" XPosition="184" YPosition="365">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074709219118" XPosition="469" YPosition="188">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074708907730" XPosition="297" YPosition="264">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074709064696" XPosition="460" YPosition="3">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074709076463" XPosition="465" YPosition="61">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074709396062" XPosition="476" YPosition="259">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074709338440" XPosition="473" YPosition="325">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074709107197" XPosition="461" YPosition="121">
+		</view>
+		<view viewref="192168011074708765936" noderef="192168011074708784483" XPosition="118" YPosition="201">
+		</view>
+	</views>
+	<nodes>
+		<node id="192168011074708765936" type="2" extendedtype="" originalid="" author="danny" created="1074708765936" lastModified="1074708770233" label="new" state="-1">
+			<details>				<page nodeid="192168011074708765936" author="192168011070384116262" created="1074708765936" lastModified="1074708770233" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074708823429" type="4" extendedtype="" originalid="" author="danny" created="1074708823429" lastModified="1074709441658" label="This is an idea" state="-1">
+			<details>				<page nodeid="192168011074708823429" author="192168011070384116262" created="1074708823429" lastModified="1074708829778" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074709295828" type="2" extendedtype="" originalid="" author="danny" created="1074709295828" lastModified="1074709301016" label="Another map" state="-1">
+			<details>				<page nodeid="192168011074709295828" author="192168011070384116262" created="1074709295828" lastModified="1074709301016" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074709219118" type="8" extendedtype="" originalid="" author="danny" created="1074709219118" lastModified="1074709225507" label="This is a decision" state="-1">
+			<details>				<page nodeid="192168011074709219118" author="192168011070384116262" created="1074709219118" lastModified="1074709225507" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074708907730" type="4" extendedtype="" originalid="" author="danny" created="1074708907730" lastModified="1074708915952" label="This is a position" state="-1">
+			<details>				<page nodeid="192168011074708907730" author="192168011070384116262" created="1074708907730" lastModified="1074708913959" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074709064696" type="6" extendedtype="" originalid="" author="danny" created="1074709064696" lastModified="1074709150039" label="Something in favour" state="-1">
+			<details>				<page nodeid="192168011074709064696" author="192168011070384116262" created="1074709064696" lastModified="1074709070755" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074709076463" type="7" extendedtype="" originalid="" author="danny" created="1074709076463" lastModified="1074709157259" label="Something against" state="-1">
+			<details>				<page nodeid="192168011074709076463" author="192168011070384116262" created="1074709076463" lastModified="1074709079067" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074709396062" type="9" extendedtype="" originalid="" author="danny" created="1074709396062" lastModified="1074709400469" label="Some reference" state="-1">
+			<details>				<page nodeid="192168011074709396062" author="192168011070384116262" created="1074709396062" lastModified="1074709400469" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074709338440" type="10" extendedtype="" originalid="" author="danny" created="1074709338440" lastModified="1074709346722" label="Some annotation" state="-1">
+			<details>				<page nodeid="192168011074709338440" author="192168011070384116262" created="1074709338440" lastModified="1074709346722" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074709107197" type="5" extendedtype="" originalid="" author="danny" created="1074709107197" lastModified="1074709139113" label="This is an argument" state="-1">
+			<details>				<page nodeid="192168011074709107197" author="192168011070384116262" created="1074709107197" lastModified="1074709139113" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+		<node id="192168011074708784483" type="3" extendedtype="" originalid="" author="danny" created="1074708784483" lastModified="1074708818522" label="What is the question?" state="-1">
+			<details>				<page nodeid="192168011074708784483" author="192168011070384116262" created="1074708784483" lastModified="1074708805213" pageno="1"></page>
+</details>
+			<source></source>
+			<image></image>
+			<coderefs>			</coderefs>
+			<shortcutrefs>			</shortcutrefs>
+		</node>
+	</nodes>
+	<links>
+		<link id="192168011074709355865" created="1074709355865" lastModified="1074709355865" author="danny" type="45" originalid="" from="192168011074709338440" to="192168011074708907730" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709259066" created="1074709259066" lastModified="1074709259066" author="danny" type="45" originalid="" from="192168011074709219118" to="192168011074708823429" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709055873" created="1074709055873" lastModified="1074709055873" author="danny" type="45" originalid="" from="192168011074708907730" to="192168011074708784483" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709311220" created="1074709311220" lastModified="1074709311220" author="danny" type="45" originalid="" from="192168011074708907730" to="192168011074709295828" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709173973" created="1074709173973" lastModified="1074709173973" author="danny" type="45" originalid="" from="192168011074709107197" to="192168011074708823429" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709167364" created="1074709167364" lastModified="1074709167364" author="danny" type="40" originalid="" from="192168011074709064696" to="192168011074708823429" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709052158" created="1074709052158" lastModified="1074709052158" author="danny" type="45" originalid="" from="192168011074708823429" to="192168011074708784483" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709412556" created="1074709412556" lastModified="1074709412556" author="danny" type="45" originalid="" from="192168011074709396062" to="192168011074708907730" view="192168011074708765936" arrow="1">
+		</link>
+		<link id="192168011074709170939" created="1074709170939" lastModified="1074709170939" author="danny" type="41" originalid="" from="192168011074709076463" to="192168011074708823429" view="192168011074708765936" arrow="1">
+		</link>	</links>
+	<codes>
+	</codes>
+</model>

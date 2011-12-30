@@ -1,0 +1,244 @@
+
+html {
+	background-color: #333;	
+	text-align: center;
+}
+	
+
+#rdf_RDF {
+	display: block;
+	width: 80%;
+	padding: 1em;
+/*	height: 80%; */
+}
+
+/* *************************** Pet Block ******************* */
+div#pet_Pet {
+	margin-left: auto;
+	margin-right: auto;
+	background: #003300;
+	display: block;
+	width: 560px;
+	height: 430px;
+	border: 2px solid #000000;
+	border-style: ridge;
+	font-family: arial, helvetica, sans-serif;
+	padding: 16px;
+	color: #660000;
+	text-align: left;
+}
+
+.pet_Pet {
+	display: block;
+	position:relative;
+	background-color: #ccccff;
+	font-weight: bold;
+}
+
+
+/* *** Pet Name *** */
+
+#pet_name {
+	background: #003300;
+	width: 560px;
+	color: #660000;
+	display: block;
+	padding:2px;
+	text-align: center; 
+	font-family: verdana, arial, sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	color: #ffffee; 
+}
+
+/* *** Depiction *** */
+#foaf_depiction {
+	background: #003300;
+	z-index: 10;
+	display: block;
+	position: absolute;
+	top:5em; 
+	left: 21em;
+	margin: 5px;
+	width: 200px;
+	height: 200px; 
+	border: 4px groove #003300;;
+/*	background: url("image.jpg") 0 0 no-repeat; */
+}
+
+/* *** Species *** */
+#pet_species {
+	position: absolute;
+	top:4em;
+	width: 34.5em;
+	background-color: #ffcccc;
+	padding: 5px; 
+}
+	
+
+
+/* *** Order *** */
+#pet_order {
+	position: absolute;
+	top:6em;
+	width: 34.5em;
+	background-color: #ffcccc;
+	padding: 5px; 
+}
+
+
+/* *** Breed *** */
+#pet_breed {
+	position: absolute;
+	top:8em;
+	width: 34.5em;
+	background-color: #ffcccc;
+	padding: 5px; 
+}
+
+/* *** Gender *** */
+#foaf_gender {
+	position: absolute;
+	top:10em;
+	width: 34.5em;
+	background-color: #ffffcc;
+	padding: 5px;
+}
+
+/* *** neutered *** */
+#pet_neutered {
+	position: absolute;
+	top:12em;
+	width: 34.5em;
+	background-color: #ffffcc;
+	padding: 5px;
+}
+
+/* *** Primary Color *** */
+#pet_primaryColor {
+	position: absolute;
+	top:14em;
+	width: 34.5em;
+	background-color: #ccffff;
+	padding: 5px;
+}
+
+/* *** Secondary Colors *** */
+#pet_secondaryColors {
+	position: absolute;
+	top:16em;
+	width: 34.5em;
+	background-color: #ccffff;
+	padding: 5px;
+}
+
+
+/* *** Fur style *** */
+#pet_furStyle {
+	position: absolute;
+	top:18em;
+	width: 34.5em;
+	background-color: #ccffff;
+	padding: 5px;
+}
+
+/* the inheritance didn't work properly with the next two, so trimmed paths */
+/* *** Fed By *** */
+#pet_fedBy {
+	position: absolute;
+	top:20.5em;
+	width: 17em;
+	background-color: #ccccff;
+	padding: 5px;
+}
+
+/* *** In Pack *** */
+#pet_inPack {
+	position: absolute;
+	top:22.5em;
+	background-color: #ccccff;
+	width: 17em;
+	padding: 5px;
+}
+
+/* *** favoriteFood *** */
+#pet_favoriteFood {
+	position: absolute;
+	top:20.5em;
+	left: 19em; 
+	width: 16.5em;
+	background-color: #ffffcc;
+	text-align: right;
+	padding: 5px;
+}
+
+/* *** Likes *** */
+#pet_likes {
+	position: absolute;
+	top:22.5em;
+	left: 19em; 
+	width: 16.5em;
+	background-color: #ffcccc;
+	text-align: right;
+	padding: 5px;
+}
+
+/* *** Dislikes *** */
+#pet_dislikes {
+	position: absolute;
+	top:24.5em;
+	left: 19em; 
+	width: 16.5em;
+	background-color: #ffcccc;
+	text-align: right;
+	padding: 5px;
+}
+
+/* *** peculiarities *** */
+#pet_peculiarities {
+	position: absolute;
+	top:24.5em;
+	background-color: #ffffcc;
+	width: 17em;	
+	padding: 5px;
+}
+
+/* *** Profile Document Block ****************************************** */	
+.pet_PetProfileDocument {
+	text-align: center; 
+	position: absolute; 
+	top: 490px; 
+	left:308px;
+	display: block;
+	width: 300px;
+	border: 1px dashed #000000;
+	padding: 5px;
+	background: #eeeeee; 
+	font-family: georgia, courier, serif;
+	font-size: 60%;
+}
+
+#ppdLabel{
+	font-size: 150%;
+}
+
+.admin-label {
+	font-weight:bold;
+	float: left;
+}
+
+.foaf_maker {
+	text-align: right;
+}
+
+#admin_generatorAgent{
+	text-align:  right;	
+}
+
+#admin_errorReportsTo{
+	text-align:  right;
+}
+
+#foaf_mbox_sha1sum {
+  display: none;
+}

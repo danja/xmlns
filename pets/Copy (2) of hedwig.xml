@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="owl.xsl"?>
+<rdf:RDF 	xmlns="http://purl.org/stuff/hedwig/"
+		xml:base ="http://purl.org/stuff/hedwig/"
+    		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    		xmlns:owl="http://www.w3.org/2002/07/owl#"
+    		xmlns:dc="http://purl.org/dc/elements/1.1/"
+    		xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    		xmlns:skosmap="http://www.w3c.rl.ac.uk/2003/11/21-skos-mapping"
+    		xmlns:wn="http://xmlns.com/wordnet/1.6/">
+
+	<owl:Ontology rdf:about="http://purl.org/stuff/hedwig/">
+		<dc:title>Pet Profile Ontology</dc:title>
+		<dc:creator>Danny Ayers danny666@virgilio.it</dc:creator>
+		<dc:date>2004-04-22</dc:date>
+		<dc:description>An Ontology for describing Pets</dc:description>
+		<dc:language>en</dc:language>
+		<dc:subject>Pets</dc:subject>
+		
+		<rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/index.rdf"/>
+        
+		<owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+		<owl:imports rdf:resource="http://www.w3.org/2002/07/owl#"/>
+		<owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+	
+		<owl:versionInfo>2004-04-22</owl:versionInfo>
+	</owl:Ontology>
+	
+<!-- CLASSES -->
+	<owl:Class rdf:ID="Pet">
+		<rdfs:comment>The class of animals kept for pleasure rather than utility</rdfs:comment>
+		<rdfs:label>Pet</rdfs:label>
+		
+		<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<rdfs:seeAlso rdf:resource="http://xmlns.com/wordnet/1.6/Pet"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+	</owl:Class>
+
+	<owl:Class rdf:ID="PetProfileDocument">
+		<rdfs:comment>A machine-readable document describing a pet</rdfs:comment>
+		<rdfs:label>Pet Profile Document</rdfs:label>
+		
+		<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+	</owl:Class>
+  	
+	<!--  A kind of additional or subsidiary Deity designed to catch the overflow and surplus of the world's worship. -->
+	<owl:Class rdf:ID="Dog">
+		<rdfs:comment>The class of animals designated 
+		Canis familiaris (domestic dog).  This
+		includes all the dog breeds, but
+		not wolves.</rdfs:comment>
+		<rdfs:label>Dog</rdfs:label>
+
+		<rdfs:subClassOf rdf:resource="#Pet"/> 
+        	<owl:disjointWith rdf:resource="#Cat"/>
+        	<owl:disjointWith rdf:resource="#Human"/>
+
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig#"/>
+		<rdfs:seeAlso rdf:resource="http://xmlns.com/wordnet/1.6/Dog"/>
+		<skosmap:exactMatch rdf:resource="http://www.funet.fi/pub/sci/bio/life/mammalia/carnivora/canidae/canis/index.html#familiaris" />
+	</owl:Class>
+
+	<owl:Class rdf:ID="Cat">
+		<rdfs:comment>The class of animals designated Felis catus (domestic dog). 
+		Feline mammal usually having thick soft fur and unable to roar</rdfs:comment>
+		<rdfs:label>Dog</rdfs:label>
+
+		<owl:subClassOf rdf:resource="#Pet"/>        
+		<owl:disjointWith rdf:resource="#Dog"/>
+		<owl:disjointWith rdf:resource="#Human"/>
+        
+		<rdfs:seeAlso rdf:resource="http://xmlns.com/wordnet/1.6/Cat"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+		<skosmap:exactMatch rdf:resource="http://www.funet.fi/pub/sci/bio/life/mammalia/carnivora/felidae/felis/index.html#catus" />
+	</owl:Class>
+    
+	<!-- so humans can be part of a Pack -->
+	<owl:Class rdf:about="Human">
+		<rdfs:label>Human</rdfs:label>
+		<rdfs:comment>The class of animals designated Homo sapiens (domestic human).</rdfs:comment>
+
+		<rdfs:subClassOf rdf:resource="#Pet"/>
+		<owl:disjointWith rdf:resource="#Dog"/>        
+		<owl:disjointWith rdf:resource="#Cat"/>
+        
+		<rdfs:seeAlso rdf:resource="http://xmlns.com/wordnet/1.6/Human"/>
+		<rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+		<skosmap:exactMatch rdf:resource="http://www.funet.fi/pub/sci/bio/life/mammalia/primates/hominidae/homo/index.html#sapiens" />
+	</owl:Class>
+
+<!-- need more animals... -->
+
+	<owl:Class rdf:about="Pack">
+		<rdfs:label>Pack</rdfs:label>
+		<rdfs:comment>A bunch of animals who hang out together</rdfs:comment>
+       
+		<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+		<rdfs:seeAlso rdf:resource="http://xmlns.com/wordnet/1.6/Pack-6"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+	</owl:Class>
+
+<!-- PROPERTIES -->
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/hedwig/physicalCharacteristic">
+		<rdfs:label>Physical Characteristic</rdfs:label>
+        	<rdfs:comment>Notable physical features of the pet</rdfs:comment>
+	 </owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/hedwig/personalityCharacteristic">
+		<rdfs:label>Personality Characteristic</rdfs:label>
+        	<rdfs:comment>Notable personality traits of the pet</rdfs:comment>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="http://purl.org/stuff/hedwig/relationalCharacteristic">
+		<rdfs:label>Relational Characteristic</rdfs:label>
+        	<rdfs:comment>Inter-animal relationships</rdfs:comment>
+	</owl:ObjectProperty>
+			
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/hedwig/primaryColor">
+		<rdfs:label>Primary Color</rdfs:label>
+        	<rdfs:comment>The predominant fur/hair/skin color</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/hedwig/physicalCharacteristic" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/hedwig/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/hedwig/secondaryColors">
+		<rdfs:label>Secondary Colors</rdfs:label>
+        	<rdfs:comment>Other fur/hair/skin colors</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/hedwig/physicalCharacteristic" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/hedwig/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/hedwig/furStyle">
+		<rdfs:label>Fur Style</rdfs:label>
+        	<rdfs:comment>Type of coat</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/hedwig/physicalCharacteristic" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/hedwig/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+	</owl:DatatypeProperty>
+			
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/hedwig/neutered">
+		<rdfs:label>Neutered</rdfs:label>
+        	<rdfs:comment>Whether or not the animal has been 'done'.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/hedwig/physicalCharacteristic" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/hedwig/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+						<!-- true | false | 1 | 0 -->
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/hedwig/"/>
+	</owl:DatatypeProperty>
+
+	
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/pets/species">
+		<rdfs:label>Species</rdfs:label>
+        	<rdfs:comment>Species of animal</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/physicalCharacteristic" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/pets/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/pets/"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/pets/breed">
+		<rdfs:label>Breed</rdfs:label>
+        	<rdfs:comment>Breed of animal</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/physicalCharacteristic" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/pets/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/pets/"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/pets/favoriteFood">
+		<rdfs:label>Favourite food</rdfs:label>
+        	<rdfs:comment>What it likes to eat</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/personalityCharacteristic" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/pets/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/pets/"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/pets/hasID">
+		<rdfs:label>hasID</rdfs:label>
+        	<rdfs:comment>Identification number</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/stuff/pets/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/pets/"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/pets/peculiarity">
+		<rdfs:label>Peculiarity</rdfs:label>
+        	<rdfs:comment>Anything that sets this animal apart from others</rdfs:comment>
+		<rdfs:domain rdf:resource="http://purl.org/stuff/pets/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/pets/"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/pets/likes">
+		<rdfs:label>Likes</rdfs:label>
+        	<rdfs:comment>Anything the animal likes</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/personalityCharacteristic" />
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/peculiarity" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/pets/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/pets/"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="http://purl.org/stuff/pets/dislikes">
+		<rdfs:label>Dislikes</rdfs:label>
+        	<rdfs:comment>Anything the animal dislikes</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/personalityCharacteristic" />
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/peculiarity" />
+		<rdfs:domain rdf:resource="http://purl.org/stuff/pets/Pet"/>
+		<owl:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/pets/"/>
+	</owl:DatatypeProperty>
+
+	<owl:ObjectProperty rdf:ID="hasPet"> 
+		<rdfs:label>hasPet</rdfs:label>
+        	<rdfs:comment>Relates an owner to their pet</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/relationalCharacteristic" />
+  		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+  		<rdfs:range rdf:resource="#Pet"/> 
+	</owl:ObjectProperty> 
+					
+	<owl:ObjectProperty rdf:ID="fedBy"> 
+		<rdfs:label>fedBy</rdfs:label>
+        	<rdfs:comment>Relates a pet to their slave</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/relationalCharacteristic" />
+  		<rdfs:domain rdf:resource="#Pet"/>
+  		<!-- A person, or the kitten's mother... -->
+  		<rdfs:range rdf:resource="#PetOrPerson" />
+	</owl:ObjectProperty> 
+
+	<owl:ObjectProperty rdf:ID="livesWith"> 
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/relationalCharacteristic" />
+  		<rdfs:domain rdf:resource="#PetOrPerson"/>
+  		<rdfs:range rdf:resource="#PetOrPerson"/> 
+	</owl:ObjectProperty> 
+
+	<owl:ObjectProperty rdf:ID="specialFriend"> 
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/relationalCharacteristic" />
+  		<rdfs:domain rdf:resource="#PetOrPerson"/>
+  		<rdfs:range rdf:resource="#PetOrPerson"/> 
+	</owl:ObjectProperty> 		
+
+	<owl:ObjectProperty rdf:ID="inPack"> 
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/relationalCharacteristic" />
+  		<rdfs:domain rdf:resource="#PetOrPerson"/>
+  		<rdfs:range rdf:resource="#Pack"/> 
+	</owl:ObjectProperty> 	
+
+	<owl:ObjectProperty rdf:ID="hasMember"> 
+		<rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/pets/relationalCharacteristic" />
+		<rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/member" />
+  		<rdfs:domain rdf:resource="#Pack"/>
+  		<rdfs:range rdf:resource="#PetOrPerson"/> 
+	</owl:ObjectProperty> 	
+
+</rdf:RDF>

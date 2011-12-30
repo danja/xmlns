@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:fmt="http://www.ldodds.com/ns/foaf-a-matic-template">
+<head xmlns:fm="http://www.ldodds.com/ns/foaf-a-matic">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" language="javascript"
+ src="pet-a-matic_files/en.js"></script>
+  <title>Pet-a-matic -- Describe your pets in RDF</title>
+  <link rel="stylesheet" href="pet-a-matic_files/pet-a-matic.css"
+ type="text/css">
+  <script language="javascript" type="text/javascript"
+ src="pet-a-matic_files/pet-a-matic.js">
+  </script>
+  <script language="javascript" type="text/javascript"
+ src="pet-a-matic_files/pet.js"></script>
+  <script language="javascript" type="text/javascript"
+ src="pet-a-matic_files/sha1.js"></script>
+  <script language="javascript">
+<!--
+// check for parameters in URL
+checkParameters();
+// -->
+ function init(){
+   var elems=document.forms[0].elements;
+   initLinkedSelect(elems['order'],elems['species']);
+ }
+  </script>
+</head>
+<body id="div.en" xmlns:fm="http://www.ldodds.com/ns/foaf-a-matic"
+ onload="init()">
+<h1>Pet-a-Matic</h1>
+<fm:languages> </fm:languages>
+<p>A complete rip-off of FOAF-a-Matic by <a
+ href="mailto:leigh@ldodds.com">Leigh Dodds</a>. </p>
+<a name="introduction"></a> <a href="http://semtext.org/pets/">Pet Profiles Home </a> 
+<h2>Introduction</h2>
+<p>Pet-a-matic is a simple Javascript application that allows you to
+create a Pet Profile for your animals. It's FOAF (friend-of-a-friend)
+for
+felines (and canines). You can read more about FOAF in Edd Dumbill's "<a
+ href="http://www-106.ibm.com/developerworks/xml/library/x-foaf.html">XML
+Watch: Finding friends with XML and RDF</a>" article, at <a
+ href="http://rdfweb.org/foaf/">the FOAF homepage on RDFWeb</a>, and
+also <a href="http://xmlns.com/foaf/0.1/">the FOAF vocabulary
+description</a>. </p>
+<p> The Pet-a-Matic is being provided as a quick and easy way for you
+to create your own Pet Profiles. Simply work through the forms on this
+page and complete whichever details you'd like to add to your
+description. As a minimum you'll need to supply your pet's name and
+your email address. </p>
+<p> Note: none of the information you enter in this page is used or
+stored in any way. The processing is entirely client-side, so your
+privacy is assured. Don't forget to save the results!<br>
+</p>
+<p> If you have comments about this application, or further questions
+about FOAF, why not join <a
+ href="http://rdfweb.org/mailman/listinfo/rdfweb-dev">the RDFWeb-dev
+mailing list</a>? </p>
+<form name="details" onsubmit="return false;"><a name="forms"></a>
+  <h2>The Forms</h2>
+  <a name="personal"></a>
+  <h2>Identification<br>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>Pet's Name<br>
+        </td>
+        <td><input name="name" type="text"></td>
+      </tr>
+      <tr>
+        <td>Your Name<br>
+        </td>
+        <td><input name="human_name" type="text"></td>
+      </tr>
+      <tr>
+        <td>Your Email Address</td>
+        <td><input name="email" type="text"></td>
+      </tr>
+      <tr>
+        <td>Your FOAF Profile (URL, if available)</td>
+        <td><input name="seeAlso" type="text"></td>
+      </tr>
+      <tr>
+        <td>Pet's ID number&nbsp; (if available)<br>
+        </td>
+        <td><input name="hasID" type="text"></td>
+      </tr>
+      <tr>
+        <td>Image of pet (URL, if available)<br>
+        </td>
+        <td><input name="depiction" type="text" value="image.jpg"></td>
+      </tr>
+      <tr>
+        <td>Pack (group of pets)<br>
+        </td>
+        <td><input name="pack" value="Pet Universe" type="text"></td>
+      </tr>
+    </tbody>
+  </table>
+  <a name="physical"></a>
+  <h2>Physical Features<br>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>Gender</td>
+        <td>
+        <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td>
+        <select name="order">
+        <option value="Mammal">Mammal</option>
+        <option value="Bird">Bird</option>
+        <option value="Reptile">Reptile</option>
+        <option value="Amphibian">Amphibian</option>
+        <option value="Fish">Fish</option>
+        <option value="Insect">Insect</option>
+        <option value="Plant">Plant</option>
+        <option value="AI">AI</option>
+        <option value="Inanimate_Object">Inanimate_Object</option>
+        <option value="Other">Other</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Species</td>
+        <td>
+        <select name="species">
+        <option value="Mammal-Cat">Cat</option>
+        <option value="Mammal-Dog">Dog</option>
+        <option value="Mammal-Rabbit">Rabbit</option>
+        <option value="Mammal-Guinea_Pig">Guinea_Pig</option>
+        <option value="Mammal-Gerbil">Gerbil</option>
+        <option value="Mammal-Hamster">Hamster</option>
+        <option value="Mammal-Mouse">Mouse</option>
+        <option value="Mammal-Ferret">Ferret</option>
+        <option value="Mammal-Rat">Rat</option>
+        <option value="Mammal-Other">Other</option>
+        <option value="Bird-Parakeet">Parakeet</option>
+        <option value="Bird-Other">Other</option>
+        <option value="Fish-Goldfish">Goldfish</option>
+        <option value="Fish-Other">Other</option>
+        <option value="Reptile-Snake">Snake</option>
+        <option value="Reptile-Lizard">Lizard</option>
+        <option value="Reptile-Other">Other</option>
+        <option value="Amphibian-Newt">Newt</option>
+        <option value="Amphibian-Other">Other</option>
+        <option value="Insect-Stick_Insect">Stick_Insect</option>
+        <option value="Insect-Other">Other</option>
+        <option value="Plant-Philodendron">Philodendron</option>
+        <option value="Plant-Other">Other</option>
+        <option value="AI-Tamagotchi">Tamagotchi</option>
+        <option value="AI-Other">Other</option>
+        <option value="Inanimate_Object-Rock">Rock</option>
+        <option value="Inanimate_Object-Other">Other</option>
+        <option value="Other-Other">Other</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Breed</td>
+        <td> <input name="breed" type="text"> </td>
+      </tr>
+      <tr>
+        <td>Primary Fur Color</td>
+        <td> <input name="primaryColor" type="text"> </td>
+      </tr>
+      <tr>
+        <td>Other Color(s)</td>
+        <td> <input name="secondaryColors" type="text"> </td>
+      </tr>
+      <tr>
+        <td>Fur Style</td>
+        <td>
+        <select name="furStyle">
+        <option>long-haired</option>
+        <option>short-haired</option>
+        <option>no-haired</option>
+        <option></option>
+        </select>
+        <br>
+        </td>
+      </tr>
+      <tr>
+        <td>Neutered</td>
+        <td>
+        <select name="neutered">
+        <option>true</option>
+        <option>false</option>
+        </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a name="personality"></a>
+  <h2>Personality</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>Pet's Favorite Food<br>
+        </td>
+        <td><input name="favoriteFood" type="text"></td>
+      </tr>
+      <tr>
+        <td>Something your pet likes</td>
+        <td><input name="likes" type="text"></td>
+      </tr>
+      <tr>
+        <td>Something your pet dislikes</td>
+        <td><input name="dislikes" type="text"></td>
+      </tr>
+      <tr>
+        <td>Peculiarities<br>
+        </td>
+        <td><textarea cols="20" rows="3" name="peculiarities"></textarea><br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<br>
+<h2>Generate Results</h2>
+<p> Now you've filled in the details Kitty/Fido will be turned into
+RDF... </p>
+<form name="results" onsubmit="return false;">
+  <p> <input value="" name="spamProtect" checked
+ type="checkbox"> Protect email addresses from spammers </p>
+  <p> <input value="Profile me!" onclick="generate();alert('boo')"
+ type="submit"> </p>
+  <textarea name="rdf" cols="80" rows="35"></textarea>
+  <p align="left"> <input value="Reset Form" type="reset"></p>
+</form>
+<a name="what-next"></a>
+<h2>What Next?</h2>
+<h3>Publish Your Pet Profile<br>
+</h3>
+<p> This is the easy part. Simple copy the generated FOAF description
+from the text box above and paste it into a file. Put the file onto
+your website somewhere where it's publically accessible. </p>
+<a name="license"></a>
+<h2>License</h2>
+<p> This work is licensed under a <a
+ href="http://creativecommons.org/licenses/by-sa/1.0/">Creative Commons
+License</a>. </p>
+<p><!-- Creative Commons License --> <a
+ href="http://creativecommons.org/licenses/by-sa/1.0/"><img
+ alt="Creative Commons License" src="foaf-a-matic_files/somerights.gif"
+ border="0"></a><br>
+<!-- /Creative Commons License --> </p>
+<hr>[<a href="http://www.ldodds.com/foaf/index.html">FOAF Hackery</a>]
+</body>
+</html>

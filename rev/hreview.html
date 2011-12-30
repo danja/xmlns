@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://www.w3.org/2003/g/data-view http://gmpg.org/xmdp/">
+ <link rel="stylesheet" href="/css/base" type="text/css" />
+<title>hReview Profile</title>
+</head>
+<body>
+<h1>hReview Profile (experimental)</h1>
+
+<p>This is an <em>experimental</em> <a
+href="http://gmpg.org/xmdp/">XMDP</a> profile for the <a
+href="http://www.microformats.org/wiki/hreview">hReview</a> specification.</p>
+<p>Use of this profile licenses RDF data extracted using <a
+rel="profileTransformation"
+href="http://micromodels.org/xslt/hreview2rdfxml">hreview2rdfxml</a>. 
+</p>
+ <dl class="profile">
+ <dt>class</dt>
+ <dd><p>
+
+  <a rel="help" href="http://www.w3.org/TR/html401/struct/global.html#adef-class">
+   HTML4 definition of the 'class' attribute.</a>
+  This meta data profile defines some 'class' attribute values (class names) 
+  and their meanings as suggested by a 
+  <a href="http://www.w3.org/TR/WD-htmllink-970328#profile">
+   draft of "Hypertext Links in HTML"</a>.
+  All values are defined according to the semantics defined in the 
+  <a href="http://microformats.org/wiki/hreview">
+   hReview specification</a>.</p>
+<dl>
+  <dt id='hreview'>hreview</dt>
+   <dd>hReview container</dd>
+
+  <dt id='version'>version</dt>
+   <dd>Version of hReview, semantics as in RFC2426 section "3.6.9 VERSION Type Definition"</dd>
+
+  <dt id='summary'>summary</dt>
+   <dd>a title for the review</dd>
+
+  <dt id='item'>item</dt>
+   <dd>item info : name and URI(s) of the item <em>(fn || url || photo ) | hCard (for person or business) | hCalendar (for event)</em></dd>
+
+  <dt id='type'>type</dt>
+   <dd>the type of the item being reviewed <em>product | business | event | person | place | website | url</em></dd>
+
+  <dt id='reviewer'>reviewer</dt>
+   <dd>the person who authored the review</dd>
+
+  <dt id='dtreviewed'>dtreviewed</dt>
+   <dd>date time of when the review was written (ISO8601)</dd>
+
+ <dt id='rating'>rating</dt>
+   <dd>decimal number from 1.0 to 5.0 inclusive indicating a rating for the item, higher indicating a better rating</dd>
+
+  <dt id='description'>description</dt>
+   <dd>the full text representing the written opinion of the reviewer</dd>
+
+  <dt id='tags'>tags</dt>
+   <dd>a list of keywords or phrases that the reviewer associates with the item</dd>
+
+  <dt id='permalink'>permalink</dt>
+   <dd>url of the review</dd>
+
+  <dt id='license'>license</dt>
+   <dd>links to the license under which the contents of the hReview is licensed, using the rel-license microformat</dd>
+  </dl>
+ </dd>
+</dl>
+<hr/>
+<address>
+  <a href="http:/dannyayers.com">Danny Ayers</a>,  June 2006
+</address>
+</body>
+</html>

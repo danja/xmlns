@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE rdf:RDF [
+	 <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	 <!ENTITY ibis 'http://purl.org/ibis#'>
+	 <!ENTITY rdfs 'http://www.w3.org/TR/1999/PR-rdf-schema-19990303#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	 xmlns:ibis="&ibis;"
+	 xmlns:rdfs="&rdfs;">
+<rdfs:Class rdf:about="&ibis;Argument"
+	 rdfs:comment="An argument"
+	 rdfs:label="Argument">
+	<rdfs:subClassOf rdf:resource="&ibis;Idea"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&ibis;Idea"
+	 rdfs:comment="An idea"
+	 rdfs:label="Idea">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&ibis;Proposition"
+	 rdfs:comment="A proposition"
+	 rdfs:label="Proposition">
+	<rdfs:subClassOf rdf:resource="&ibis;Idea"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&ibis;con"
+	 rdfs:comment="Used to denote that an argument counters a proposition"
+	 rdfs:label="con">
+	<rdfs:range rdf:resource="&ibis;Argument"/>
+</rdf:Property>
+<rdf:Property rdf:about="&ibis;pro"
+	 rdfs:comment="Used to denote that an argument supports a proposition"
+	 rdfs:label="pro">
+	<rdfs:range rdf:resource="&ibis;Argument"/>
+</rdf:Property>
+</rdf:RDF>

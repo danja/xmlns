@@ -1,0 +1,129 @@
+@prefix : <http://www.purl.org/stuff/rev#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> . 
+
+# core (stable) terms
+   
+    :Review     a rdfs:Class;
+         rdfs:comment "A review of an artistic work";
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "Review";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+    :hasReview     a rdf:Property;
+         rdfs:comment "Associates a work with a a review";
+         rdfs:domain rdfs:Resource;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "hasReview";
+         rdfs:range <http://www.purl.org/stuff/rev#Review>;
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+    :rating     a rdf:Property;
+         rdfs:comment "A numeric value";
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "rating";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+    
+    :reviewer     a rdf:Property;
+         rdfs:comment "The person that has written the review";
+         rdfs:domain <http://www.purl.org/stuff/rev#Review>;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "reviewer";
+         rdfs:range foaf:Person;
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+    
+    :text     a rdf:Property;
+         rdfs:comment "The text of the review";
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "text";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+    :type     a rdf:Property;
+         rdfs:comment "The type of media of a work under review";
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "type";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+# Auxiliary (testing) terms
+
+    :Comment     a rdfs:Class;
+         rdfs:comment "A comment on a review";
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "Comment";
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :Feedback     a rdfs:Class;
+         rdfs:comment "Feedback on the review. Expresses whether the review was useful or not";
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "Feedback";
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :commenter     a rdf:Property;
+         rdfs:comment "The commenter on the review";
+         rdfs:domain <http://www.purl.org/stuff/rev#Comment>,
+                <http://www.purl.org/stuff/rev#Feedback>;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "commenter";
+         rdfs:range foaf:Agent;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :hasComment     a rdf:Property;
+         rdfs:comment "Associates a review with a comment on the review";
+         rdfs:domain <http://www.purl.org/stuff/rev#Review>;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "hasComment";
+         rdfs:range <http://www.purl.org/stuff/rev#Comment>;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :hasFeedback     a rdf:Property;
+         rdfs:comment "Associates a review with a feedback on the review";
+         rdfs:domain <http://www.purl.org/stuff/rev#Review>;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "hasFeedback";
+         rdfs:range <http://www.purl.org/stuff/rev#Feedback>;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :positiveVotes     a rdf:Property;
+         rdfs:comment "Number of positive usefulness votes (integer)";
+         rdfs:domain <http://www.purl.org/stuff/rev#Review>;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "positiveVotes";
+         rdfs:range rdfs:Literal;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+        
+    :title     a rdf:Property;
+         rdfs:comment "The title of the review";
+         rdfs:domain <http://www.purl.org/stuff/rev#Review>;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "title";
+         rdfs:range rdfs:Literal;
+         rdfs:subPropertyOf dc:title;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :totalVotes     a rdf:Property;
+         rdfs:comment "Number of usefulness votes (integer)";
+         rdfs:domain <http://www.purl.org/stuff/rev#Review>;
+         rdfs:isDefinedBy <http://www.purl.org/stuff/rev>;
+         rdfs:label "totalVotes";
+         rdfs:range rdfs:Literal;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+ 
+# the full RDF/XML schema also contain OWL compatibility statements.

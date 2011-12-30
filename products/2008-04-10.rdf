@@ -1,0 +1,301 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rev="http://www.purl.org/stuff/rev#"
+    xmlns:va="http://www.purl.org/stuff/va#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns="http://purl.org/stuff/products#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#componentOf">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term (meriology)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>discrete part of</rdfs:comment>
+    <rdfs:label>componentOf</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#price">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>cost</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Price"/>
+    <rdfs:label>price</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#realization">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Pattern"/>
+    <rdfs:domain rdf:resource="http://purl.org/stuff/products#Product"/>
+    <rdfs:comment>a realization of</rdfs:comment>
+    <rdfs:label>realization</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#euro">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>in euro</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/stuff/products#Price"/>
+    <rdfs:label>euro</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Brand">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <va:exampleUsage>Fender</va:exampleUsage>
+    <rdfs:comment>product brand</rdfs:comment>
+    <rdfs:label>Brand</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#manufacturer">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>who makes the thing</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Manufacturer"/>
+    <rdfs:label>manufacturer</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#embodiment">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Kind"/>
+    <rdfs:domain rdf:resource="http://purl.org/stuff/products#Pattern"/>
+    <rdfs:comment>a kind of</rdfs:comment>
+    <rdfs:label>embodiment</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#similar">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>auxiliary term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>is functionally similar to, may be substituted in most circumstances without significant system degradation</rdfs:comment>
+    <rdfs:label>similar</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Price">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <va:exampleUsage>...</va:exampleUsage>
+    <rdfs:comment>how much a thing costs</rdfs:comment>
+    <rdfs:label>Price</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#similarPrice">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional auxiliary term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>is similar to in financial cost</rdfs:comment>
+    <rdfs:label>similarPrice</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/products#similar"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#similarPerformance">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional auxiliary term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>is similar to in capabilities</rdfs:comment>
+    <rdfs:label>similarPerformance</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/products#similar"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#vendor">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>who sells the thing</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Vendor"/>
+    <rdfs:label>vendor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#sterling">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>in pounds sterling</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/stuff/products#Price"/>
+    <rdfs:label>pounds sterling</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#similarPopularity">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional auxiliary term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>is similar to in popularity</rdfs:comment>
+    <rdfs:label>similarPopularity</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/products#similar"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#similarBuild">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional auxiliary term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>is similar to in physical construction</rdfs:comment>
+    <rdfs:label>similarBuild</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/products#similar"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Manufacturer">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <va:exampleUsage>Fender</va:exampleUsage>
+    <rdfs:comment>product manufacturer</rdfs:comment>
+    <rdfs:label>Manufacturer</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#similarDesign">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional auxiliary term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>is conceptually similar to</rdfs:comment>
+    <rdfs:label>similarDesign</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/stuff/products#similar"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Outlet">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <va:exampleUsage>Thomann Online</va:exampleUsage>
+    <rdfs:comment>where a product may be purchased</rdfs:comment>
+    <rdfs:label>Outlet</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#brand">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Brand"/>
+    <rdfs:comment>brand of</rdfs:comment>
+    <rdfs:label>brand</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Product">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <va:exampleUsage>Guitar</va:exampleUsage>
+    <rdfs:comment>generic concept of the product</rdfs:comment>
+    <rdfs:label>Product</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Item">
+    <vs:term_status>testing</vs:term_status>
+    <va:exampleUsage>my old strat</va:exampleUsage>
+    <vs:moreinfo>core term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>physical object, instance of a particular product</rdfs:comment>
+    <rdfs:label>Item</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#outlet">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>where the thing can be bought</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Outlet"/>
+    <rdfs:label>outlet</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Kind">
+    <vs:term_status>testing</vs:term_status>
+    <va:exampleUsage>Black &amp; White Squier Strat</va:exampleUsage>
+    <vs:moreinfo>core term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>specific model or version of product, identifiable by brand/model number etc.</rdfs:comment>
+    <rdfs:label>Kind</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.purl.org/stuff/va#exampleUsage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#dollars">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>in dollars</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/stuff/products#Price"/>
+    <rdfs:label>dollars</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#necessaryComponentOf">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>provisional core term (meriology)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>discrete and necessary part of something</rdfs:comment>
+    <rdfs:label>necessaryComponentOf</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#examplar">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:range rdf:resource="http://purl.org/stuff/products#Item"/>
+    <rdfs:domain rdf:resource="http://purl.org/stuff/products#Kind"/>
+    <rdfs:comment>an real-world example of</rdfs:comment>
+    <rdfs:label>exemplar</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Pattern">
+    <vs:term_status>testing</vs:term_status>
+    <va:exampleUsage>Stratocaster Guitar</va:exampleUsage>
+    <vs:moreinfo>core term</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <rdfs:comment>type of product, design</rdfs:comment>
+    <rdfs:label>Pattern</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/products#Vendor">
+    <vs:term_status>testing</vs:term_status>
+    <vs:moreinfo>core term (commercial)</vs:moreinfo>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/products"/>
+    <va:exampleUsage>Thomann</va:exampleUsage>
+    <rdfs:comment>product seller</rdfs:comment>
+    <rdfs:label>Vendor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+      "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>RDF SPICE Vocabulary</title>
+  <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/" />
+</head>
+
+<body>
+<h1>RDF SPICE</h1>
+
+<p>holding page</p>
+
+<p></p>
+
+<p>see:</p>
+
+<p><a
+href="http://dannyayers.com/2011/02/23/Adding-SPICE-to-the-Semantic-Web">Adding
+SPICE to the Semantic Web</a></p>
+
+<p></p>
+
+<p>NB. make circuit nodes bnodes!</p>
+
+<p></p>
+
+<p>hash or slash URIs??</p>
+
+<p></p>
+
+<p>example term:</p>
+
+<p></p>
+
+<p><code>@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .</code></p>
+
+<p><code>@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+.</code></p>
+
+<p><code>@prefix : &lt;http://purl.org/spice/&gt; .</code></p>
+
+<p><code>+xsd</code></p>
+
+<p><code></code></p>
+
+<p><code>:Resistor a rdfs:Class ;</code></p>
+
+<p><code>rdfs:label "Resistor" ;</code></p>
+
+<p><code>dc:title "Resistor" ;</code></p>
+
+<p><code>dc:description "a two-terminal passive electronic component which
+implements electrical resistance" ;</code></p>
+
+<p><code>rdfs:isDefinedBy &lt;http://purl.org/spice/&gt; ;</code></p>
+
+<p><code>rdfs:subClassOf &lt;http://dbpedia.org/resource/Resistor&gt;
+;</code></p>
+
+<p><code>:terminalCount "2"^^xsd:int ;</code></p>
+
+<p><code>:spiceInstanceTemplate "R&lt;name&gt; &lt;(+) node&gt; &lt;(-)
+node&gt; [model name] &lt;value&gt;+ [TC = &lt;TC1&gt; [,&lt;TC2&gt;]]"
+;</code></p>
+
+<p><code>:spiceModelTemplate ".MODEL &lt;model name&gt; RES [model parameters]"
+;</code></p>
+
+<p><code>:spiceExample "RLOAD 15 0 2K" .</code></p>
+
+<p></p>
+
+<h3>Open Questions</h3>
+
+<p>Best bet here is probably follow the modeling of SPICE, e.g. a resistor is
+<em>fairly</em> idealised (ideal value but can have temperature coefficient and
+can generate noise).</p>
+
+<p>Need to consider how to model actual resistor classes (e.g. all 10k 5%
+carbon film) and instances of those - punning..?</p>
+
+<p></p>
+</body>
+</html>

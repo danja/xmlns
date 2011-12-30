@@ -1,0 +1,14 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX georss: <http://www.georss.org/georss>
+PREFIX gml: <http://www.opengis.net/gml>
+
+SELECT DISTINCT ?name ?homepage ?mbox ?photo
+
+WHERE {
+?person foaf:name ?name .
+
+OPTIONAL {?person foaf:depiction ?photo }
+OPTIONAL {?person foaf:homepage ?homepage }  
+OPTIONAL {?person foaf:weblog ?homepage } # hmm
+OPTIONAL {?person foaf:mbox ?mbox }
+}

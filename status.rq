@@ -1,0 +1,19 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+
+SELECT DISTINCT ?status ?x ?label
+
+WHERE {
+{
+  ?x a rdf:Property ;
+     rdfs:label ?label ;
+     vs:term_status ?status .
+} UNION {
+  ?x a rdfs:Class ;
+     rdfs:label ?label ;
+     vs:term_status ?status .
+}
+}
+ORDER BY ?status
+

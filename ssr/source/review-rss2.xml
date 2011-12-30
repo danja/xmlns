@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-16"?>
+
+<rss version="2.0"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:ssr="http://purl.org/stuff/ssr"
+xmlns:rev="http://www.purl.org/stuff/rev/" >
+
+<ssr:rdf transform="http://ideagraph.net/xmlns/ssr/source/rev+rss2rdf.xsl" />
+
+<channel>
+<title>A Reviews Feed</title>
+<link>http://www.example.org/reviews</link>
+<description>For demonstration purposes</description>
+
+<item>
+<title>Down and Out in the Magic Kingdom</title>
+<link>http://www.craphound.com/down/</link>
+<guid>http://www.example.org/reviews/2003/05/04.html</guid>
+<pubDate>Tue, 08 Apr 2003 10:28:59 GMT</pubDate>
+<description>A great SF thriller set in a future DisneyWorld.</description>
+
+<rev:type>Book</rev:type>
+<rev:rating>9</rev:rating>
+<dc:creator>Cory Doctorow</dc:creator>
+<rev:reviewer>danja</rev:reviewer>
+
+</item>
+</channel>
+</rss>

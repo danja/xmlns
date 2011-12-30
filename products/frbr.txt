@@ -1,0 +1,34 @@
+when we say “book” to
+describe a physical object that has paper
+pages and a binding and can sometimes be
+used to prop open a door or hold up a table
+leg, FRBR calls this an “item.”
+
+When we say “book” we also may mean a
+“publication” as when we go to a bookstore
+to purchase a book. We may know its
+ISBN but the particular copy does not
+matter as long as it’s in good condition
+and not missing pages. FRBR calls this
+a “manifestation.”
+
+When we say “book” as in ‘who translated
+that book,’ we may have a particular text in
+mind and a specific language. FRBR calls
+this an “expression.”
+
+When we say “book” as in ‘who wrote
+that book,’ we could mean a higher level
+of abstraction, the conceptual content that
+underlies all of the linguistic versions, the story
+being told in the book, the ideas in a person’s
+head for the book. FRBR calls this a “work.”
+
+
+
+
+
+
+
+
+

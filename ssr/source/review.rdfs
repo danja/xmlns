@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns="http://purl.org/stuff/rev"
+         xml:base="http://purl.org/stuff/rev">
+
+<rdfs:Class rdf:ID="Review">
+         <rdfs:comment>A review of an artistic work</rdfs:comment>  
+</rdfs:Class>
+
+<rdf:Property rdf:ID="type">
+         <rdfs:comment>The type of media of a work under review</rdfs:comment>
+</rdf:Property>
+
+<rdf:Property rdf:ID="rating">
+         <rdfs:comment>A mark out of 10</rdfs:comment>
+</rdf:Property>
+
+<rdf:Property rdf:ID="text">
+         <rdfs:comment>The review itself</rdfs:comment>
+</rdf:Property>
+
+
+<rdf:Property rdf:ID="hasReview">
+         <rdfs:comment>Used to associate a work of art with a a review</rdfs:comment>
+         <rdfs:domain rdf:resource="http://purl.org/rss/1.0/item"/>
+         <rdfs:range rdf:resource="#Review"/>
+</rdf:Property>
+
+<rdf:Property rdf:ID="reviewer">
+         <rdfs:comment>The person that has written the review</rdfs:comment>
+         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator" />
+</rdf:Property>
+
+</rdf:RDF>

@@ -1,0 +1,29 @@
+Order:
+Mammal
+Bird
+Reptile
+Amphibian
+Fish
+Insect
+Plant
+AI
+Inanimate Object
+Other
+
+Species:
+Cat
+Dog
+Rabbit
+Guinea Pig
+Gerbil
+Hamster
+Mouse 
+Ferret
+Rat
+Snake
+Lizard
+Philodendron
+Tamagotchi
+Rock
+Other
+

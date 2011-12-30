@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+      "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:mvcb="http://webns.net/mvcb/" xml:lang="en">
+<head>
+  <title>DogMo : Dog Mood Ontology</title>
+  <meta http-equiv="content-type"
+  content="application/xhtml+xml; charset=UTF-8" />
+  <link rel="mvcb:generatorAgent" type="application/rdf+xml" title="DOAP"
+  href="http://rdfohloh.wikier.org/project/specgen" />
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+ <link href="style2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>DogMo</h1>
+
+<h2>Dog Mood Vocabulary</h2>
+
+<p></p>
+
+<p id="mymw-doctype"><strong>Working Draft : 2010-07-29</strong></p>
+
+<p class="copyright"><strong>License: <a
+href="http://creativecommons.org/licenses/by/2.0/">CC-By</a></strong> - use as
+you wish, without directly adding or modifying terms in this namespace </p>
+
+<p><strong>Status:</strong> work in progress</p>
+
+<p><strong>Other formats:</strong>  <a href="index.ttl">Turtle</a>, <a
+href="index.rdf">RDF/XML</a></p>
+
+<p>Comments are very welcome, please send them to <a
+href="mailto:danny.ayers@gmail.com">danny.ayers@gmail.com</a></p>
+
+<p></p>
+<!-- ===================================================================== -->
+<hr />
+
+<h2 id="abstract">Abstract</h2>
+
+<p>This specification defines a simple, restricted ontology/vocabulary for
+describing the current emotional state of an agent (typically a dog).</p>
+
+<h2 id="contents">Table of Contents</h2>
+<ol id="toc">
+  <li><a href="#intro">Introduction</a> </li>
+  <li><a href="#sec-glance">DogMo at a glance</a></li>
+  <li><a href="#overview">DogMo example</a> </li>
+  <li><a href="#reference">Cross-reference for DogMo classes and
+  properties</a></li>
+</ol>
+<hr />
+<!-- ===================================================================== -->
+
+<h2 id="intro">1 Introduction</h2>
+
+<blockquote>
+  I like dogs. You always know what a dog is thinking. It has four moods.
+  Happy, sad, cross and concentrating. Also, dogs are faithful and they do not
+  tell lies because they cannot talk.</blockquote>
+
+<p>- <em>Christopher John Francis Boone in <a
+href="http://en.wikipedia.org/wiki/The_Curious_Incident_of_the_Dog_in_the_Night-Time">The
+Curious Incident of the Dog in the Night-Time</a>, <a
+href="http://en.wikipedia.org/wiki/Mark_Haddon">Mark Haddon</a> 2003.</em></p>
+
+<p></p>
+
+<p></p>
+
+<p>This ontology models those four moods (as <a
+href="http://www.w3.org/2004/02/skos/">SKOS</a> concepts), allowing the
+expression of agent's emotional state. It is assumed that the agent will only
+be in one of the moods at any given time, and typically statements will be
+associated with a particular point or period in time. The means of tying the
+mood to the time may vary between application scenarios and so is not specified
+here (dated named graphs and n-ary relations being two possibilities).
+Additionally no attempt is made to express canine fidelity or the inference
+leading to the inability to prevaricate.</p>
+<!-- ===================================================================== -->
+
+<h2 id="sec-glance">2. DogMo at a glance</h2>
+
+<p>An alphabetical index of DogMo terms, by class (concepts) by property
+(relationships, attributes) and instance (value), are given below. All the
+terms are hyperlinked to their detailed description for quick reference. </p>
+<!-- The list of classes and properties goes here -->
+
+<div style="padding: 1em; border: dotted; background-color: #ddd;">
+<p>Classes: <a href="#term_Mood">Mood</a></p>
+
+<p>Properties: <a href="#term_currentMood">currentMood</a></p>
+
+<p>Instances: <a href="#term_Happy">Happy</a>, <a href="#term_Sad">Sad</a>, <a
+href="#term_Cross">Cross</a>, <a
+href="#term_Concentrating">Concentrating</a></p>
+</div>
+<!-- End of the terms list -->
+
+<p></p>
+<!-- ===================================================================== -->
+
+<h2 id="overview">3. Example</h2>
+
+<p>Here is a <a
+href="http://en.wikipedia.org/wiki/Turtle_%28syntax%29">Turtle</a> document
+describing a happy cat:</p>
+
+<p></p>
+
+<div class="example" style="white-space: pre-wrap;">
+<pre>        @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+        @prefix pets: &lt;http://purl.org/stuff/pets/&gt; .
+        @prefix dogmo: &lt;http://purl.org/stuff/dogmood#&gt; .
+
+        &lt;http://hyperdata.org/xmlns/pets/2004-04-24/sambuca-css.xml#me&gt;
+             foaf:name "Sambuca";
+             a pets:Cat;
+             dogmo:currentMood dogmo:Happy .
+      </pre>
+</div>
+<!-- ===================================================================== -->
+
+<h2 id="reference">4. Cross-reference for DogMo classes and properties</h2>
+<!-- The following is the script-generated list of classes and properties -->
+
+<div class="specterm" id="term_Mood">
+<h3>Class: dm:Mood</h3>
+
+<p style="font-family:monospace; font-size:0.em;">URI: <a
+href="http://purl.org/stuff/dogmood#Mood">http://purl.org/stuff/dogmood#Mood</a></p>
+
+<p>- a narrow enumeration of the states of mind or emotions experienced by
+agents, typically dogs</p>
+
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back to
+top</a>]</p>
+</div>
+
+<div class="specterm" id="term_currentMood">
+<h3>Property: dm:currentMood</h3>
+
+<p style="font-family:monospace; font-size:0.em;">URI: <a
+href="http://purl.org/stuff/dogmood#currentMood">http://purl.org/stuff/dogmood#currentMood</a></p>
+
+<p>- associates an agent with its state of mind or emotion </p>
+<dl>
+  <dt>Domain:</dt>
+    <dd><a href="http://xmlns.com/foaf/0.1/Agent"
+      style="font-family: monospace;">foaf:Agent</a></dd>
+  <dt>Range:</dt>
+    <dd><a href="#term_MoodSet" style="font-family: monospace;">dm:Mood</a></dd>
+</dl>
+
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back to
+top</a>]</p>
+</div>
+
+<div class="specterm" id="term_Concentrating">
+<h3>Instance: dm:Concentrating</h3>
+
+<p style="font-family:monospace; font-size:0.em;">URI: <a
+href="http://purl.org/stuff/dogmood#Concentrating">http://purl.org/stuff/dogmood#Concentrating</a></p>
+
+<p>- having attention directed on something</p>
+<dl>
+  <dt>RDF Type:</dt>
+    <dd><a href="#term_Mood" style="font-family: monospace;">dm:Mood</a></dd>
+    <dd><a href="http://www.w3.org/2004/02/skos/core#Concept"
+      style="font-family: monospace;">skos:Concept</a></dd>
+</dl>
+
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back to
+top</a>]</p>
+</div>
+
+<div class="specterm" id="term_Cross">
+<h3>Instance: dm:Cross</h3>
+
+<p style="font-family:monospace; font-size:0.em;">URI: <a
+href="http://purl.org/stuff/dogmood#Cross">http://purl.org/stuff/dogmood#Cross</a></p>
+
+<p>- bad-tempered, angry or annoyed, a feeling that is usually oriented toward
+some real or supposed grievance</p>
+<dl>
+  <dt>RDF Type:</dt>
+    <dd><a href="#term_Mood" style="font-family: monospace;">dm:Mood</a></dd>
+    <dd><a href="http://www.w3.org/2004/02/skos/core#Concept"
+      style="font-family: monospace;">skos:Concept</a></dd>
+</dl>
+
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back to
+top</a>]</p>
+</div>
+
+<div class="specterm" id="term_Happy">
+<h3>Instance: dm:Happy</h3>
+
+<p style="font-family:monospace; font-size:0.em;">URI: <a
+href="http://purl.org/stuff/dogmood#Happy">http://purl.org/stuff/dogmood#Happy</a></p>
+
+<p>- a state of mind or feeling characterized by contentment, love,
+satisfaction, pleasure, or joy</p>
+<dl>
+  <dt>RDF Type:</dt>
+    <dd><a href="#term_Mood" style="font-family: monospace;">dm:Mood</a></dd>
+    <dd><a href="http://www.w3.org/2004/02/skos/core#Concept"
+      style="font-family: monospace;">skos:Concept</a></dd>
+</dl>
+
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back to
+top</a>]</p>
+</div>
+
+<div class="specterm" id="term_Sad">
+<h3>Instance: dm:Sad</h3>
+
+<p style="font-family:monospace; font-size:0.em;">URI: <a
+href="http://purl.org/stuff/dogmood#Sad">http://purl.org/stuff/dogmood#Sad</a></p>
+
+<p>- an emotion characterized by feelings of disadvantage, loss, and
+helplessness</p>
+<dl>
+  <dt>RDF Type:</dt>
+    <dd><a href="#term_Mood" style="font-family: monospace;">dm:Mood</a></dd>
+    <dd><a href="http://www.w3.org/2004/02/skos/core#Concept"
+      style="font-family: monospace;">skos:Concept</a></dd>
+</dl>
+
+<p style="float: right; font-size: small;">[<a href="#sec-glance">back to
+top</a>]</p>
+
+<p></p>
+</div>
+<!-- End of the terms list -->
+<!-- ===================================================================== -->
+
+<p>Created with the aid of the <a
+href="http://www.rdfabout.com/demo/validator/">rdf:about
+Validator/Converter</a> and <a
+href="http://forge.morfeo-project.org/wiki_en/index.php/SpecGen">SpecGen</a></p>
+
+<p style="text-align:right;margin-left:auto;margin-right:0;"><a
+href="http://danny.ayers.name/">Danny Ayers</a> 2010</p>
+</body>
+</html>
+<!-- specification regenerated by SpecGen5 at 19:32:37 07/29/10 CEST -->

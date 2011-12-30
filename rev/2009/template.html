@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+      "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:mvcb="http://webns.net/mvcb/" xml:lang="en">
+<head>
+  <title>RDF Review Vocabulary</title>
+  <meta http-equiv="content-type"
+  content="application/xhtml+xml; charset=UTF-8" />
+  <link rel="mvvb:generatorAgent" type="application/rdf+xml" title="DOAP"
+  href="http://rdfohloh.wikier.org/project/specgen" />
+  <link rel="stylesheet" type="text/css" href="http://example.org/style.css" />
+</head>
+
+<body>
+<h1 id="title">RDF Review Vocabulary</h1>
+<dl>
+  <dt><strong>Latest version:</strong></dt>
+    <dd><a
+      href="http://www.purl.org/stuff/rev">http://www.purl.org/stuff/rev</a></dd>
+  <dt><strong>Last Update:</strong></dt>
+    <dd>2009-02-23</dd>
+  <dt><strong>Editors:</strong></dt>
+    <dd><strong><a href="http://dannyayers.com/">Danny Ayers</a>, <a
+      href="http://kmi.open.ac.uk/people/tom/html">Tom Heath</a></strong></dd>
+  <dt><strong>Contributors:</strong></dt>
+    <dd>See <a href="#acknowledgements">acknowledgements</a></dd>
+</dl>
+
+<p class="copyright"><strong>License:</strong> <a rel="license"
+href="http://creativecommons.org/licenses/by/3.0/"><img
+alt="Creative Commons License" style="border-width:0" src="../../images/cc.png"
+/></a></p>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons 3.0
+Attribution</a> : you are free to copy, adapt, distribute and transmit this
+document and associated schemas. The required attribution is a link back to
+this document (or the schema), ideally following <a
+href="http://en.wikipedia.org/wiki/Linked_Data">linked data</a> principles. </p>
+<!-- ===================================================================== -->
+<hr />
+
+<h2 id="abstract">Abstract</h2>
+
+<p>This document provides a vocabulary specification for the purpose of
+creating sharable reviews and ratings of blogs, CDs, books, software, anything
+identifiable. It includes the definition of an RDF vocabulary as well as a
+GRDDL-enabled HTML meta data profile for the <a
+href="http://microformats.org/wiki/hreview">hReview</a> microformat.</p>
+
+<h2 id="status">Status of this Document</h2>
+
+<p>This document is liable to editorial changes although the RDF Schema is now
+stable.</p>
+
+<h2 id="contents">Table of Contents</h2>
+<ol id="toc">
+  <li><a href="#intro">Introduction</a> </li>
+  <li><a href="#L504">Namespaces</a></li>
+  <li><a href="#sec-glance">RDF Review Vocabulary at a glance</a></li>
+  <li><a href="#overview">RDF Review Vocabulary overview</a> 
+    <ol>
+      <li><a href="#s31">Example</a></li>
+    </ol>
+  </li>
+  <li><a href="#reference">Cross-reference for RDF Review Vocabulary classes
+    and properties</a></li>
+</ol>
+
+<h3>Appendixes</h3>
+<ul>
+  <li><a href="#profile">hReview Profile</a></li>
+  <li><a href="#references">Normative References</a></li>
+  <li><a href="#changes">Change Log</a> </li>
+  <li><a href="#acknowledgements">Acknowledgements</a> </li>
+</ul>
+<ol id="appendix">
+</ol>
+<hr />
+<!-- ===================================================================== -->
+
+<h2 id="intro">1. Introduction</h2>
+
+<p>This specification aims to define the minimum terms needed to provide a
+review/rating capability, generally leaving the rest of the resource
+description to existing, more domain-appropriate vocabularies. The core terms
+are stable with several deployments (e.g. see <a
+href="http://revyu.com/">Revyu</a>), certain new terms are provisionally
+included while testing in deployment (see <a
+href="http://www.iterating.com/">ITerating</a>). </p>
+
+<p>The vocabulary is suitable for use in any RDF-compatible language : FOAF,
+DOAP, RSS etc. It is also compatible with the hReview microformat and OWL
+Lite.</p>
+
+<h2><a id="L504">2. Namespaces</a></h2>
+
+<p>To use with microformats, see <a href="../index.html#hReview">hReview
+Profile</a></p>
+
+<p class="c1">The XML namespace for this vocabulary is
+<strong><code>http://www.purl.org/stuff/rev#</code></strong> </p>
+
+<p class="c1">i.e. in RDF/XML documents the following attribute should be
+included in the <strong>rdf:RDF</strong> element :</p>
+
+<p
+class="c1"><strong><code>xmlns:rev="http://www.purl.org/stuff/rev#"</code></strong></p>
+
+<p></p>
+
+<p>Reviews written using the <em>RDF Review Vocabulary</em> will typically also
+use terms from the Dublin Core and FOAF namespaces :</p>
+
+<p><code><strong>xmlns:dc="http://purl.org/dc/elements/1.1/"</strong><br />
+</code><code><strong>xmlns:foaf="http://xmlns.com/foaf/0.1/"</strong></code></p>
+
+<p><code><strong></strong><br />
+</code></p>
+<!-- ===================================================================== -->
+
+<h2 id="sec-glance">3. RDF Review Vocabulary at a glance</h2>
+
+<p>An alphabetical index of RDF Review Vocabulary terms, by class (concepts)
+and by property (relationships, attributes), are given below. All the terms are
+hyperlinked to their detailed description for quick reference. </p>
+<!-- The list of classes and properties goes here -->
+%s <!-- End of the terms list -->
+
+<p>...</p>
+<!-- ===================================================================== -->
+
+<h2 id="overview">4. RDF Review Vocabulary overview</h2>
+
+<p>The RDF Review Vocabulary definitions presented here are ...</p>
+
+<h3 id="s31">4.1. Example</h3>
+
+<p>Here is an RDF/XML document describing a review:</p>
+
+<div class="example" style="white-space: pre-wrap;">
+<pre>        &lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                 xmlns:rev="http://purl.org/stuff/rev#"
+                 xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
+                 xmlns:foaf="http://xmlns.com/foaf/0.1/"&gt;
+    &lt;rdf:Description rdf:about="http://revyu.com/things/rome-city-italy-history-art-1235403088"&gt;
+        &lt;rev:hasReview rdf:resource="http://revyu.com/reviews/bdd81f728376b16b1c10294470713b7ddeb12f5c"/&gt;
+        &lt;s:label&gt;Rome&lt;/s:label&gt;
+        &lt;s:seeAlso rdf:resource="http://revyu.com/things/rome-city-italy-history-art-1235403088"/&gt;
+    &lt;/rdf:Description&gt;
+    &lt;rdf:Description rdf:about="http://revyu.com/reviews/bdd81f728376b16b1c10294470713b7ddeb12f5c"&gt;
+        &lt;rev:createdOn&gt;2009-02-23T07:31:28-08:00&lt;/rev:createdOn&gt;
+        &lt;rev:maxRating&gt;5&lt;/rev:maxRating&gt;
+        &lt;rev:minRating&gt;1&lt;/rev:minRating&gt;
+        &lt;rev:rating&gt;5&lt;/rev:rating&gt;
+        &lt;rev:reviewer rdf:resource="http://revyu.com/people/gianlucaangelic"/&gt;
+        &lt;rev:text&gt;Rome is an historical and fantastic city, full of monuments, churches and streets. Anybody is able to mention, maybe with a slight effort, its most famous monuments and the protagonists of its history. This is perhaps the key to the charm of a city that seems to invite every visitor to feel part of its complex reality and its millennial history.&lt;/rev:text&gt;
+        &lt;s:label&gt;Review of Rome, by gianlucaangelic&lt;/s:label&gt;
+        &lt;foaf:primaryTopic rdf:resource="http://revyu.com/things/rome-city-italy-history-art-1235403088"/&gt;
+    &lt;/rdf:Description&gt;
+    &lt;rdf:Description rdf:about="http://revyu.com/people/gianlucaangelic"&gt;
+       &lt;s:seeAlso rdf:resource="http://revyu.com/people/gianlucaangelic"/&gt;
+    &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</pre>
+</div>
+<!-- ===================================================================== -->
+
+<h2 id="reference">5. Cross-reference for RDF Review Vocabulary classes and
+properties</h2>
+
+<p>...</p>
+<!-- The following is the script-generated list of classes and properties -->
+%s <!-- End of the terms list -->
+
+<p>...</p>
+<!-- ===================================================================== -->
+
+<h2><a id="profile">A. hReview Profile</a></h2>
+
+<p>This is a <em>provisional</em> <a href="http://gmpg.org/xmdp/">XMDP</a>
+profile for the <a href="http://www.microformats.org/wiki/hreview">hReview</a>
+specification.</p>
+
+<p>Use of this profile licenses RDF data extracted using <a
+rel="profileTransformation"
+href="http://danja.talis.com/xmlns/rev_2007-11-09/hreview2rdfxml.xsl">hreview2rdfxml.xsl</a>.
+</p>
+
+<p>To apply this profile to a document (and GRDDL-enable them), add the
+following profile attribute to its head element:</p>
+
+<p><code>&lt;head
+<strong>profile="http://www.purl.org/stuff/rev#"</strong><code>&gt;</code></code></p>
+
+<p>Note multiple profiles can be used, space-separated, e.g.</p>
+
+<p><code>&lt;head profile="http://www.purl.org/stuff/rev#
+http://www.w3.org/2006/03/hcard http://purl.org/stuff/glink/"&gt;</code></p>
+
+<p><a
+href="http://danja.talis.com/xmlns/rev_2007-11-09/hreview-sample.html">Sample
+hReview</a>, <a
+href="http://triplr.org/turtle/danja.talis.com/xmlns/rev_2007-11-09/hreview-sample.html">GRDDL
+output</a> (Turtle view)</p>
+
+<h3>Terms</h3>
+<dl class="profile">
+  <dt>class</dt>
+    <dd><a rel="help"
+      href="http://www.w3.org/TR/html401/struct/global.html#adef-class">HTML4
+      definition of the 'class' attribute.</a> This meta data profile defines
+      some 'class' attribute values (class names) and their meanings as
+      suggested by a <a
+      href="http://www.w3.org/TR/WD-htmllink-970328#profile">draft of
+      "Hypertext Links in HTML"</a>. All values are defined according to the
+      semantics defined in the <a
+      href="http://microformats.org/wiki/hreview">hReview specification</a>. 
+      <dl>
+        <dt id="hreview">hreview</dt>
+          <dd>hReview container</dd>
+        <dt id="version">version</dt>
+          <dd>Version of hReview, semantics as in RFC2426 section "3.6.9
+            VERSION Type Definition"</dd>
+        <dt id="summary">summary</dt>
+          <dd>a title for the review</dd>
+        <dt id="item">item</dt>
+          <dd>item info : name and URI(s) of the item <em>(fn || url || photo )
+            | hCard (for person or business) | hCalendar (for event)</em></dd>
+        <dt id="type">type</dt>
+          <dd>the type of the item being reviewed <em>product | business |
+            event | person | place | website | url</em></dd>
+        <dt id="reviewer">reviewer</dt>
+          <dd>the person who authored the review</dd>
+        <dt id="dtreviewed">dtreviewed</dt>
+          <dd>date time of when the review was written (ISO8601)</dd>
+        <dt id="rating">rating</dt>
+          <dd>decimal number from 1.0 to 5.0 inclusive indicating a rating for
+            the item, higher indicating a better rating</dd>
+        <dt id="description">description</dt>
+          <dd>the full text representing the written opinion of the
+          reviewer</dd>
+        <dt id="tags">tags</dt>
+          <dd>a list of keywords or phrases that the reviewer associates with
+            the item</dd>
+        <dt id="permalink">permalink</dt>
+          <dd>url of the review</dd>
+        <dt id="license">license</dt>
+          <dd>links to the license under which the contents of the hReview is
+            licensed, using the rel-license microformat</dd>
+      </dl>
+    </dd>
+</dl>
+
+<h2>4. Examples</h2>
+
+<h2 id="references">B. References</h2>
+<dl>
+  <dt class="label" id="ref-some">name</dt>
+    <dd><em><a href="http://.../">long name</a></em> description...</dd>
+</dl>
+
+<h3 id="references-other">B.2 Other references</h3>
+<dl>
+  <dt class="label" id="ref-rfc2119">IETF RFC 2119</dt>
+    <dd><em><a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119: Key words
+      for use in RFCs to Indicate Requirement Levels</a></em>. Internet
+      Engineering Task Force, 1997 (see http://www.ietf.org/rfc/rfc2119.txt).
+    </dd>
+</dl>
+<!-- ===================================================================== -->
+
+<h2 id="changes">C Change Log</h2>
+
+<p>2009-02-23 : This doc updated using SpecGen</p>
+
+<p>2008-12 : RDF Schema cleaned up, hosting moved</p>
+
+<p>2007-10/2007-11 :</p>
+<ul>
+  <li>added iterating.com terms</li>
+  <li>added minRating/maxRating from revyu.com</li>
+  <li>added DL-compatibility statements</li>
+  <li>added GRDDL profile </li>
+  <li>applied CC licence</li>
+  <li>lots of editorial on this doc</li>
+  <li>changed references to "artistic work" to "art"</li>
+</ul>
+
+<p>2006 :</p>
+<ul>
+  <li>tidied up RDFS (with Tom Heath)</li>
+</ul>
+
+<p>2005-05-10 :</p>
+<ul>
+  <li>shifted to different server, dud dns (report - Morten)</li>
+  <li>changed ns/base in RDFS (linked &amp; in text) &amp; RSS example to
+    http://www.purl.org/stuff/rev#</li>
+  <li>changed examples to use dc:description rather than review:text</li>
+  <li>various minor editorial changes (report - Benjamin Nowack)</li>
+</ul>
+
+<p><em>First Draft 26th September 2003</em></p>
+
+<h2><a id="acknowledgements"></a>D Acknowledgements</h2>
+
+<p>Contributions to, and feedback on these documents have been provided by:
+Leigh Dodds, Victor Lindsay, Alf Eaton, <a
+href="http://bnode.org/blog">Benjamin Nowack</a>, Morten Frederikson, <a
+href="http://iterating.com/">Nicolas Vandenberghe</a>. Tools used in the
+creation of these documents include: Amaya, schemadoc.py, nxml-mode, Pellet</p>
+</body>
+</html>

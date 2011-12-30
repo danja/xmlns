@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="">
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Basic HTML data types</dc:title>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/global.html"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="cover.html#toc"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="http://www.w3.org/StyleSheets/TR/W3C-REC"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="style/default.css"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html">
+        <dc:description>previous</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/global.html">
+        <dc:description>next</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="cover.html#minitoc">
+        <dc:description>contents</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="index/elements.html">
+        <dc:description>elements</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="index/attributes.html">
+        <dc:description>attributes</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="index/list.html">
+        <dc:description>index</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.1">
+        <dc:description>Case
+      information</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.2">
+        <dc:description>SGML basic
+      types</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.3">
+        <dc:description>Text strings</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.4">
+        <dc:description>URIs</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.5">
+        <dc:description>Colors</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.5.1">
+        <dc:description>Notes on using
+          colors</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.6">
+        <dc:description>Lengths</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.7">
+        <dc:description>Content types (MIME
+      types)</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.8">
+        <dc:description>Language codes</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.9">
+        <dc:description>Character
+      encodings</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.10">
+        <dc:description>Single
+      characters</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.11">
+        <dc:description>Dates and
+      times</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.12">
+        <dc:description>Link types</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.13">
+        <dc:description>Media
+      descriptors</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.14">
+        <dc:description>Script data</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.15">
+        <dc:description>Style sheet
+      data</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#h-6.16">
+        <dc:description>Frame target
+      names</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./intro/sgmltut.html">
+        <dc:description>SGML
+  tutorial</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./sgml/dtd.html">
+        <dc:description>document type definition</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-ISO8879">
+        <dc:description>[ISO8879]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/styles.html#edef-STYLE"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="interact/scripts.html#edef-SCRIPT"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./sgml/dtd.html#Text">
+        <dc:description>%Text;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="intro/sgmltut.html#attributes">
+        <dc:description>tutorial discussion of
+  attributes</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-URI">
+        <dc:description>[URI]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-RFC1630">
+        <dc:description>[RFC1630]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-RFC1738">
+        <dc:description>[RFC1738]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-RFC1808">
+        <dc:description>[RFC1808]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-RFC1808">
+        <dc:description>[RFC1808]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/links.html#edef-BASE">
+        <dc:description>base URIs</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/links.html">
+        <dc:description>links</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#URI">
+        <dc:description>%URI;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-sensitive">
+        <dc:description>case-sensitive.</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="appendix/notes.html#non-ascii-chars">
+        <dc:description>non-ASCII characters in URI
+  attribute values</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/loosedtd.html#Color">
+        <dc:description>%Color;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-SRGB">
+        <dc:description>[SRGB]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-insensitive">
+        <dc:description>case-insensitive.</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./conform.html#deprecated">
+        <dc:description>deprecated</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./present/styles.html">
+        <dc:description>style
+    sheets</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/global.html#edef-BODY"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/graphics.html#edef-FONT"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/graphics.html#adef-bgcolor"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-SRGB">
+        <dc:description>[SRGB]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#Pixels">
+        <dc:description>%Pixels;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-CSS1">
+        <dc:description>[CSS1]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#Length">
+        <dc:description>%Length;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#MultiLength">
+        <dc:description>%MultiLength;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-neutral">
+        <dc:description>case-neutral.</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="references.html#ref-RFC2045">
+        <dc:description>[RFC2045]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="references.html#ref-RFC2046">
+        <dc:description>[RFC2046]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#type-media-descriptors">
+        <dc:description>media</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#ContentType">
+        <dc:description>%ContentType;.</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-insensitive">
+        <dc:description>case-insensitive.</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-MIMETYPES">
+        <dc:description>[MIMETYPES].</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#LanguageCode">
+        <dc:description>%LanguageCode</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-RFC1766">
+        <dc:description>[RFC1766]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/dirlang.html#langcodes">
+        <dc:description>language codes</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-insensitive">
+        <dc:description>case-insensitive.</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#Charset">
+        <dc:description>%Charset</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./charset.html#encodings">
+        <dc:description>character encodings</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-CHARSETS">
+        <dc:description>[CHARSETS]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-insensitive">
+        <dc:description>case-insensitive.</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html#spec-char-encoding">
+        <dc:description>specifying character
+  encodings</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html#doc-char-set">
+        <dc:description>document character set</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#Character">
+        <dc:description>%Character</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html#entities">
+        <dc:description>character references</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-ISO8601">
+        <dc:description>[ISO8601]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-DATETIME">
+        <dc:description>[DATETIME]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#Datetime">
+        <dc:description>%Datetime</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-ISO8601">
+        <dc:description>[ISO8601]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./references.html#ref-DATETIME">
+        <dc:description>[DATETIME]</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#LinkTypes">
+        <dc:description>%LinkTypes</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-insensitive">
+        <dc:description>case-insensitive,</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/dirlang.html#adef-lang"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/styles.html#adef-media"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/styles.html#style-external">
+        <dc:description>external style
+    sheets</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/global.html#adef-title"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./struct/global.html#profiles">
+        <dc:description>profile</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/global.html#adef-profile"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/global.html#edef-HEAD"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/links.html">
+        <dc:description>links in HTML
+  documents</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#MediaDesc">
+        <dc:description>%MediaDesc</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/styles.html#adef-media"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="#case-insensitive">
+        <dc:description>case-sensitive</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/styles.html#adef-media"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#Script">
+        <dc:description>%Script;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./sgml/dtd.html">
+        <dc:description>DTD</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="interact/scripts.html#edef-SCRIPT"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="interact/scripts.html#scripts">
+        <dc:description>intrinsic event attributes</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html#entities">
+        <dc:description>character references</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="appendix/notes.html#notes-specifying-data">
+        <dc:description>specifying non-HTML
+  data</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/dtd.html#StyleSheet">
+        <dc:description>%StyleSheet;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="./sgml/dtd.html">
+        <dc:description>DTD</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/styles.html#edef-STYLE"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/styles.html#adef-style"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html#entities">
+        <dc:description>character
+  references</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="appendix/notes.html#notes-specifying-data">
+        <dc:description>specifying non-HTML
+  data</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="sgml/loosedtd.html#FrameTarget">
+        <dc:description>%FrameTarget;</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="present/frames.html#edef-FRAMESET"/>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="charset.html">
+        <dc:description>previous</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="struct/global.html">
+        <dc:description>next</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="cover.html#minitoc">
+        <dc:description>contents</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="index/elements.html">
+        <dc:description>elements</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="index/attributes.html">
+        <dc:description>attributes</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <dc:relation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="index/list.html">
+        <dc:description>index</dc:description>
+      </rdf:Description>
+    </dc:relation>
+    <stylesheet xmlns="http://www.w3.org/1999/xhtml#" rdf:resource="http://www.w3.org/StyleSheets/TR/W3C-REC"/>
+    <next xmlns="http://www.w3.org/1999/xhtml#" rdf:resource="struct/global.html"/>
+    <contents xmlns="http://www.w3.org/1999/xhtml#" rdf:resource="cover.html#toc"/>
+  </rdf:Description>
+</rdf:RDF>

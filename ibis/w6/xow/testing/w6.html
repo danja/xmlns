@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head profile="http://purl.org/ibis/w6/xhtml-profile">
+<title>Testing W6</title>
+
+<link href="xow.css" rel="stylesheet" type="text/css" />
+<script src="xow.js" type="text/javascript"></script>
+</head>
+<body>
+<h2>XOW - XHTML Outlines for W6 </h2>
+<p>2004-02-22 - work-in-progress</p>
+<p>
+The following is an XHTML representation of data using the <a href="http://ideagraph.net/xmlns/ibis/w6/">w6</a> vocabulary. It's an expandable outline, so clicking on the grey squares should expand/contract it. 
+I'm working in IE, but I'll try and keep it working in Mozilla, it should fall back on being a simple outline list in Lynx etc. Not tested on Mac. Be sure and view the source. There's an <a href="xow2rdf.xsl">XSLT stylesheet</a> to generate the <a href="pretty.rdf">RDF</a> (after pretty-printing), 
+and another (<a href="xow2bookmarks.xsl">xow2bookmarks.xsl</a>) that puts the data in a format suitable for importing into Mozilla/Firefox (<a href="w6bm.html">w6bm.html</a>). 
+I'm working on making this in-place editable, so it can be used for rapid input/annotation. Lots to do...
+</p>
+<p>See also: <a href="http://66.70.191.189/cgi-bin/mt-search.cgi?IncludeBlogs=1%26search=xhtml+outlines">XHTML Outlines</a> and 
+<a href="http://66.70.191.189/cgi-bin/mt-search.cgi?IncludeBlogs=1%26search=w6">W6</a> notes on my blog, also 
+<a href="http://developers.technorati.com/wiki/xhtmloutlines">XO</a> and <a href="http://www.w3.org/2004/01/rdxh/spec">GRDDL</a>
+</p>
+<p>
+<h3>Instructions</h3>
+Hold down the [Alt] key and click on the <strong>text</strong> of an item to edit.</br>
+Click on the <strong>text</strong> of an item, then press the [w] key to change class (subject, who, what, why, when, where)<br/>
+Click on the <strong>text</strong> of an item, then [Insert] key to insert a new node<br/>
+<i>delete and arrow keys to follow...</i>
+Once done editing, click on <a href="#" onClick="newWindow(getXML())" >Get modified page</a>, which will open a new window<br/> 
+(doesn't yet display properly - need to click page reload for it to it to show in Firefox, IE refuses point-blank to display, although the source is there).<br/>
+<i>link to version with toRDF XSLT link to follow...</i>
+
+</p>
+<a href="#" onClick="newWindow(getXML())" >Get modified page</a>
+
+
+<ul id="list-1" title="Question Garland"  class="subject">
+	<li class="subject"><p>W6</p>
+    		<ul id="list-2" title="Question Garland" class="subject">
+      			<li class="what">also known as the Question Garland</li>
+      			<li class="what"><p class="subject">An easy ontology</p>
+      				<ul id="list-3" title="W6">
+						<li class="who">Who?</li>
+						<li class="what">What?</li>
+						<li class="when">When?</li>
+						<li class="where">Where?</li>
+						<li class="why">Why?</li>
+						<li class="how">How?</li>
+    				</ul>
+    			</li>
+      			<li class="why">Simplifying knowledge acquisition</li>
+      			<li class="how"><p class="subject">Using an OWL Ontology</p>
+      				<ul id="list-4" title="Using an OWL Ontology" class="subject">
+						<li class="what"><p>The Web Ontology Language</p>
+      					<ul id="list-5" title="The Web Ontology Language" class="subject">
+							<li class="what">Part of the Semantic Web</li>
+							<li class="who"><a href="http://www.w3.org/">WWW Consortium</a></li>						
+							<li class="why">Knowledge on the web</li>
+							<li class="when">2004</li>
+							<li class="where">Webwide</li>
+							<li class="how">URIs, XML, RDF, OWL etc.</li>
+    					</ul>
+    				</li>
+						<li class="why">Adding more logic to RDF</li>
+						<li class="who"><a href="http://www.w3.org/2001/sw/WebOnt/">The OWL WG</a></li>
+						<li class="when">2004</li>
+						<li class="where">Webwide</li>
+						<li class="how"><a href="http://www.w3.org/TR/owl-guide/">OWL Guide</a></li>
+    				</ul>
+				</li>
+      			<li class="when">2004</li>
+      			<li class="who"><a href="http://dannyayers.com/">Danny Ayers</a></li>
+      			<li class="where">Mozzanella</li>
+
+   		</ul>
+	</li>     
+</ul>
+
+</body>
+</html>

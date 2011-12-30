@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rev: <http://www.purl.org/stuff/rev#> .
+@prefix : <http://www.purl.org/stuff/rev#> .
+
+:Comment a rdfs:Class ;
+     	 rdfs:label "Comment" ;	
+     	 rdfs:comment "A comment on a review" ;
+     	 vs:status "testing" ;
+     	 rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .
+	
+:Feedback a rdfs:Class ;
+	rdfs:label "Feedback" ;
+     	rdfs:comment "Feedback on the review. Expresses whether the review was useful or not" ;
+     	vs:status "testing" ;
+     	rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .
+
+:title a rdf:Property;
+	rdfs:label "title" ;	
+	rdfs:comment "The title of the review" ;
+	rdfs:domain <http://www.purl.org/stuff/rev#Review> ;
+	rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+	rdfs:subClassOf dc:title ;
+     	vs:status "testing" ;
+     	rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .
+	
+:commenter a rdf:Property; 	
+	rdfs:comment "The commenter of the review" ;
+	rdfs:domain  <http://www.purl.org/stuff/rev#Comment> ;
+	rdfs:domain  <http://www.purl.org/stuff/rev#Feedback> ;
+	rdfs:range   <http://xmlns.com/foaf/0.1/Agent> ;
+     	rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .
+
+:hasComment a rdf:Property;
+	rdfs:comment "Used to associate a review with a comment on the review" ;
+	rdfs:domain <http://www.purl.org/stuff/rev#Review> ;
+	rdfs:range  <http://www.purl.org/stuff/rev#Comment> ; 
+     	rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .
+	
+:hasFeedback a rdf:Property;
+	rdfs:comment "Used to associate a review with a feedback on the review" ;
+	rdfs:domain <http://www.purl.org/stuff/rev#Review> ;
+	rdfs:range <http://www.purl.org/stuff/rev#Feedback> ;
+     	rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .
+	
+:totalVotes a rdf:Property;	
+	rdfs:comment "Number of usefulness votes (integer)" ;
+	rdfs:domain <http://www.purl.org/stuff/rev#Review> ;
+	rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+     	rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .
+	
+:positiveVotes a rdf:Property;
+	rdfs:comment "Number of positive usefulness votes (integer)" ;
+	rdfs:domain  <http://www.purl.org/stuff/rev#Review> ;
+	rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+     	rdfs:isDefinedBy <http://www.purl.org/stuff/rev#> .

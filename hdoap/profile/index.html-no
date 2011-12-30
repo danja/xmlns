@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding=""?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2003/g/data-view">
+  <meta http-equiv="Content-Type" content="" />
+  <!-- meta http-equiv="Content-Type" content="" -->
+  <title>hDOAP : An XHTML profile for DOAP</title>
+  <!-- link type="text/css" rel="stylesheet" href="An%20XHTML%20profile%20for%20RDF%20Site%20Summaries_files/base.css"
+      -->
+  <link rel="transformation"
+  href="http://www.w3.org/2003/12/rdf-in-xhtml-xslts/grddlProfileTransformation.xsl"
+  />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>hDOAP Profile : Description of a Project in XHTML</h1>
+
+<p></p>
+
+<p>hDOAP is a microformat (i.e. a dialect of XHTML) used to express
+Description of a Project (<a href="http://usefulinc.com/doap">DOAP</a>) data
+in XHTML. This document describes and defines the hDOAP profile. <a
+href="http://www.w3.org/TR/grddl/">GRDDL</a> may be used to extract
+machine-readable data from the document.</p>
+
+<p><strong>Status:</strong> <em>2005-05-29 - almost finished, some less
+common elements need adding to the stylesheets</em></p>
+
+<p><em>@@TODO add references to relevant docs</em></p>
+
+<h2>Creating hDOAP Documents</h2>
+
+<p>There are (at least) two ways of creating a hDOAP document. The first is
+to use an HTML editor and include the attributes for CSS as structured in
+this sample : <a href="../samples/redland-doap.html">redland-doap.html</a>
+(describes the Redland RDF Toolkit).</p>
+
+<p>The second is to create a standard DOAP file and run it through the XSLT
+transformation described below. The <a
+href="http://doapy.bonjourlesmouettes.org/doap-a-matic">DOAP-a-matic</a>
+provides a very easy way of creating the DOAP.</p>
+
+<h2>GRDDL</h2>
+
+<p>hDOAP is designed to be compatible with the <a
+href="http://www.w3.org/TR/grddl/">GRDDL</a> technique, a mechanism for
+<b>G</b>leaning <b>R</b>esource <b>D</b>escriptions from <b>D</b>ialects of
+<b>L</b>anguages; that is, for getting RDF data out of XML and XHTML
+documents using explicitly associated transformation algorithms.</p>
+
+<p>There are two ways of making the association. The hDOAP document may
+contain the following elements:</p>
+
+<p><code>&lt;head profile="<a
+href="http://www.w3.org/2003/g/data-view">http://www.w3.org/2003/g/data-view</a>"
+/&gt;</code></p>
+
+<p><code>&lt;link rel="transformation" href="<a
+href="http://purl.org/stuff/hdoap/hdoap2doap.xsl">http://purl.org/stuff/hdoap/hdoap2doap.xsl</a>"
+/&gt;</code></p>
+
+<p>This transformation is what is required to convert the document into
+RDF/XML. The profile here (more formally, <a
+href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/global.html#profiles">metadata
+profile</a> as specified in <a
+href="http://www.w3.org/TR/1999/REC-html401-19991224/types.html#h-6.12">section
+6.12 Link types</a> of the <a href="http://www.w3.org/TR/html4/">HTML 4.0
+specification</a>) simply states that the result of the transformation will
+be data considered equivalent to the XHTML document.</p>
+
+<p>But there is a <strong>more elegant</strong> way of making the
+association. When the hDOAP profile is used in documents it can be declared
+explicitly with the element:</p>
+
+<p><tt>&lt;head profile="<a
+href="http://purl.org/stuff/hdoap/profile">http://purl.org/stuff/hdoap/profile</a>"
+/&gt;</tt>.</p>
+
+<p>This associates the document with this profile.</p>
+
+<p>A GRDDL-capable client tool, when visiting a page which contains that
+profile reference will first visit the profile document
+(<strong>this</strong> document), apply the transformation declared here
+(using the data-view profile above). The results of that transformation will
+contain a statement identifying the transformation that should be applied to
+convert the hDOAP document into RDF/XML. The GRDDL client has everything it
+needs to get RDF/XML from the original XHTML document, while the author of
+the hDOAP document need not concern themselves with the details of the
+profile, merely including the reference to its URI is enough. Cunning, eh?</p>
+
+<h2>The Transformations in XSLT</h2>
+
+<p>To create an XHTML hDOAP document from an RDF/XML DOAP document, you can
+use the following stylesheet: <a href="../doap2html.xsl">doap2html.xsl</a></p>
+
+<p>Sample input: <a
+href="http://purl.org/stuff/hdoap/samples/redland-doap.rdf">redland-doap.rdf</a>,
+sample output: <a
+href="../samples/redland-doap.html">redland-doap.html</a></p>
+
+<h4>CSS Styling</h4>
+
+<p>A CSS stylesheet is also available: <a href="../hdoap.css">hdoap.css,</a>
+which can be applied to the hDOAP XHTML (e.g. <a
+href="../samples/redland-doap.html">redland.doap.html</a>) or used in concert
+with doap2html.xsl for client-side styling of (RDF/XML) DOAP documents (e.g.
+<a
+href="../samples/gnome-bluetooth-doap.xml">gnome-bluetooth-doap.xml</a>).</p>
+
+<h4>Try It Out:</h4>
+
+<p>Convert RDF/XML DOAP file to hDOAP:</p>
+
+<form method="get" action="http://www.w3.org/2000/06/webdata/xslt">
+  <p>XSL file: <input type="text" size="60" name="xslfile"
+  value="http://purl.org/stuff/hdoap/doap2html.xsl" /></p>
+
+  <p>DOAP data: <input type="text" size="60" name="xmlfile"
+  value="http://purl.org/stuff/hdoap/samples/redland-doap.rdf" /></p>
+  <!--
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Base: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Base"
+      value="http://www.w3.org/"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Channel: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Channel"
+      value="http://www.w3.org/2000/08/w3c-synd/home.rss"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Page: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Page"
+      value="http://www.w3.org/"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+      -->
+
+  <p>
+  <input type="submit" value="Get Results" /></p>
+</form>
+
+<p>Obtain the RDF/XML from an XHTML you can use the following stylesheet: <a
+href="http://purl.org/stuff/hdoap/hdoap2doap.xsl">hdoap2doap.xsl</a> (as
+specified for GRDDL):</p>
+
+<form method="get" action="http://www.w3.org/2000/06/webdata/xslt">
+  <p>XSL file: <input type="text" size="60" name="xslfile"
+  value="http://purl.org/stuff/hdoap/doap2html.xsl" /></p>
+
+  <p>hDOAP data: <input type="text" size="60" name="xmlfile"
+  value="http://purl.org/stuff/hdoap/samples/redland-doap.rdf" /></p>
+  <!--
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Base: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Base"
+      value="http://www.w3.org/"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Channel: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Channel"
+      value="http://www.w3.org/2000/08/w3c-synd/home.rss"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Page: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Page"
+      value="http://www.w3.org/"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+      -->
+
+  <p>
+  <input type="submit" value="Get Results" /></p>
+</form>
+
+<p>The result of GRDDLing <strong>this</strong> page:</p>
+
+<form method="get" action="http://www.w3.org/2000/06/webdata/xslt">
+  <p>XSL file: <input type="text" size="100" name="xslfile"
+  value="http://www.w3.org/2003/12/rdf-in-xhtml-xslts/grddlProfileTransformation.xsl"
+  /></p>
+
+  <p>Profile data: <input type="text" size="60" name="xmlfile"
+  value="http://purl.org/stuff/hdoap/profile" /></p>
+  <!--
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Base: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Base"
+      value="http://www.w3.org/"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Channel: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Channel"
+      value="http://www.w3.org/2000/08/w3c-synd/home.rss"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+
+      &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;Page: &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;input type="text" size="60" name="Page"
+      value="http://www.w3.org/"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/p&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+      -->
+
+  <p>
+  <input type="submit" value="Get Results" /></p>
+</form>
+
+
+<p><a href="http://dannyayers.com/">Danny Ayers</a> 2005</p>
+</body>
+</html>

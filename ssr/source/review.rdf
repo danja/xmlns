@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rev="http://www.purl.org/stuff/rev/" xmlns="http://purl.org/rss/1.0/" xmlns:r="http://backend.userland.com/rss2" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel rdf:about="http://www.example.org/reviews">
+<dc:title>A Reviews Feed</dc:title>
+<dc:description>For demonstration purposes</dc:description>
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="http://www.craphound.com/down/"/>
+</rdf:Seq>
+</items>
+</channel>
+<item rdf:about="http://www.craphound.com/down/">
+<dc:title>Down and Out in the Magic Kingdom</dc:title>
+<dc:date>2003-04-08T10:28:59</dc:date>
+<dc:description>A great SF thriller set in a future DisneyWorld.</dc:description>
+<content:encoded><![CDATA[A grea]]><![CDATA[t SF thriller set in a future Di]]><![CDATA[sneyWorld.]]></content:encoded>
+<rev:hasReview>
+<rev:Review>
+<rev:type>Book</rev:type>
+<rev:rating>9</rev:rating>
+<rev:reviewer>danja</rev:reviewer>
+<rev:text>A great SF thriller set in a future DisneyWorld.</rev:text>
+</rev:Review>
+</rev:hasReview>
+<dc:creator>Cory Doctorow</dc:creator>
+</item>
+</rdf:RDF>

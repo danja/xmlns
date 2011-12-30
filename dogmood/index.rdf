@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dogmood="http://purl.org/stuff/dogmood#">
+	<owl:Ontology rdf:about="http://purl.org/stuff/dogmood">
+		<dc:creator>Danny Ayers</dc:creator>
+		<dct:creator rdf:resource="http://danny.ayers.name/#me" />
+		<dct:description xml:lang="en">An RDF vocabulary for describing the mood of a dog (or other agent) based on the classification found in the book The Curious Incident of the Dog in the Night-Time by Mark Haddon.</dct:description>
+		<dct:title xml:lang="en">Dog Mood Vocabulary</dct:title>
+		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/The_Curious_Incident_of_the_Dog_in_the_Night-Time" />
+	</owl:Ontology>
+	<rdf:Property rdf:about="http://purl.org/stuff/dogmood#currentMood">
+		<rdfs:label>mood</rdfs:label>
+		<skos:prefLabel xml:lang="en">mood</skos:prefLabel>
+		<dc:description>associates an agent with its current state of mind or emotion</dc:description>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/dogmood" />
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+		<rdfs:range>
+			<owl:Class rdf:about="http://purl.org/stuff/dogmood#Mood">
+				<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/dogmood" />
+				<rdfs:label>Moods</rdfs:label>
+				<dc:description>a narrow enumeration of the states of mind or emotions experienced by agents, typically dogs</dc:description>
+				<skos:prefLabel xml:lang="en">Moods</skos:prefLabel>
+				<owl:oneOf>
+					<rdf:Description>
+						<rdf:first>
+							<dogmood:Mood rdf:about="http://purl.org/stuff/dogmood#Happy">
+								<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+								<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/dogmood" />
+								<rdfs:label>Happy</rdfs:label>
+								<skos:prefLabel xml:lang="en">Happy</skos:prefLabel>
+								<dc:description>a state of mind or feeling characterized by contentment, love, satisfaction, pleasure, or joy</dc:description>
+							</dogmood:Mood>
+						</rdf:first>
+						<rdf:rest>
+							<rdf:Description>
+								<rdf:first>
+									<dogmood:Mood rdf:about="http://purl.org/stuff/dogmood#Sad">
+										<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+										<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/dogmood" />
+										<rdfs:label>Sad</rdfs:label>
+										<skos:prefLabel xml:lang="en">Sad</skos:prefLabel>
+										<dc:description>an emotion characterized by feelings of disadvantage, loss, and helplessness</dc:description>
+									</dogmood:Mood>
+								</rdf:first>
+								<rdf:rest>
+									<rdf:Description>
+										<rdf:first>
+											<dogmood:Mood rdf:about="http://purl.org/stuff/dogmood#Cross">
+												<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+												<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/dogmood" />
+												<rdfs:label>Cross</rdfs:label>
+												<skos:prefLabel xml:lang="en">Sad</skos:prefLabel>
+												<dc:description>bad-tempered, angry or annoyed, a feeling that is usually oriented toward some real or supposed grievance</dc:description>
+											</dogmood:Mood>
+										</rdf:first>
+										<rdf:rest>
+											<rdf:Description>
+												<rdf:first>
+													<dogmood:Mood rdf:about="http://purl.org/stuff/dogmood#Concentrating">
+														<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+														<rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/dogmood" />
+														<rdfs:label>Concentrating</rdfs:label>
+														<skos:prefLabel xml:lang="en">Concentrating</skos:prefLabel>
+														<dc:description>having attention directed on something</dc:description>
+													</dogmood:Mood>
+												</rdf:first>
+												<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+											</rdf:Description>
+										</rdf:rest>
+									</rdf:Description>
+								</rdf:rest>
+							</rdf:Description>
+						</rdf:rest>
+					</rdf:Description>
+				</owl:oneOf>
+			</owl:Class>
+		</rdfs:range>
+	</rdf:Property>
+</rdf:RDF>

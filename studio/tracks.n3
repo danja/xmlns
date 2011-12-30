@@ -1,0 +1,741 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix : <http://purl.org/stuff/studio/> .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+   [ a :WorkInProgress;
+       :origin [ rdfs:label "Original" ];
+       :shortName "benbass" ;
+       :style "reggae";
+       :currentState "minimal";
+       :nextAction "add variation"
+   ];
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+   [ a :WorkInProgress;
+    :shortName "bitter" ;
+    dc:title "Bittersweet Symphony";
+    :origin [ rdfs:label "Cover" ];
+    :style "foot gazer";
+    :currentState "basics down";
+    :nextAction "spice, mix"
+   ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "d" ;
+      :nextAction "delete" 
+   ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "fadeaway" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "gloria" ;
+      dc:title "Gloria" ;
+      :currentState "basics down";
+      :nextAction "reuse as something else" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "gloriaok" ;
+      dc:title "Gloria" ;
+      :origin [ rdfs:label "Cover" ];
+      :style "blues rock";
+      :currentState "lots down";
+      :nextAction "redo vocals";
+      :nextAction "mix bass" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "good" ;
+      dc:title "Lucy Leave" ;
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "lucy" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "lucygood" ;
+      dc:title "Lucy Leave" ;
+      :currentState "lots down";
+      :origin [ rdfs:label "Cover" ];
+      :style "blues rock";
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "140" ;
+      :shortName "newsong" ;
+      :aka "Roadrunneresque" ;
+      :currentState "guitar and bass";
+      :origin [ rdfs:label "Original" ];
+      :style "blues rock";
+      :nextAction "blues rock";
+      :nextAction "mix bass" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "135" ;
+      :shortName "oddgloria" ;
+      dc:title "Gloria" ;
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "passenger" ;
+      dc:title "The Passenger" ;
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :currentState "basics down";
+      :nextAction "vocals?"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "practice" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "smokestack" ;
+      dc:title "Smokestack Lightning" ;
+      :currentState "basics down";
+      :origin [ rdfs:label "Cover" ];
+      :style "blues rock";
+      :nextAction "extend";
+      :nextAction "vocals" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "testing" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "walay" ;
+      :currentState "minimal";
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "12bar160" ;
+      :comment "practice" ;
+      :currentState "minimal";
+      :nextAction "none" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "92" ;
+      :shortName "baggies" ;
+      :currentState "lots down";
+      :origin [ rdfs:label "Original" ];
+      :style "dub";
+      :nextAction "extend" ;
+      :nextAction "mix" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "day-one1" ;
+      :currentState "minimal";
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "farm0" ;
+      dc:title "Farmer John" ;
+      :currentState "lots down";
+      :origin [ rdfs:label "Cover" ];
+      :style "dub";
+      :nextAction "extend" ;
+      :nextAction "mix" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "girl-what" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "girl" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "90" ;
+      :shortName "girlonmiddub" ;
+      dc:title "Girl is on my mind" ;
+      :currentState "lots down";
+      :origin [ rdfs:label "Cover" ];
+      :style "dub";
+      :nextAction "extend" ;
+      :nextAction "vocals" ;
+      :nextAction "mix" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "hangout-new" ;
+      :style "dub";
+      :currentState "minimal";
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "hangout" ;
+      dc:title "Let it all hang out" ;
+      :currentState "minimal";
+      :origin [ rdfs:label "Cover" ];
+      :currentState "minimal";
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "155" ;
+      :shortName "heyjoe" ;
+      dc:title "Hey Joe" ;
+      :currentState "minimal";
+      :origin [ rdfs:label "Cover" ];
+      :currentState "basics";
+      :nextAction "bass" ;
+      :nextAction "vocals" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "heyjoe_not" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "140" ;
+      :shortName "jangly" ;
+      :currentState "lots down";
+      :origin [ rdfs:label "Original" ];
+      :style "pop rock";
+      :nextAction "extend" ;
+      :nextAction "mix" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "lightmf" ;
+      :currentState "lots down";
+      dc:title "Light My Fire" ;
+      :origin [ rdfs:label "Cover" ];
+      :style "pop rock";
+      :nextAction "extend" ;
+      :nextAction "vocals" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "likeaboutyou" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "lola" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "lucybetter" ;
+      dc:title "Lucy Leave" ;
+      :currentState "lots down";
+      :origin [ rdfs:label "Cover" ];
+      :style "blues rock";
+      :nextAction "mix";
+      :nextAction "layer vocals" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "luftfl" ;
+      dc:title "Lust for Life" ;  
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "90" ;
+      :shortName "nameless" ;
+      dc:title "Celebrity" ;  
+      :currentState "lots down";
+      :origin [ rdfs:label "Original" ];
+      :style "pop rock";
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "new-lola" ;
+      dc:title "Lola" ;  
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "140" ;
+      :shortName "next" ; 
+      :currentState "basics down";
+      :origin [ rdfs:label "Original" ];
+      :style "detective rock";
+      :nextAction "mix" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "rumble0" ;
+      dc:title "Rumble" ;  
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "rumble1" ;
+      dc:title "Rumble" ;  
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "stairs" ;
+      dc:title "Man who sold the world" ;
+      :currentState "guitar and bass";
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :nextAction "mix";
+      :nextAction "vocals" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "101" ;
+      :shortName "trumble" ;
+      dc:title "Rumble/Smokestack Lightning" ;  
+      :origin [ rdfs:label "Cover" ];
+      :style "blues rock";
+      :nextAction "mix";
+      :nextAction "vocals" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "urene" ;
+      dc:title "Goodnight Irene" ;  
+      :origin [ rdfs:label "Cover" ];
+      :style "folk rock";
+      :currentState "lots down";
+      :nextAction "mix";
+      :nextAction "backing vocals" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "wabbit" ;
+      dc:title "White Rabbit" ;  
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :currentState "guitar only";
+      :nextAction "mix";
+      :nextAction "bass" ; 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "wibble" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "122" ;
+      :shortName "getyourdatasou" ; 
+      :currentState "done";
+      :origin [ rdfs:label "Original" ];
+      :style "rap rock"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "carolastthnig" ;
+      :nextAction "archive" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "darwin" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "darwinity" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "dubbish" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "incrowd" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "155" ;
+      :shortName "lastime" ;
+      dc:title "The Last Time" ;  
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :currentState "lots down";
+      :nextAction "mix";
+      :nextAction "backing vocal" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "155" ;
+      :shortName "lastime-souped" ;
+      dc:title "The Last Time" ;  
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :currentState "lots down";
+      :nextAction "archive"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "130" ;
+      :shortName "louie" ;
+      dc:title "The Last Time" ;  
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :currentState "lots down";
+      :nextAction "mix";
+      :nextAction "backing vocal" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "130" ;
+      :shortName "p2" ;
+      dc:title "The Passenger" ;  
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :currentState "bitts down";
+      :nextAction "archive"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "passenger_" ;
+      dc:title "The Passenger" ;
+      :origin [ rdfs:label "Cover" ];
+      :style "rock";
+      :currentState "guitar and bass";
+      :nextAction "archive"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "150" ;
+      :shortName "petergunn" ;
+      :nextAction "archive"
+  ]
+] .
+
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "101" ;
+      :shortName "rumbletainted" ;
+      :nextAction "archive"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "sisteray" ;
+      :nextAction "archive"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "taintedbroken" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+      :shortName "testdrum" ;
+      :nextAction "delete" 
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "140" ;
+      :shortName "thing" ; 
+      :currentState "basics down";
+      :origin [ rdfs:label "Original" ];
+      :style "space rock"
+  ]
+] .
+
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "140" ;
+      :shortName "thuddy" ; 
+      :currentState "ideas down";
+      :origin [ rdfs:label "Original" ];
+      :style "dark rock"
+  ]
+] .
+
+[ a :ProgressReport;
+  dc:date "2008-03-18";
+    :subject
+  [ a :WorkInProgress;
+       :bpm "120" ;
+      :shortName "uhuhuhuh" ; 
+      :currentState "lots down";
+      :origin [ rdfs:label "Original" ];
+      :style "rock"
+  ]
+] .
+
+
+
+
+
+
+
+
+
+
+  
+
+
+

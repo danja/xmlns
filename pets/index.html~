@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Pet Profiles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link 
+media="screen" href="spec-rec.css" 
+type="text/css" rel="stylesheet" />
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Pet Profiles</h1>
+<h5><b>for FOAF and RDF</b></h5>
+<p><i>Semantic Web development so far has shown an unjustifiable bias towards 
+  two-legged creatures.This experiment is an attempt aimed at redressing the balance.</i></p>
+<ul>
+<li><a href="http://semtext.org/pets/hosting.htm">How to put your pet on the Semantic 
+  Web</a></li>
+  <li><a href="http://semtext.org/pets/pet-a-matic.htm">Pet-a-matic</a></li>
+  <li> <a href="hedwig.xml">Ontology/Schema</a> (view source for the RDF/XML)</li>
+</ul>
+<h4>update : 2004-08-04</h4>
+<p>Nothing much has happened. Except a correction to the ontology/schema - non-existent 
+  owl:range now replaced by rdfs:range. Thanks <a href="http://asynchronous.org/blog/">jsled</a>.</p>
+<h4><b>update : 2004-04-28</b></h4>
+<p>I've got the XSLT+CSS version working, and also have set up a simple backend 
+  for storing the profiles. I think I'll move all the demo stuff <a href="http://semtext.org/pets">over 
+  there</a>, and just keep the background docs and schema here.</p>
+<p>Here's an example: <a href="http://semtext.org/pets/profile.xml"><b>Sambuca</b></a> 
+  (view source to see the RDF), <a href="http://semtext.org/pets/pet.xsl">XSLT</a>, <a href="http://semtext.org/pets/pet.css">CSS</a> 
+  and <a href="http://semtext.org/pets/profile.html">resulting HTML</a> </p>
+<h4><b>update : 2004-04-24</b></h4>
+<p>The ontology has been changed somewhat, which has been reflected in the Pet-a-matic. 
+</p>
+<p>I've also tried direct CSS styling of the RDF/XML profiles, and there's a sample 
+  here: <a href="2004-04-24/sambuca-css.xml">Sambuca</a></p>
+<p>This is only likely to display correctly in Mozilla-based browsers. View source 
+  to see the data. I've not updated the XSLT stylesheet to reflect the changes 
+  in the ontology, but that should provide better cross-browser support.</p>
+<p></p>
+<h3>Earlier material</h3>
+<p><b><a href="basil.xml">Basil</a></b> ( styled! - view source for the RDF/XML)</p>
+<p>schema rendering stylesheet : <a href="owl.xsl">owl.xsl</a><br>
+  CSS for the schema profiles : <a href="style.css">style.css</a></p>
+<p>XSLT for individual profiles : <a href="pet.xsl">pet.xsl</a><br>
+  CSS for the individual profiles : <a href="pet.css">pet.css</a></p>
+<p><i><b>Four legs good!</b></i></p>
+<p>2004-04-20 <a href="http://dannyayers.com">Danny Ayers</a> </p>
+<p><br>
+  <br>
+</p>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

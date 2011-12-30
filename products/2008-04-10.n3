@@ -1,0 +1,240 @@
+@prefix : <http://purl.org/stuff/products#> .
+@prefix admin: <http://webns.net/mvcb/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rev: <http://www.purl.org/stuff/rev#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> . 
+@prefix va: <http://www.purl.org/stuff/va#> .
+
+:Item a rdfs:Class, owl:Class ;
+rdfs:label "Item" ;
+rdfs:comment "physical object, instance of a particular product" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term";
+va:exampleUsage "my old strat";
+vs:term_status "testing" .
+
+:Kind a rdfs:Class, owl:Class ;
+rdfs:label "Kind" ;
+rdfs:comment "specific model or version of product, identifiable by brand/model number etc." ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term";
+va:exampleUsage "Black & White Squier Strat";
+vs:term_status "testing" .
+
+:Pattern a rdfs:Class, owl:Class ;
+rdfs:label "Pattern" ;
+rdfs:comment "type of product, design" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term";
+va:exampleUsage "Stratocaster Guitar";
+vs:term_status "testing" .
+
+:Product a rdfs:Class, owl:Class ;
+rdfs:label "Product" ;
+rdfs:comment "generic concept of the product" ;
+va:exampleUsage "Guitar";
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term";
+vs:term_status "testing" .
+
+:Brand a rdfs:Class, owl:Class ;
+rdfs:label "Brand" ;
+rdfs:comment "product brand" ;
+va:exampleUsage "Fender";
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term (commercial)";
+vs:term_status "testing" .
+
+:Manufacturer a rdfs:Class, owl:Class ;
+rdfs:label "Manufacturer" ;
+rdfs:comment "product manufacturer" ;
+va:exampleUsage "Fender";
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term (commercial)";
+vs:term_status "testing" .
+
+:Vendor a rdfs:Class, owl:Class ;
+rdfs:label "Vendor" ;
+rdfs:comment "product seller" ;
+va:exampleUsage "Thomann";
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term (commercial)";
+vs:term_status "testing" .
+
+:Outlet a rdfs:Class, owl:Class ;
+rdfs:label "Outlet" ;
+rdfs:comment "where a product may be purchased" ;
+va:exampleUsage "Thomann Online";
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term (commercial)";
+vs:term_status "testing" .
+
+:Price a rdfs:Class, owl:Class ;
+rdfs:label "Price" ;
+rdfs:comment "how much a thing costs" ;
+va:exampleUsage "...";
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term (commercial)";
+vs:term_status "testing" .
+
+:examplar a rdf:Property, owl:ObjectProperty ;
+rdfs:label "exemplar" ;
+rdfs:comment "an real-world example of" ;
+rdfs:domain :Kind;
+rdfs:range :Item;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term";
+vs:term_status "testing" .
+
+:embodiment a rdf:Property, owl:ObjectProperty ;
+rdfs:label "embodiment" ;
+rdfs:comment "a kind of" ;
+rdfs:domain :Pattern;
+rdfs:range :Kind;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term";
+vs:term_status "testing" .
+
+:realization a rdf:Property, owl:ObjectProperty ;
+rdfs:label "realization" ;
+rdfs:comment "a realization of" ;
+rdfs:domain :Product;
+rdfs:range :Pattern;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term";
+vs:term_status "testing" .
+
+:componentOf a rdf:Property, owl:ObjectProperty ;
+rdfs:label "componentOf" ;
+rdfs:comment "discrete part of" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term (meriology)";
+vs:term_status "testing" .
+
+:necessaryComponentOf a rdf:Property, owl:ObjectProperty ;
+rdfs:label "necessaryComponentOf" ;
+rdfs:comment "discrete and necessary part of something" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional core term (meriology)";
+vs:term_status "testing" .
+
+:brand a rdf:Property, owl:ObjectProperty ;
+rdfs:label "brand" ;
+rdfs:comment "brand of" ;
+rdfs:range :Brand ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "core term (commercial)";
+vs:term_status "testing" .
+
+:similar a rdf:Property, owl:ObjectProperty ;
+rdfs:label "similar" ;
+rdfs:comment "is functionally similar to, may be substituted in most circumstances without significant system degradation" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "auxiliary term";
+vs:term_status "testing" .
+
+:similarDesign a rdf:Property, owl:ObjectProperty ;
+rdfs:subPropertyOf :similar;
+rdfs:label "similarDesign" ;
+rdfs:comment "is conceptually similar to" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional auxiliary term";
+vs:term_status "testing" .
+
+:similarBuild a rdf:Property, owl:ObjectProperty ;
+rdfs:subPropertyOf :similar;
+rdfs:label "similarBuild" ;
+rdfs:comment "is similar to in physical construction" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional auxiliary term";
+vs:term_status "testing" .
+
+:similarPerformance a rdf:Property, owl:ObjectProperty ;
+rdfs:subPropertyOf :similar;
+rdfs:label "similarPerformance" ;
+rdfs:comment "is similar to in capabilities" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional auxiliary term";
+vs:term_status "testing" .
+
+:similarPrice a rdf:Property, owl:ObjectProperty ;
+rdfs:subPropertyOf :similar;
+rdfs:label "similarPrice" ;
+rdfs:comment "is similar to in financial cost" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional auxiliary term";
+vs:term_status "testing" .
+
+:similarPopularity a rdf:Property, owl:ObjectProperty ;
+rdfs:subPropertyOf :similar;
+rdfs:label "similarPopularity" ;
+rdfs:comment "is similar to in popularity" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional auxiliary term";
+vs:term_status "testing" .
+
+:manufacturer a rdf:Property, owl:ObjectProperty ;
+rdfs:label "manufacturer" ;
+rdfs:range :Manufacturer;
+rdfs:comment "who makes the thing" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional term (commercial)";
+vs:term_status "testing" .
+
+:vendor a rdf:Property, owl:ObjectProperty ;
+rdfs:label "vendor" ;
+rdfs:range :Vendor;
+rdfs:comment "who sells the thing" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional term (commercial)";
+vs:term_status "testing" .
+
+:outlet a rdf:Property, owl:ObjectProperty ;
+rdfs:label "outlet" ;
+rdfs:range :Outlet;
+rdfs:comment "where the thing can be bought" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional term (commercial)";
+vs:term_status "testing" .
+
+:price a rdf:Property, owl:ObjectProperty ;
+rdfs:label "price" ;
+rdfs:range :Price;
+rdfs:comment "cost" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional term (commercial)";
+vs:term_status "testing" .
+
+:sterling a rdf:Property, owl:DatatypeProperty ;
+rdfs:label "pounds sterling" ;
+rdfs:domain :Price;
+rdfs:comment "in pounds sterling" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional term (commercial)";
+vs:term_status "testing" .
+
+:dollars a rdf:Property, owl:DatatypeProperty ;
+rdfs:label "dollars" ;
+rdfs:domain :Price;
+rdfs:comment "in dollars" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional term (commercial)";
+vs:term_status "testing" .
+
+:euro a rdf:Property, owl:DatatypeProperty ;
+rdfs:label "euro" ;
+rdfs:domain :Price;
+rdfs:comment "in euro" ;
+rdfs:isDefinedBy <http://purl.org/stuff/products>;
+vs:moreinfo "provisional term (commercial)";
+vs:term_status "testing" .
+
+# for DL compatibility
+va:exampleUsage a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+vs:moreinfo a owl:AnnotationProperty .
+

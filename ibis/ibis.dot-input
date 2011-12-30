@@ -1,0 +1,11 @@
+digraph "ibis" {
+
+node [fontname=Arial]
+edge [fontname=Arial]
+
+"Idea" [shape=box, label="Idea", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Argument" [shape=box, label="Argument", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Idea"->"Argument" [dir=back, label=isa, color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Proposition" [shape=box, label="Proposition", color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+"Idea"->"Proposition" [dir=back, label=isa, color="0.0,0.0,0.0", fontcolor="0.0,0.0,0.0"]
+}

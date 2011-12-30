@@ -1,0 +1,3 @@
+CP=$(/home/danny/java/Jena-2.5.4/bin/make_classpath "/home/danny/java/Jena-2.5.4/")
+java -cp /home/danny/java/Jena-2.5.4/bin:$CP N3toRdfXml "$@"
+

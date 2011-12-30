@@ -1,0 +1,879 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://purl.org/stuff/studio/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <subject rdf:nodeID="A1"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <subject rdf:nodeID="A5"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <nextAction>delete</nextAction>
+    <shortName>d</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <subject rdf:nodeID="A8"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <subject rdf:nodeID="A11"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <nextAction>archive</nextAction>
+    <shortName>sisteray</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <subject rdf:nodeID="A14"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <subject rdf:nodeID="A16"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <subject rdf:nodeID="A18"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <nextAction>vocals</nextAction>
+    <nextAction>extend</nextAction>
+    <style>blues rock</style>
+    <origin rdf:nodeID="A20"/>
+    <currentState>basics down</currentState>
+    <dc:title>Smokestack Lightning</dc:title>
+    <shortName>smokestack</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <style>dark rock</style>
+    <origin rdf:nodeID="A22"/>
+    <currentState>ideas down</currentState>
+    <shortName>thuddy</shortName>
+    <bpm>140</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <subject rdf:nodeID="A24"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <subject rdf:nodeID="A26"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <subject rdf:nodeID="A28"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <style>dub</style>
+    <nextAction>vocals</nextAction>
+    <shortName>girlonmiddub</shortName>
+    <currentState>lots down</currentState>
+    <dc:title>Girl is on my mind</dc:title>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+    <origin rdf:nodeID="A30"/>
+    <bpm>90</bpm>
+    <nextAction>extend</nextAction>
+    <nextAction>mix</nextAction>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <nextAction>add variation</nextAction>
+    <currentState>minimal</currentState>
+    <style>reggae</style>
+    <shortName>benbass</shortName>
+    <origin rdf:nodeID="A32"/>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <nextAction>archive</nextAction>
+    <dc:title>Gloria</dc:title>
+    <shortName>oddgloria</shortName>
+    <bpm>135</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <subject rdf:nodeID="A35"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <nextAction>backing vocals</nextAction>
+    <nextAction>mix</nextAction>
+    <currentState>lots down</currentState>
+    <style>folk rock</style>
+    <origin rdf:nodeID="A3"/>
+    <dc:title>Goodnight Irene</dc:title>
+    <shortName>urene</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <nextAction>delete</nextAction>
+    <shortName>heyjoe_not</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <nextAction>mix</nextAction>
+    <nextAction>extend</nextAction>
+    <style>dub</style>
+    <origin rdf:nodeID="A38"/>
+    <currentState>lots down</currentState>
+    <dc:title>Farmer John</dc:title>
+    <shortName>farm0</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <nextAction>delete</nextAction>
+    <shortName>wibble</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <subject rdf:nodeID="A41"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <subject rdf:nodeID="A43"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <subject rdf:nodeID="A45"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <nextAction>delete</nextAction>
+    <dc:title>Rumble</dc:title>
+    <shortName>rumble0</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <nextAction>delete</nextAction>
+    <shortName>dubbish</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <subject rdf:nodeID="A29"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <nextAction>archive</nextAction>
+    <currentState>guitar and bass</currentState>
+    <style>rock</style>
+    <origin rdf:nodeID="A49"/>
+    <dc:title>The Passenger</dc:title>
+    <shortName>passenger_</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <nextAction>archive</nextAction>
+    <origin rdf:nodeID="A50"/>
+    <currentState>minimal</currentState>
+    <dc:title>Let it all hang out</dc:title>
+    <shortName>hangout</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <nextAction>archive</nextAction>
+    <dc:title>Lola</dc:title>
+    <shortName>new-lola</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <subject rdf:nodeID="A21"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <subject rdf:nodeID="A37"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <nextAction>archive</nextAction>
+    <shortName>rumbletainted</shortName>
+    <bpm>101</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <subject rdf:nodeID="A33"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <subject rdf:nodeID="A57"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <nextAction>archive</nextAction>
+    <dc:title>Lust for Life</dc:title>
+    <shortName>luftfl</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <nextAction>delete</nextAction>
+    <shortName>fadeaway</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <subject rdf:nodeID="A62"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <nextAction>none</nextAction>
+    <currentState>minimal</currentState>
+    <comment>practice</comment>
+    <shortName>12bar160</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <subject rdf:nodeID="A46"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <subject rdf:nodeID="A65"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <nextAction>delete</nextAction>
+    <shortName>likeaboutyou</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <subject rdf:nodeID="A70"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <subject rdf:nodeID="A12"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <subject rdf:nodeID="A58"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <style>rap rock</style>
+    <origin rdf:nodeID="A60"/>
+    <currentState>done</currentState>
+    <shortName>getyourdatasou</shortName>
+    <bpm>122</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <nextAction>mix</nextAction>
+    <style>detective rock</style>
+    <origin rdf:nodeID="A59"/>
+    <currentState>basics down</currentState>
+    <shortName>next</shortName>
+    <bpm>140</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <nextAction>archive</nextAction>
+    <dc:title>Lucy Leave</dc:title>
+    <shortName>good</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <nextAction>delete</nextAction>
+    <shortName>darwinity</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <style>space rock</style>
+    <origin rdf:nodeID="A67"/>
+    <currentState>basics down</currentState>
+    <shortName>thing</shortName>
+    <bpm>140</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <nextAction>delete</nextAction>
+    <shortName>incrowd</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <subject rdf:nodeID="A77"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <subject rdf:nodeID="A66"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <subject rdf:nodeID="A19"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <nextAction>archive</nextAction>
+    <currentState>minimal</currentState>
+    <style>dub</style>
+    <shortName>hangout-new</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <subject rdf:nodeID="A82"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <subject rdf:nodeID="A84"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <subject rdf:nodeID="A86"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <nextAction>archive</nextAction>
+    <shortName>carolastthnig</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <subject rdf:nodeID="A89"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <nextAction>vocals</nextAction>
+    <nextAction>extend</nextAction>
+    <style>pop rock</style>
+    <origin rdf:nodeID="A71"/>
+    <dc:title>Light My Fire</dc:title>
+    <currentState>lots down</currentState>
+    <shortName>lightmf</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <style>rock</style>
+    <origin rdf:nodeID="A91"/>
+    <currentState>lots down</currentState>
+    <shortName>uhuhuhuh</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <nextAction>delete</nextAction>
+    <shortName>darwin</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <nextAction>delete</nextAction>
+    <shortName>girl-what</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <nextAction>vocals</nextAction>
+    <nextAction>mix</nextAction>
+    <style>rock</style>
+    <origin rdf:nodeID="A95"/>
+    <currentState>guitar and bass</currentState>
+    <dc:title>Man who sold the world</dc:title>
+    <shortName>stairs</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <nextAction>archive</nextAction>
+    <shortName>petergunn</shortName>
+    <bpm>150</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <subject rdf:nodeID="A98"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <nextAction>vocals</nextAction>
+    <nextAction>mix</nextAction>
+    <style>blues rock</style>
+    <origin rdf:nodeID="A99"/>
+    <dc:title>Rumble/Smokestack Lightning</dc:title>
+    <shortName>trumble</shortName>
+    <bpm>101</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <nextAction>mix bass</nextAction>
+    <nextAction>blues rock</nextAction>
+    <style>blues rock</style>
+    <origin rdf:nodeID="A68"/>
+    <currentState>guitar and bass</currentState>
+    <aka>Roadrunneresque</aka>
+    <shortName>newsong</shortName>
+    <bpm>140</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <nextAction>vocals</nextAction>
+    <nextAction>bass</nextAction>
+    <currentState>basics</currentState>
+    <origin rdf:nodeID="A102"/>
+    <currentState>minimal</currentState>
+    <dc:title>Hey Joe</dc:title>
+    <shortName>heyjoe</shortName>
+    <bpm>155</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <nextAction>delete</nextAction>
+    <shortName>practice</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <nextAction>reuse as something else</nextAction>
+    <currentState>basics down</currentState>
+    <dc:title>Gloria</dc:title>
+    <shortName>gloria</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <nextAction>archive</nextAction>
+    <style>pop rock</style>
+    <origin rdf:nodeID="A106"/>
+    <currentState>lots down</currentState>
+    <dc:title>Celebrity</dc:title>
+    <shortName>nameless</shortName>
+    <bpm>90</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <nextAction>backing vocal</nextAction>
+    <nextAction>mix</nextAction>
+    <currentState>lots down</currentState>
+    <style>rock</style>
+    <origin rdf:nodeID="A80"/>
+    <dc:title>The Last Time</dc:title>
+    <shortName>louie</shortName>
+    <bpm>130</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <subject rdf:nodeID="A109"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <subject rdf:nodeID="A112"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <nextAction>mix</nextAction>
+    <nextAction>extend</nextAction>
+    <style>dub</style>
+    <origin rdf:nodeID="A113"/>
+    <currentState>lots down</currentState>
+    <shortName>baggies</shortName>
+    <bpm>92</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <subject rdf:nodeID="A74"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <subject rdf:nodeID="A87"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <nextAction>delete</nextAction>
+    <shortName>lucy</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <nextAction>delete</nextAction>
+    <shortName>lola</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <nextAction>archive</nextAction>
+    <currentState>minimal</currentState>
+    <shortName>walay</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <subject rdf:nodeID="A90"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <subject rdf:nodeID="A54"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <subject rdf:nodeID="A93"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <subject rdf:nodeID="A107"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <subject rdf:nodeID="A103"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <subject rdf:nodeID="A104"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <subject rdf:nodeID="A105"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <subject rdf:nodeID="A6"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <subject rdf:nodeID="A39"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <nextAction>backing vocal</nextAction>
+    <nextAction>mix</nextAction>
+    <currentState>lots down</currentState>
+    <style>rock</style>
+    <origin rdf:nodeID="A125"/>
+    <dc:title>The Last Time</dc:title>
+    <shortName>lastime</shortName>
+    <bpm>155</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <nextAction>delete</nextAction>
+    <shortName>taintedbroken</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <subject rdf:nodeID="A129"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <subject rdf:nodeID="A131"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <nextAction>delete</nextAction>
+    <dc:title>Rumble</dc:title>
+    <shortName>rumble1</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <subject rdf:nodeID="A133"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <subject rdf:nodeID="A36"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <nextAction>delete</nextAction>
+    <shortName>girl</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <subject rdf:nodeID="A51"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <subject rdf:nodeID="A140"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <subject rdf:nodeID="A142"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <subject rdf:nodeID="A75"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <nextAction>mix bass</nextAction>
+    <nextAction>redo vocals</nextAction>
+    <currentState>lots down</currentState>
+    <style>blues rock</style>
+    <origin rdf:nodeID="A47"/>
+    <dc:title>Gloria</dc:title>
+    <shortName>gloriaok</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <nextAction>layer vocals</nextAction>
+    <nextAction>mix</nextAction>
+    <style>blues rock</style>
+    <origin rdf:nodeID="A9"/>
+    <currentState>lots down</currentState>
+    <dc:title>Lucy Leave</dc:title>
+    <shortName>lucybetter</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <nextAction>archive</nextAction>
+    <currentState>bitts down</currentState>
+    <style>rock</style>
+    <origin rdf:nodeID="A127"/>
+    <dc:title>The Passenger</dc:title>
+    <shortName>p2</shortName>
+    <bpm>130</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <nextAction>mix</nextAction>
+    <nextAction>extend</nextAction>
+    <style>pop rock</style>
+    <origin rdf:nodeID="A126"/>
+    <currentState>lots down</currentState>
+    <shortName>jangly</shortName>
+    <bpm>140</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <subject rdf:nodeID="A31"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <subject rdf:nodeID="A92"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <nextAction>delete</nextAction>
+    <shortName>testing</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <nextAction>archive</nextAction>
+    <style>blues rock</style>
+    <origin rdf:nodeID="A2"/>
+    <currentState>lots down</currentState>
+    <dc:title>Lucy Leave</dc:title>
+    <shortName>lucygood</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <subject rdf:nodeID="A96"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <subject rdf:nodeID="A94"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <subject rdf:nodeID="A135"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <rdfs:label>Cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <rdfs:label>Original</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <subject rdf:nodeID="A151"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <subject rdf:nodeID="A101"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <nextAction>archive</nextAction>
+    <currentState>lots down</currentState>
+    <style>rock</style>
+    <origin rdf:nodeID="A138"/>
+    <dc:title>The Last Time</dc:title>
+    <shortName>lastime-souped</shortName>
+    <bpm>155</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <nextAction>bass</nextAction>
+    <nextAction>mix</nextAction>
+    <currentState>guitar only</currentState>
+    <style>rock</style>
+    <origin rdf:nodeID="A100"/>
+    <dc:title>White Rabbit</dc:title>
+    <shortName>wabbit</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <nextAction>archive</nextAction>
+    <currentState>minimal</currentState>
+    <shortName>day-one1</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <subject rdf:nodeID="A144"/>
+    <dc:date>2008-03-18</dc:date>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/ProgressReport"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <nextAction>delete</nextAction>
+    <shortName>testdrum</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <nextAction>spice, mix</nextAction>
+    <currentState>basics down</currentState>
+    <style>foot gazer</style>
+    <origin rdf:nodeID="A110"/>
+    <dc:title>Bittersweet Symphony</dc:title>
+    <shortName>bitter</shortName>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <nextAction>vocals?</nextAction>
+    <currentState>basics down</currentState>
+    <style>rock</style>
+    <origin rdf:nodeID="A136"/>
+    <dc:title>The Passenger</dc:title>
+    <shortName>passenger</shortName>
+    <bpm>120</bpm>
+    <rdf:type rdf:resource="http://purl.org/stuff/studio/WorkInProgress"/>
+  </rdf:Description>
+</rdf:RDF>

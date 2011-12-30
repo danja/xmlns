@@ -1,0 +1,94 @@
+<rdf:RDF xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:w6="http://purl.org/ibis/w6#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="">
+    <dc:title>Testing W6</dc:title>
+  </rdf:Description>
+  <w6:Idea rdf:nodeID="1">
+    <dc:title>Question Garland</dc:title>
+    <w6:subject>
+      <w6:Idea rdf:nodeID="2">
+        <dc:title>Question Garland</dc:title>
+        <w6:what rdf:parseType="Resource">
+          <dc:title>also known as the Question Garland</dc:title>
+        </w6:what>
+        <w6:what>
+          <w6:Idea rdf:nodeID="3">
+            <dc:title>W6</dc:title>
+            <w6:who rdf:parseType="Resource">
+              <dc:title>Who?</dc:title>
+            </w6:who>
+            <w6:what rdf:parseType="Resource">
+              <dc:title>What?</dc:title>
+            </w6:what>
+            <w6:when rdf:parseType="Resource">
+              <dc:title>When?</dc:title>
+            </w6:when>
+            <w6:where rdf:parseType="Resource">
+              <dc:title>Where?</dc:title>
+            </w6:where>
+            <w6:why rdf:parseType="Resource">
+              <dc:title>Why?</dc:title>
+            </w6:why>
+            <w6:how rdf:parseType="Resource">
+              <dc:title>How?</dc:title>
+            </w6:how>
+          </w6:Idea>
+        </w6:what>
+        <w6:why rdf:parseType="Resource">
+          <dc:title>Simplifying knowledge acquisition</dc:title>
+        </w6:why>
+        <w6:how>
+          <w6:Idea rdf:nodeID="4">
+            <dc:title>Using an OWL Ontology</dc:title>
+            <w6:what>
+              <w6:Idea rdf:nodeID="5">
+                <dc:title>The Web Ontology Language</dc:title>
+                <w6:what rdf:parseType="Resource">
+                  <dc:title>Part of the Semantic Web</dc:title>
+                </w6:what>
+                <w6:who rdf:resource="http://www.w3.org/">
+                  <dc:title>WWW Consortium</dc:title>
+                </w6:who>
+                <w6:why rdf:parseType="Resource">
+                  <dc:title>Knowledge on the web</dc:title>
+                </w6:why>
+                <w6:when rdf:parseType="Resource">
+                  <dc:title>2004</dc:title>
+                </w6:when>
+                <w6:where rdf:parseType="Resource">
+                  <dc:title>Webwide</dc:title>
+                </w6:where>
+                <w6:how rdf:parseType="Resource">
+                  <dc:title>URIs, XML, RDF, OWL etc.</dc:title>
+                </w6:how>
+              </w6:Idea>
+            </w6:what>
+            <w6:why rdf:parseType="Resource">
+              <dc:title>Adding more logic to RDF</dc:title>
+            </w6:why>
+            <w6:who rdf:resource="http://www.w3.org/2001/sw/WebOnt/">
+              <dc:title>The OWL WG</dc:title>
+            </w6:who>
+            <w6:when rdf:parseType="Resource">
+              <dc:title>2004</dc:title>
+            </w6:when>
+            <w6:where rdf:parseType="Resource">
+              <dc:title>Webwide</dc:title>
+            </w6:where>
+            <w6:how rdf:resource="http://www.w3.org/TR/owl-guide/">
+              <dc:title>OWL Guide</dc:title>
+            </w6:how>
+          </w6:Idea>
+        </w6:how>
+        <w6:when rdf:parseType="Resource">
+          <dc:title>2004</dc:title>
+        </w6:when>
+        <w6:who rdf:resource="http://dannyayers.com/">
+          <dc:title>Danny Ayers</dc:title>
+        </w6:who>
+        <w6:where rdf:parseType="Resource">
+          <dc:title>Mozzanella</dc:title>
+        </w6:where>
+      </w6:Idea>
+    </w6:subject>
+  </w6:Idea>
+</rdf:RDF>

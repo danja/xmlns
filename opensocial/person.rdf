@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:gd="http://schemas.google.com/g/2005"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:gml="http://www.opengis.net/gml"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://xmlns.com/foaf/0.1/"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:atom="http://www.w3.org/2005/Atom"
+         xmlns:awol="http://purl.org/stuff/Atom#"
+         xmlns:georss="http://www.georss.org/georss">
+   <Person>
+      <primaryTopicOf rdf:resource="http://sandbox.orkut.com:80/feeds/people/14358878523263729569"/>
+      <dc:modified>2007-10-28T14:01:29.948-07:00</dc:modified>
+      <name>Elizabeth Bennet</name>
+      <depiction>
+         <Image>
+            <thumbnail rdf:resource="http://img1.orkut.com/images/small/1193601584/115566312.jpg"/>
+         </Image>
+      </depiction>
+      <dc:related rdf:resource="http://orkut.com/Profile.aspx?uid=17583631990196664929"/>
+      <dc:source rdf:resource="http://sandbox.orkut.com:80/feeds/people/14358878523263729569"/>
+      <based_near>
+         <gml:Point xmlns="http://www.w3.org/2005/Atom">
+            <gml:pos>51.668674 -0.066235</gml:pos>
+         </gml:Point>
+      </based_near>
+   </Person>
+</rdf:RDF>

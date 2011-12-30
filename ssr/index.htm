@@ -1,0 +1,361 @@
+<html>
+<head>
+<title>Simple Semantic Resolution - RSS 2.0 Module</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK 
+media=screen href="../../css/spec-rec.css" 
+type=text/css rel=stylesheet>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Simple Semantic Resolution - RSS 2.0 Module</h1>
+<h2> Specification Version 1.0 (DRAFT)</h2>
+<p>This version : 7th May 2003 </p>
+<p>Latest version : <a href="http://purl.org/stuff/ssr">http://purl.org/stuff/ssr</a></p>
+<p>Danny Ayers, 2003. Comments appreciated: <a href="mailto:danny666@virgilio.it">email</a> 
+  <a href="http://dannyayers.com">blog</a></p>
+<p><i> license/copyright willl be 'primarily public domain'</i></p>
+<hr/>
+<h2>Abstract</h2>
+<p>This specification defines the Simple Semantic Resolution (SSR) Module for 
+  the <a href="http://backend.userland.com/rss">RSS 2.0</a> syndication format. 
+  The purpose of SSR is to provide a mechanism by which the semantics of an RSS 
+  2.0 document can be unambiguously resolved to an RDF model. This is done by 
+  declaring the RSS 2.0 file as being an RDF representation and provide a mapping 
+  between the RSS 2.0 syntax and the RDF model. The mapping is declared using 
+  an XSLT to give an RSS 1.0-based representation, this RDF/XML serialization 
+  providing anchorage to the RDF model. The role of the XSLT stylesheet is as 
+  part of a module's specification, processing with it will not be needed in most 
+  circumstances.</p>
+<p><i><b>Put simply</b></i><b>:</b> an element is added to the source RSS 2.0 
+  document which declares &quot;<i>this is RDF, and here is the mapping</i>&quot;. 
+  This has absolutely no effect on the interpretation of the document as RSS 2.0 
+  within the bounds of that specification, but enables the contents of RSS 2.0 
+  files to be considered first class material for the Semantic Web. </p>
+<p>This specification is intended to act as a bridge between RSS 2.0 and RSS 1.0 
+  on a technical level, it is hoped readers of this document will consider the 
+  technical aspects above any political concerns. No general criticism of either 
+  format is intended here.</p>
+<p><b>Module Developers</b> : see also <a href="modules.htm">SSR-Enabling an RSS 
+  2.0 Module</a></p>
+<h3>Contents</h3>
+<ul>
+  <li><a href="#background">1. Background</a> 
+    <ul>
+      <li><a href="#problem">1.1 The Problem</a> </li>
+      <li><a href="#solution">1.2 A Solution</a></li>
+    </ul>
+  </li>
+  <li><a href="#who">2. Who has to do What, and Why</a> 
+    <ul>
+      <li><a href="#user">2.1 End User</a></li>
+      <li><a href="#provider"> 2.2 Content Provider</a></li>
+      <li><a href="#appdeveloper">2.3 End-Use Application Developer</a></li>
+      <li><a href="#modauthor">2.4 Module Author</a></li>
+      <li><a href="#semwebdev">2.5 Semantic Web Developer</a></li>
+    </ul>
+  </li>
+  <li><a href="#example">3. Example Usage</a> 
+    <ul>
+      <li><a href="#rss2">3.1 RSS 2.0 Source</a></li>
+      <li><a href="#transformed">3.2 Transformed Source</a></li>
+      <li><a href="#rdf">3.3 RDF Model</a> 
+        <ul>
+          <li><a href="#graph">3.3.1 Graph Visualization</a></li>
+          <li><a href="#triples">3.3.2 Triples of the Data Model</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#definitions">4. Definitions</a> 
+    <ul>
+      <li><a href="#namespace">4.1 Namespace</a></li>
+      <li><a href="#element">4.2 Element</a></li>
+      <li><a href="#attribute">4.3 Attribute</a></li>
+    </ul>
+  </li>
+  <li><a href="#further">5. Further Development</a> 
+    <ul>
+      <li><a href="#modules">5.1 SSR and Modules</a></li>
+      <li><a href="#problems">5.2 Potential Problems</a></li>
+    </ul>
+  </li>
+  <li><a href="#acks">6. Acknowledgements</a></li>
+  <li>7.<a href="#changes">Changes</a></li>
+</ul>
+<h2>1 Background<a name="background"></a></h2>
+<h3>1.1 The Problem<a name="problem"></a></h3>
+<p>RSS 2.0 is an easy format to generate, and has clearly defined semantics within 
+  the core application domain of simple syndication. It also offers an extension 
+  mechanism through the use of XML namespaces. Languages defined in other namespaces 
+  may be directly inserted into an RSS 2.0 document. However, the manner in which 
+  such a language (combined with core RSS 2.0) should be interpreted by an RSS 
+  2.0 agent is not formally defined within the RSS 2.0 specification, and it falls 
+  to the author of the language/module to fully describe the interpretation. </p>
+<p>RSS 1.0 on the other hand is perceived as being difficult to generate, but 
+  has far more widely defined semantics thanks to its foundation as an Resource 
+  Description Framework (RDF) language. By using the framework, a module author 
+  is spared a great deal of effort in defining how their extension should be interpreted, 
+  as the basic data relationships are defined already in RDF.</p>
+<h3>1.2 A Solution<a name="solution"></a></h3>
+<p>It has been suggested many times that the standard RDF/XML serialization format 
+  is inelegant and cumbersome. But the RDF community is fairly united in the view 
+  that the important part of RDF is the model, not the serialization. Other representations 
+  are available - Notation 3, N-Triples and the node and arc graph visualization 
+  are all in common use.</p>
+<p>Both RSS 1.0 and RSS 2.0 describe the same basic data structures (channels, 
+  items and so on) and within the RSS domain they effectively share the same data 
+  model. That this model can be described in terms of the RDF model is evinced 
+  by RSS 1.0. The RDF model in general is very powerful, but the RSS 1.0 (RDF/XML) 
+  format is considered difficult. </p>
+<p>The solution proposed here is the obvious one : take the simple syntax of RSS 
+  2.0 and combine it with the powerful model of RDF.</p>
+<p>There are two requirements for this. The first is a way of mapping the RSS 
+  2.0 syntax to the RDF model, the second is a means of declaring in an RSS 2.0 
+  file that such a mapping is available.</p>
+<p>Of significance is the fact that for most practical purposes the mapping is 
+  only needed in one direction : RSS 2.0 to RDF. Generally speaking, generation 
+  of RSS 2.0 from an application that is aware of the RDF model should be a relatively 
+  simple operation, as the target model expressed in XML could be described as 
+  a 'semantic downcast' from an RDF representation. </p>
+<p>The mapping required can be expressed as an XSLT transform that converts RSS 
+  2.0 into RSS 1.0. The use of XSLT to convert arbitrary XML to RDF is a relatively 
+  common practice, but this specification extends the idea by demanding an explicit 
+  assertion of the mapping within the source document. This is not unlike the 
+  children's game &quot;Simon Says&quot;, where commands are ignored unless qualified 
+  by the key phrase - &quot;touch your nose&quot; (do nothing) &quot;Simon says 
+  'touch your nose'&quot; (touch your nose). This analogy provides an alternate 
+  title for the specification : <b><i>Simon Says: &quot;RDF&quot;.</i></b></p>
+<p> Processing can be applied directly to the data in an SSR-enabled feed without 
+  the application needing to use either XSLT or RDF/XML. The difference is that 
+  SSR can remove any ambiguity from the feed, so it's possible to be sure that 
+  an application behaving as intended.</p>
+<h2/>2. Who has to do What, and Why <a name="who"></a></h2>
+<p/>One of the aims of SSR is for a minimization of the effort required for the 
+  maximum benefit for everyone involved in the syndication process. 
+<h3/>2.1 End User<a name="user"></a></h3>
+<p/>The end user should notice no difference, all being well they smile more.
+<h3/> 2.2 Content Provider<a name="provider"></a> </h3>
+<p/>The feed producer has to ensure that the modules they are using are appropriately 
+  supported - that there is a reference map available somewhere. If their material 
+  is particularly complicated, they may have to provide the XSLT themselves. Apart 
+  from this it's just a matter of adding a single element to the feed. 
+<p/>If you anticipate a considerable amount of use of the richer content, then 
+  you may be advised to consider running the XSLT locally and supplying the transformed 
+  data in a separate feed.
+<h3/>2.3 End-Use Application Developer<a name="appdeveloper"></a> </h3>
+<p/>A consumer of RSS 2.0 can consume the data exactly as before, ignoring the 
+  additional element (the element is from another namespace). If the application 
+  can use RDF, then either stylesheet processing or other means can be used to 
+  extract the required information from the feed. An RSS 1.0 source can be synthesized 
+  from the RSS 2.0 feed.
+<p/>Anyone building an application from scratch can save a lot of work by supporting 
+  SSR. As the semantics contained in an SSR-enabled RSS feed are expressed in 
+  terms of the RDF model, then use of an interface with that model will allow 
+  decoupling of processing within the application. Typically this would involve 
+  using either an RDF API or making a simple custom representation of RDF artifacts 
+  (resources, properties etc.) within the application. RSS 1.0 data can be parsed 
+  into the RDF model directly. RSS 2.0 plus a set of known modules could also 
+  be treated in this fashion, though a more general solution would be XSLT pre-processing. 
+  Once the data is loaded into the RDF representation in the application, a common 
+  set of processing can then be applied to display or otherwise process the data.
+<h3/>2.4 Module Author<a name="modauthor"></a> </h3>
+<p/>A module author (RSS 1.0 or 2.0) that wishes to take advantage of SSR should 
+  provide an XSLT stylesheet with their module, identified at a permanent address. 
+  The XSLT should be suitable for converting an RSS 2.0-compatible XML representation 
+  of information expressed using their module into an RDF/XML representation. 
+  The RDF/XML will be an RDF model that matches the semantics they intend in the 
+  RSS 2.0 syntax. A detailed description of the full procedure is provided in 
+  <a href="modules.htm">SSR-Enabling an RSS 2.0 Module</a>.
+<h3/>2.5 Semantic Web Developer<a name="semwebdev"></a> </h3>
+<p/>One way of taking most advantage of SSR is to have your parser recognise the 
+  <code><b>&lt;ssr:rdf&gt;</b></code> element, and pump any RSS 2.0 containing 
+  this through an XSLT engine. Caching copies of the stylesheets you're interested 
+  in is probably a good idea. 
+<p/>However SSR simply disambiguates RSS 2.0 so that it can be interpreted using 
+  the RDF model. If SSR is used, then an inference engine could reason with the 
+  information supplied in an RSS 2.0 feed without going anywhere near XSLT or 
+  RDF/XML.
+<p/>If you are working with an RDF Schema that may be used in conjunction with 
+  the RSS 1.0 vocabulary, then you should consider making your vocabulary available 
+  for use in RSS 2.0 by following the steps described in <a href="#modauthor">2.4</a> 
+  above.
+<p/>
+<p/>
+<h2>3. Example Usage<a name="example"></a></h2>
+<h3>3.1 RSS 2.0 Source<a name="rss2"></a></h3>
+<p>This is a lot easier than the verbiage might suggest, here is an example : 
+</p>
+<p><code>&lt;?xml version=&quot;1.0&quot;?&gt;</code></p>
+<p> <code>&lt;rss version=&quot;2.0&quot;</code></p>
+<p><code>xmlns:ssr=&quot;http://purl.org/stuff/ssr&quot;</code><code>&gt;</code><code> 
+  </code></p>
+<p><b><code>&lt;ssr:rdf transform=&quot;http://w3future.com/weblog/gems/rss2rdf.xsl&quot; 
+  /&gt;</code></b><code></code></p>
+<p> <code>&lt;channel&gt;<br>
+  &lt;title&gt;A Sample Feed&lt;/title&gt;<br>
+  &lt;link&gt;http://www.example.org/&lt;/link&gt;<br>
+  &lt;description&gt;For demonstration purposes&lt;/description&gt;</code><code><br>
+  </code><code><br>
+  &lt;item&gt;<br>
+  &lt;title&gt;A Simple Item&lt;/title&gt;<br>
+  &lt;link&gt;http://www.example.org/something.html&lt;/link&gt;<br>
+  &lt;guid&gt;http://www.example.org/something.html&lt;/guid&gt;<br>
+  &lt;pubDate&gt;Tue, 08 Apr 2003 10:28:59 GMT&lt;/pubDate&gt;<br>
+  &lt;description&gt;Here is the descriptive text.&lt;/description&gt;<br>
+  &lt;/item&gt;<br>
+  <br>
+  &lt;/channel&gt;<br>
+  </code><code><br>
+  &lt;/rss&gt;</code></p>
+<p>The added line says :</p>
+<ul>
+  <li>this is RDF data</li>
+  <li>to interpret this data <b><i>you can</i></b> : 
+    <ul>
+      <li>apply the stylesheet at this address</li>
+      <li>interpret the result as RDF/XML</li>
+    </ul>
+  </li>
+</ul>
+<p>But you<i><b> don't have to</b></i> apply the stylesheet at this address. It 
+  isn't necessary for an XSLT processor to be involved in day-to-day running at 
+  all. That is entirely up to the consumer of the feed.</p>
+<p>A consumer that understands the RDF model can interpret the feed as RDF. This 
+  may or may not involve the use of XSLT.</p>
+<p>The benefit is that the existing RSS 2.0 channel can now transparently act 
+  as a conduit for semantically rich data, and be backed by the formal specifications 
+  of the RDF framework. </p>
+<p>
+<h3>3.2 Transformed Source<a name="transformed"></a></h3>
+<p>An interpreter of the source above will apply this <a href="http://w3future.com/weblog/gems/rss2rdf.xsl">XSLT 
+  transformation</a> resulting in the following :</p>
+<p><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
+  &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; 
+  <br>
+  xmlns=&quot;http://purl.org/rss/1.0/&quot; <br>
+  xmlns:r=&quot;http://backend.userland.com/rss2&quot; <br>
+  xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot; <br>
+  xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;&gt;</code></p>
+<p><code>&lt;channel rdf:about=&quot;http://www.example.org/&quot;&gt;<br>
+  &lt;dc:title&gt;A Sample Feed&lt;/dc:title&gt;<br>
+  &lt;dc:description&gt;For demonstration purposes&lt;/dc:description&gt;</code></p>
+<p><code>&lt;items&gt;<br>
+  &lt;rdf:Seq&gt;<br>
+  &lt;rdf:li rdf:resource=&quot;http://www.example.org/something.html&quot;/&gt;<br>
+  &lt;/rdf:Seq&gt;<br>
+  &lt;/items&gt;</code></p>
+<p><code>&lt;/channel&gt;<br>
+  &lt;item rdf:about=&quot;http://www.example.org/something.html&quot;&gt;<br>
+  &lt;dc:title&gt;A Simple Item&lt;/dc:title&gt;<br>
+  &lt;dc:date&gt;2003-04-08T10:28:59&lt;/dc:date&gt;<br>
+  &lt;dc:description&gt;Here is the descriptive text.&lt;/dc:description&gt;<br>
+  &lt;content:encoded&gt;&lt;![CDATA[Here is the descriptive text.]]&gt;&lt;/content:encoded&gt;<br>
+  &lt;/item&gt;<br>
+  &lt;/rdf:RDF&gt;</code></p>
+<p><a href="output.rdf">output.rdf</a></p>
+<h3>3.3 RDF Model<a name="rdf"></a></h3>
+<h4>3.3.1 Graph Visualization<a name="graph"></a></h4>
+<p>The RDF that the original RSS 2.0 represents can then be used in any RDF system, 
+  or visualized like this :</p>
+<p><img src="images/example.gif" width="763" height="186"></p>
+<p><i>[apologies, I can't get a decent scaled image at the moment - using Isaviz]</i></p>
+<p><a href="images/example.png">Larger version</a> (from <a href="http://www.w3.org/RDF/Validator/">W3C 
+  RDF Validator</a>)</p>
+<p><a href="images/example.svg">SVG Version</a></p>
+<h4><b>3.3.2 Triples of the Data Model in N-Triples Format (Sub, Pred, Obj)<a name="triples"></a></b></h4>
+<p><code>&lt;http://www.example.org/&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; 
+  &lt;http://purl.org/rss/1.0/channel&gt; .<br>
+  &lt;http://www.example.org/&gt; &lt;http://purl.org/dc/elements/1.1/title&gt; 
+  &quot;A Sample Feed&quot; .<br>
+  &lt;http://www.example.org/&gt; &lt;http://purl.org/dc/elements/1.1/description&gt; 
+  &quot;For demonstration purposes&quot; .<br>
+  _:jARP67745 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq&gt; 
+  .<br>
+  _:jARP67745 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#_1&gt; &lt;http://www.example.org/something.html&gt; 
+  .<br>
+  &lt;http://www.example.org/&gt; &lt;http://purl.org/rss/1.0/items&gt; _:jARP67745 
+  .<br>
+  &lt;http://www.example.org/something.html&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; 
+  &lt;http://purl.org/rss/1.0/item&gt; .<br>
+  &lt;http://www.example.org/something.html&gt; &lt;http://purl.org/dc/elements/1.1/title&gt; 
+  &quot;A Simple Item&quot; .<br>
+  &lt;http://www.example.org/something.html&gt; &lt;http://purl.org/dc/elements/1.1/date&gt; 
+  &quot;2003-04-08T10:28:59&quot; .<br>
+  &lt;http://www.example.org/something.html&gt; &lt;http://purl.org/dc/elements/1.1/description&gt; 
+  &quot;Here is the descriptive text.&quot; .<br>
+  &lt;http://www.example.org/something.html&gt; &lt;http://purl.org/rss/1.0/modules/content/encoded&gt; 
+  &quot;Here is the descriptive text.&quot; .</code></p>
+<p>(from <a href="http://www.w3.org/RDF/Validator/">W3C RDF Validator</a>)<br>
+</p>
+<h2>4. Definitions<a name="definitions"></a></h2>
+<h3>4.1 Namespace<a name="namespace"></a></h3>
+<p>The namespace for Simple Semantics Resolution is:</p>
+<p><b>http://purl.org/stuff/ssr</b></p>
+<p>the recommended prefix is <b>ssr</b>, so the namespace declaration will read 
+</p>
+<p> <b>xmlns:ssr=&quot;http://purl.org/stuff/ssr&quot;</b></p>
+<h3><b>4.2 Element<a name="element"></a></b></h3>
+<p>There is only one XML element in the SSR language : </p>
+<p><b><code>&lt;ssr:rdf/&gt;</code></b></p>
+<p>When this element appears as a child of the top-level <code>&lt;rss&gt;</code> 
+  element of an RSS 2.0 document, it states that the contents of this document 
+  may be interpreted as RDF.</p>
+<p>This element will usually be used in combination with the attribute described 
+  below, although alternate usage is suggested: </p>
+<p>Inclusion of this element in an RSS 2.0 document without any attributes would 
+  be hint to any application reading the data that an RDF interpretation is possible, 
+  but that the application itself should decide the mapping itself. In other words 
+  - <i>take your best shot</i>.</p>
+<h3>4.3 Attribute<a name="attribute"></a></h3>
+<p>There is only one XML attribute in the SSR language : </p>
+<p><b><code>transform=</code></b>&quot;uri-of-stylesheet&quot;</p>
+<p>This attribute is to be used in conjunction with the element above to state 
+  that the contents of this document may be interpreted as RDF using the stylesheet 
+  identified above to produce RDF/XML. So the line:</p>
+<p><code><b>&lt;ssr:rdf transform=&quot;http://w3future.com/weblog/gems/rss2rdf.xsl&quot; 
+  /&gt;</b></code></p>
+<p>states:</p>
+<p>&quot;<i>this feed, after processing by the identified XSLT will produce RDF/XML 
+  that may be interpreted as the RDF model of this feed</i>&quot;</p>
+<p>There is no duty imposed on either the producer or consumer of the feed to 
+  use the identified stylesheet or even retrieve it. </p>
+<p>However, such a stylesheet <b>must</b> be available somewhere.</p>
+<h2>5 Further Development<a name="further"></a></h2>
+<h3>5.1 SSR and Modules<a name="modules"></a></h3>
+<p>Although the use of the SSR module does offer an important benefit to core 
+  RSS 2.0 data, the real gains are to be made when it is used in combination with 
+  other modules and namespaces.</p>
+<p>It is anticipated that an RSS module author will provide a stylesheet that 
+  will convert RSS 2.0 documents including entities from their module into RSS 
+  1.0. By mapping to RDF/XML in this way, the author is spared the trouble of 
+  detailing aspects like the relationship between their elements/attributes and 
+  the RSS 2.0 elements/attributes : all this will be made specific by applying 
+  the XSLT transformation and interpreting the results in terms of the RDF model.</p>
+<p>A major bonus is that it will be possible to include existing RSS 1.0 modules 
+  and other RDF vocabularies in RSS 2.0 files <i>without any loss or corruption 
+  of their semantics</i>.</p>
+<p>Multiple module (namespace) support may be problematic, it remains to be seen. 
+  But RSS 2.0 + <i>module X</i> is a start.</p>
+<h3>5.2 Potential Problems<a name="problems"></a></h3>
+<p>The RSS 1.0 and RSS 2.0 specifications have drifted apart some distance from 
+  their common roots, so the mapping between the entities in each may not be precise. 
+  It is hoped that publication of this specification will help identify such mismatches.</p>
+<p>There are likely to be related implementation issues (like the date format) 
+  but these may largely be resolvable within the XSLT (like the date format!).</p>
+<h2>6. Acknowledgements<a name="acks"></a></h2>
+<p>The particular XSLT stylesheet referred to in this document is Sjoerd Visscher's 
+  <a href="http://w3future.com/weblog/2002/09/09.xml">RSS to RDF converter</a>. 
+  The RDF graph diagram was generated using IsaViz. Thanks to Uche Ogbuji for 
+  the inspiration. Many thanks to the folks on the RSS development mailing lists 
+  for positive and helpful feedback.</p>
+<h2>7. Changes<a name="changes"></a></h2>
+<h5>2003-05-07</h5>
+<p>Changes section added.<br>
+  Name change: Simple Semantic<s>s</s> Resolution.<br>
+  Paragraph added to 2.3.<br>
+  Paragraph added to 2.5.<br>
+  Various minor changes.</p>
+<p>&nbsp;</p>
+</body>
+</html>

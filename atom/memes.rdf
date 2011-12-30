@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://purl.org/stuff/Atom#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:atom="http://www.w3.org/2005/Atom"
+         xmlns:awol="http://purl.org/stuff/Atom#">
+   <Feed rdf:about="">
+      <title>Planet Intertwingly: Memes</title>
+      <author>
+         <Person>
+            <name>Sam Ruby</name>
+            <email rdf:resource="mailto:rubys@intertwingly.net"/>
+         </Person>
+      </author>
+      <id rdf:resource="http://planet.intertwingly.net/memes.atom"/>
+      <link>
+         <Link>
+            <rel>iana:alternate</rel>
+            <to rdf:parseType="Resource">
+               <src rdf:resource="http://planet.intertwingly.net/memes.atom"/>
+            </to>
+         </Link>
+      </link>
+      <updated>2007-09-19T10:30:17Z</updated>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/a8c800958d3bac5653c70d1ea2622856"/>
+            <title>A little REST and Relaxation - Parleys - Parleys.com - a Belgian Java User Group initiative</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://parleys.com/display/PARLEYS/A%20little%20REST%20and%20Relaxation"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-18T21:04:40Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Mike Herrick: <a href="http://feeds.feedburner.com/~r/PanicFromFuzzy/~3/158116335/roy-fielding-video.html">Roy Fielding Video</a>
+                           </li>
+                           <li>Mark Baker: <a href="http://markbaker.ca/blog/2007/09/17/a-little-rest-and-reaffirmation/">A little REST and Reaffirmation</a>
+                           </li>
+                           <li>Aristotle Pagaltzis: <a href="http://plasmasturm.org/log/470/">Enterprise software</a>
+                           </li>
+                           <li>Santiago Gala: <a href="http://memojo.com/~sgala/blog/2007/09/18/Service-hubs-and-footprints">Service hubs and footprints</a>
+                           </li>
+                           <li>Stefan Tilkov: <a href="http://innoq.com/blog/st/2007/09/17/roy_fielding_presentation_a_little_rest_and_relaxation.html">Roy Fielding Presentation: A Little REST and Relaxation</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/e61e73d5b6d0ab6e9b4e59f7d26ad1ca"/>
+            <title>ApacheCon 07</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://us.apachecon.com/us2007/program/talk/2012"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-18T21:04:40Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Mike Herrick: <a href="http://feeds.feedburner.com/~r/PanicFromFuzzy/~3/158116335/roy-fielding-video.html">Roy Fielding Video</a>
+                           </li>
+                           <li>Mark Baker: <a href="http://markbaker.ca/blog/2007/09/17/a-little-rest-and-reaffirmation/">A little REST and Reaffirmation</a>
+                           </li>
+                           <li>Stefan Tilkov: <a href="http://innoq.com/blog/st/2007/09/15/a_little_rest_and_relaxation.html">A Little REST and Relaxation</a>
+                           </li>
+                           <li>Ted Leung: <a href="http://sauria.com/blog/2007/09/14/apachecon-us-early-bird-deadline-is-sept-22/">ApacheCon US Early bird deadline is Sept 22</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/fa2ab9a3bfc3f8c377ac7248cd8add59"/>
+            <title>Index of /code/basura</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://intertwingly.net/code/basura/"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-19T07:00:04Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Uche &amp; Chimezie Ogbuji: <a href="http://copia.ogbuji.net/blog/2007-09-19/del.icio.us.links">del.icio.us bookmarks for 2007-09-18</a>
+                           </li>
+                           <li>Stephen O’Grady: <a href="http://feeds.feedburner.com/~r/tecosystems/~3/158398819/">links for 2007-09-19</a>
+                           </li>
+                           <li>Sam Ruby: <a href="http://intertwingly.net/blog/2007/09/18/Introducing-Basura">Introducing Basura</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/1d5956e7802459c5025df8c5698f0316"/>
+            <title>mitchell's blog: Mozilla's New Focus on Thunderbird and Internet Communications</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://weblogs.mozillazine.org/mitchell/archives/2007/09/mozillas_new_focus_on_thunderb.html"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-19T08:08:07Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Matt Mullenweg: <a href="http://photomatt.net/2007/09/19/thunderbird-is-back/">Thunderbird is Back</a>
+                           </li>
+                           <li>Sam Ruby: <a href="http://intertwingly.net/blog/2007/09/18/MailCo">MailCo</a>
+                           </li>
+                           <li>David Ascher: <a href="http://ascher.ca/blog/2007/09/17/joining-mozilla/">Joining Mozilla</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/c2222273e2e283effb9de0ca79f14061"/>
+            <title>Joining Mozilla</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://ascher.ca/blog/2007/09/17/joining-mozilla/"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-19T05:21:52Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Stephen O’Grady: <a href="http://feeds.feedburner.com/~r/tecosystems/~3/158398819/">links for 2007-09-19</a>
+                           </li>
+                           <li>Sam Ruby: <a href="http://intertwingly.net/blog/2007/09/18/MailCo">MailCo</a>
+                           </li>
+                           <li>David Ascher: <a href="http://ascher.ca/blog/2007/09/17/activestate-rocks-on/">ActiveState rocks on</a>
+                           </li>
+                           <li>David Ascher: <a href="http://ascher.ca/blog/2007/09/17/joining-mozilla/">Joining Mozilla</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/503a41d50f420145c1f2c2b8ed353752"/>
+            <title>The Aquarium: GlassFish v2 Launch RoundUp</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://blogs.sun.com/theaquarium/entry/glassfish_v2_launch_roundup"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-19T01:48:44Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Dave Johnson: <a href="http://rollerweblogger.org/roller/entry/switched">Switched</a>
+                           </li>
+                           <li>Tim Bray: <a href="http://tbray.org/ongoing/When/200x/2007/09/17/GlassFish-V2">GlassFish V2</a>
+                           </li>
+                           <li>Simon Phipps: <a href="http://blogs.sun.com/webmink/entry/glassfish_v2_swims_free">Glassfish v2 swims free</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/10051d10316600075ae990cf9693b8b2"/>
+            <title>Making it stick.: AMQP, XMPP</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://patricklogan.blogspot.com/2007/09/amqp-xmpp.html"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-18T05:21:38Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Stephen O’Grady: <a href="http://feeds.feedburner.com/~r/tecosystems/~3/157923270/">links for 2007-09-18</a>
+                           </li>
+                           <li>Stefan Tilkov: <a href="http://innoq.com/blog/st/2007/09/17/apache_as_a_service_hub.html">Apache as a Service Hub</a>
+                           </li>
+                           <li>Stefan Tilkov: <a href="http://innoq.com/blog/st/2007/09/17/scaling_messaging.html">Scaling Messaging</a>
+                           </li>
+                           <li>Patrick Logan: <a href="http://patricklogan.blogspot.com/2007/09/amqp-xmpp.html">AMQP, XMPP</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/7857e15ce8ea6599fa543d1027bc42ab"/>
+            <title>Sam Ruby: One More Step Forward?</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://intertwingly.net/blog/2007/09/15/One-More-Step-Forward"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-18T19:21:40Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>James Snell: <a href="http://snellspace.com/wp/?p=752">Progress is relative</a>
+                           </li>
+                           <li>Tim Bray: <a href="http://tbray.org/ongoing/When/200x/2007/09/16/Autumnal-Atom">Autumnal mod_atom</a>
+                           </li>
+                           <li>Tim Bray: <a href="http://tbray.org/ongoing/When/200x/2007/09/16/Sunday-Pedantry">The Sunday Contests</a>
+                           </li>
+                           <li>Sam Ruby: <a href="http://intertwingly.net/blog/2007/09/15/One-More-Step-Forward">One More Step Forward?</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+      <entry>
+         <Entry>
+            <id rdf:resource="tag:planet.intertwingly.net,2007:meme/f747e6103620985f4981524f806b75da"/>
+            <title>Bad, Feed Readers, Bad!</title>
+            <link>
+               <Link>
+                  <rel>iana:alternate</rel>
+                  <to rdf:parseType="Resource">
+                     <src rdf:resource="http://tbray.org/ongoing/When/200x/2007/09/14/Lousy-Aggregators"/>
+                  </to>
+               </Link>
+            </link>
+            <updated>2007-09-17T16:56:54Z</updated>
+            <content>
+               <Content>
+                  <type>xhtml</type>
+                  <body rdf:parseType="Literal">
+                     <div xmlns="http://www.w3.org/1999/xhtml">Spotted by:<ul>
+                           <li>Tim Bray: <a href="http://tbray.org/ongoing/When/200x/2007/09/14/Lousy-Aggregators">Bad, Feed Readers, Bad!</a>
+                           </li>
+                           <li>Tim Bray: <a href="http://tbray.org/ongoing/When/200x/2007/09/16/Autumnal-Atom">Autumnal mod_atom</a>
+                           </li>
+                           <li>Sam Ruby: <a href="http://intertwingly.net/blog/2007/09/15/One-More-Step-Forward">One More Step Forward?</a>
+                           </li>
+                           <li>Aristotle Pagaltzis: <a href="http://plasmasturm.org/log/469/">Filed under “safe bets”</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </body>
+               </Content>
+            </content>
+         </Entry>
+      </entry>
+   </Feed>
+</rdf:RDF>

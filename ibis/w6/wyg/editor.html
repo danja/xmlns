@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>WYSIWYG Editor</title>
+<script language="JavaScript">
+
+  //var viewMode = 1; // edit
+  var content;
+
+  function init(){
+	// Gecko
+	content = document.getElementById("editArea").contentDocument;
+	if(content == null){ 
+		// IE
+		content = editArea.document;
+	}
+	content.designMode = "On";
+  }
+
+
+  function doCommand(command){
+	doCommand(command, null);
+  }
+
+  function doCommand(command, value){
+	content.execCommand(command, false, value);
+  }
+
+  function promptForValue(promptText, command){
+    var value = prompt(promptText, '');
+    if(value != null)
+      content.execCommand(command, false, value);
+  }
+
+// Styling on mouse events
+
+  function mouseOver(ctrl){
+	ctrl.style.borderColor = '#000000';
+	ctrl.style.backgroundColor = '#B5BED6';
+	ctrl.style.cursor = 'hand';	
+  }
+  
+  function mouseOut(ctrl){
+	ctrl.style.borderColor = '#D6D3CE';  
+	ctrl.style.backgroundColor = '#D6D3CE';
+  }
+  
+  function mouseDown(ctrl){
+	ctrl.style.backgroundColor = '#8492B5';
+  }
+  
+  function mouseUp(ctrl){
+    	ctrl.style.backgroundColor = '#B5BED6';
+  }
+
+</script>
+<style>
+
+  .butClass
+  {    
+    border: 1px solid;
+    border-color: #D6D3CE;
+  }
+  
+  .tdClass
+  {
+    padding-left: 3px;
+    padding-top:3px;
+  }
+
+</style>
+
+<body onLoad="init()">
+    <table width="415px" height="30px" border="0" cellspacing="0" cellpadding="0" bgcolor="#D6D3CE">	
+    <tr>
+	<td>
+		<img alt="Image" class="butClass" src="image.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="toggleMode()">	
+	</td>	
+	<td class="tdClass" colspan="1" width="80%">
+		  <select name="selFont" onChange="doCommand('fontname', this.options[this.selectedIndex].value)">
+		    <option value="">-- Font --</option>
+		    <option value="Arial">Arial</option>
+		    <option value="Courier">Courier</option>
+		    <option value="Sans Serif">Sans Serif</option>
+		    <option value="Tahoma">Tahoma</option>
+		    <option value="Verdana">Verdana</option>
+		    <option value="Wingdings">Wingdings</option>
+		  </select>
+		  <select name="selSize" onChange="doCommand('fontsize', this.options[this.selectedIndex].value)">
+		    <option value="">-- Size --</option>
+		    <option value="1">Very Small</option>
+		    <option value="2">Small</option>
+		    <option value="3">Medium</option>
+		    <option value="4">Large</option>
+		    <option value="5">Larger</option>
+		    <option value="6">Very Large</option>
+		  </select>
+		  <select name="selHeading" onChange="doCommand('formatblock', this.options[this.selectedIndex].value)">
+		    <option value="">-- Heading --</option>
+		    <option value="Heading 1">H1</option>
+		    <option value="Heading 2">H2</option>
+		    <option value="Heading 3">H3</option>
+		    <option value="Heading 4">H4</option>
+		    <option value="Heading 5">H5</option>
+		    <option value="Heading 6">H6</option>
+		  </select>
+		</td>
+    </tr>
+    </table>
+	<table id="tblCtrls" width="415px" height="30px" border="0" cellspacing="0" cellpadding="0" bgcolor="#D6D3CE">	
+	<tr>
+		<td class="tdClass">
+			<img alt="Bold" class="butClass" src="bold.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('bold')">
+			<img alt="Italic" class="butClass" src="italic.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('italic')">
+			<img alt="Underline" class="butClass" src="underline.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('underline')">
+			
+			<img alt="Align Left" class="butClass" src="left.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('justifyleft')">
+			<img alt="Align Center" class="butClass" src="center.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('justifycenter')">
+			<img alt="Align Right" class="butClass" src="right.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('justifyright')">
+						
+			<img alt="Ordered List" class="butClass" src="ordlist.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('insertorderedlist')">
+			<img alt="Bulleted List" class="butClass" src="bullist.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('insertunorderedlist')">
+			
+			<img alt="Text Color" class="butClass" src="forecol.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="promptForValue('Foreground color : ','forecolor')">
+			<img alt="Background Color" class="butClass" src="bgcol.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="promptForValue('Background color : ','backcolor')">
+
+			<img alt="Horizontal Rule" class="butClass" src="rule.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('inserthorizontalrule')">
+			
+			<img alt="Hyperlink" class="butClass" src="link.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="doCommand('createlink')">
+			<img alt="Image" class="butClass" src="image.gif" onMouseOver="mouseOver(this)" onMouseOut="mouseOut(this)" onMouseDown="mouseDown(this)" onMouseUp="mouseUp(this)" onClick="promptForValue('Enter image location','insertimage')">
+
+			
+		</td>
+	</tr>
+	</table>
+	<iframe id="editArea" style="width: 410px; height:205px" /></iframe>
+</body>
+</html>
+

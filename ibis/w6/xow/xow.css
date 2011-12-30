@@ -1,0 +1,111 @@
+/* CSS for w6 in XHTML Outlines */
+
+/* boilerplate doc nicening */
+body {
+	background: #FFF;
+	font-family:georgia, verdana, arial, helvetica, sans-serif;
+	color:#333;
+}
+
+a		{ color: #336666; text-decoration: none; font-weight: bold; } 
+a:link		{ color: #336666; text-decoration: none; font-weight: bold;} 
+a:visited	{ color: #336666; text-decoration: none; font-weight: bold;} 
+a:active	{ color: #669999;  font-weight: bold;} 
+a:hover		{ color: #669999;  text-decoration: underline; font-weight: bold;}
+
+/* general list items */
+ul {
+	/* padding: .5m 0 0 0; */
+	padding 2em,2em,2em,2em;
+/*	margin-left: 1em; */
+	/*list-style-type: none; */
+	/* margin: 0; */
+	list-style: none outside;
+	background-color: #EEF; 
+	background-position: left;
+
+}
+
+div.outline {
+
+	background-color: #EFF; 
+}
+
+p.box {
+ border:2px solid; 
+
+  padding:0px;
+	background-color: #EFF; 
+	}
+
+li {
+	padding-left: .6em; 
+	margin-left: 1em; 
+	list-style-image: url("li.gif");
+	position: relative; 
+	margin-left: 1.5em; 
+	font-weight: normal; 
+	background-color: #EFF; 
+}
+
+
+.title {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+
+/* w6-specific classes */
+li.subject { 
+	list-style-image: url("subject.gif");
+	font-weight: bold; 
+	background-color: #EEF; 
+}
+
+li.who { 
+	list-style-image: url("who.gif");
+	font-weight: normal; 
+}
+
+li.what { 
+	list-style-image: url("what.gif");
+	font-weight: normal; 
+}
+
+li.why { 
+	list-style-image: url("why.gif");
+	font-weight: normal; 
+}
+
+li.when { 
+	list-style-image: url("when.gif");
+	font-weight: normal; 
+}
+
+li.where { 
+	list-style-image: url("where.gif");
+	font-weight: normal; 
+}
+
+li.how { 
+	list-style-image: url("how.gif");
+	font-weight: normal; 
+}
+
+p.subject { 
+	font-weight: bold; 
+ 	margin-bottom: -3px; 
+ 	/* -1em; didn't work in Moz */
+ 	margin-left: 3em; 
+}
+
+img {
+	border: 0px none; 
+}
+
+
+
+// Later???
+abbr, acronym, .help {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}

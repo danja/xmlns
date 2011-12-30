@@ -1,0 +1,539 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+
+<title>IBIS Vocabulary</title>
+    <link  media="screen" href="spec-rec.css" type="text/css" rel="stylesheet" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /></head>
+<body>
+
+<h1>IBIS Vocabulary</h1>
+<div class="head"> 
+  <p id="doctype"><em>Issue-Based Information Systems for the Semantic Web</em></p>
+  <p id="doctype"><strong>Latest draft</strong> : (<a href="#section-Changes">changes</a>)</p>
+  <p id="doctype">The material presented here is subject to change. Feedback is 
+    requested - please <a href="mailto:danny.ayers@gmail.com">email</a>. </p>
+  <hr/>
+  <p><strong><em>Note</em></strong></p>
+  <p><em>latest schema here : <a href="http://dannyayers.com/2003/12/ibis.rdfs">rdf/xml</a>, 
+    <a href="http://dannyayers.com/2003/12/ibis.n3">n3</a></em>
+<em>(2006-01-06 - minor editorial changes, bug in the schema fixed)</em>
+</p>
+<hr />
+</div>
+<div class="toc"> 
+  <h2 class="nonum">Abstract</h2>
+  <p class="nonum">Issue-Based Information Systems (IBIS) is a collaborative problem 
+    analysis and solving technique. The purpose of this document is to provide 
+    URIs/PSIs for the use of IBIS in web languages, and to provide an RDF representation 
+    of terms in an IBIS grammar which will be largely interoperable with existing 
+    non-RDF usage. This vocabulary is designed to express core IBIS concepts and 
+    features a small number of classes and properties which may be extended through 
+    the use of other standard or custom vocabularies.</p>
+  <p class="nonum"><em>This document is entirely unrelated to the IBIS signal integrity 
+    modelling language.</em></p>
+  <p class="nonum"><strike><strong>RDF Schema: <a href="ibis.rdfs">ibis.rdfs</a></strong></strike><em> (I think the link above is the one)</em></p>
+  <h2 class="nonum"><a id="contents" name="contents">Contents</a></h2>
+</div>
+<ol>
+  <li> 
+    <div class="toc"> <a href="#intro">Introduction</a></div>
+    <ol>
+      <li> 
+        <div class="toc"> <a href="#origins">Origins of IBIS</a></div>
+      </li>
+      <li><a href="#process">The IBIS Process</a></li>
+      <li><a href="#rdfrepresentation">RDF Representation</a></li>
+    </ol>
+  </li>
+  <li><a href="#namespace">Namespace</a></li>
+  <li> 
+    <div class="toc"><a href="#psis">Published Subject Indicators</a></div>
+  </li>
+  <li><a href="#classes">RDF Classes</a></li>
+  <li> 
+    <div class="toc"><a href="#"> RDF Properties</a></div>
+  </li>
+  <li> 
+    <div class="toc"><a href="#uses"> Applications</a></div>
+  </li>
+</ol>
+<div class="toc"> 
+  <h3><a id="section-Appendices-TOC"
+
+      name="section-Appendices-TOC">Appendices</a></h3>
+</div>
+<ul>
+  <li> 
+    <div class="toc">A. <a href="#schema">RDF Schema</a></div>
+  </li>
+  <li> 
+    <div class="toc"> 
+      <div class="toc">B. <a href="#appendixa">gIBIS Terms</a></div>
+    </div>
+  </li>
+  <li> 
+    <div class="toc">C. <a href="#tools">Tools</a></div>
+  </li>
+
+  <li> D. <a href="#license">License &amp; Copyright</a> </li>
+  <li>
+    E <a href="#section-Changes">Changes</a></li>
+
+</ul>
+<hr />
+<h2><a id="section-Introduction" name="section-Introduction">1 Introduction</a></h2>
+<h3>1.1 Origins of IBIS<a name="origins"></a> </h3>
+<p>In their 1970 paper <a href="#rittel">Issues as Elements of Information Systems</a>, 
+  Kunz and Rittel introduced Issue-Based Information Systems (IBIS) as a collaborative 
+  problem identification and solving tool. The concept is based on processes of 
+  argument. The system is particularly useful when at the outset a problem is 
+  either poorly defined, and/or preconceptions of the nature of the problem lead 
+  to participants in the discussion taking adversarial roles. To avoid the polarisation 
+  that is common in debates, IBIS follows a procedure involving a decomposition 
+  of the problem. The key to the system is the idea of an <em>issue</em>, which 
+  is in effect a question. As the procedure takes place, particular kinds of knowledge 
+  artifacts are generated and recorded. Although finding a good solution to any 
+  given problem is by no means guaranteed, the process can reveal answers on which 
+  a concensus can be reached, or discover aspects of the problem to which other 
+  reasoning techniques may be applied.</p> 
+<div id="purple"><a href="#origins">(01)</a></div>
+<p>The system is described in the original paper in terms of a model and algorithms, 
+  although at the time of writing the procedures were implemented largely by hand. 
+  Subsequent exploration and development lead to the implementation of <a href="#gIBIS">gIBIS</a>, 
+  a sophisticated, hypertext-based graphical tool for using the IBIS techniques 
+  by Conklin &amp; Begeman. Later this led to the development of the commercial 
+  QuestMap tool, which has since been superceded by the <a href="http://www.compendiuminstitute.org">Compendium</a> 
+  product. </p>
+<h3>1.2 The IBIS Process<a name="process"></a> </h3>
+<p>Initially, the general area in which the problem lies is identified. Within 
+  this area issues are identified through discussion, and each is recorded as 
+  a question. Possible answers to the question are identified as <em>positions</em>, 
+  which may begin as general points of view of individual participants but are 
+  crystalised into a clearly defined statements, which are noted. At this point 
+  the participants express <em>arguments</em> in favour of or against a position, 
+  and these are also recorded. The unravelling of the issues in this fashion may 
+  be enough that an answer on which all the participants agree is found - in which 
+  case everybody can go home. However, if this is not the case then the positions 
+  and arguments are re-examined, and wherever possible treated as issues themselves, 
+  and the decomposition cycle repeated.</p>
+<p>It is reasonable to expect that this process can aid debate in at least two 
+  ways. Firstly the extraction (@@ reification?) of the positions and arguments 
+  will abstract these away from the problem as perceived by the participants, 
+  allowing individuals to seem these in a neutral manner. This will allow participants 
+  to contribute their knowledge and reasoning skills to aspects of the problem 
+  that might otherwise seem opposed to their own opinions. Secondly, the decomposition 
+  part of the process cycle ensures that change is always occurring, so there 
+  is less likelihood of the discussion getting stuck in an infinite loop.</p>
+<p>IBIS in effect covers knowledge elicitation, modelling and reasoning. The use 
+  of atomic statements and relationships between these statements anticipates 
+  some of the core techniques of Semantic Web developers three decades later. 
+  Another aspect of the IBIS system that is all-too familiar in the 21st century 
+  is the kind of problems it is particularly aimed towards solving are those that 
+  have been dubbed 'wicked' (@@ ref - Conklin?). A wicked problem is one in which 
+  the nature of the problem itself may be poorly understood, and one in which 
+  the terms of reference are unclear or in dispute. Resources are likely to be 
+  expended before such a problem is solved by traditional means, whereas IBIS 
+  provides a procedure in which conflicts do not have to be resolved before progress 
+  can be made.</p>
+<h3>1.2 RDF Representation<a name="rdfrepresentation"></a></h3>
+<p>Several pieces of software (see <a href="#tools">Tools</a>) have be written 
+  to help map dialogues, record debate and trace citation paths. Most of these 
+  tools include some form of domain modelling - entities and relationships are 
+  represented and perhaps constrained in ways that reflect the networks represented. 
+  Implementations focus primarily on making a user-friendly recording system, 
+  the procedure and necessary reasoning are still carried out manually by human 
+  participants. </p>
+<p>@@TODO </p>
+<p>Main points : </p>
+<ul>
+  <li>previous tools mostly node-centric - pro-nodes, con-nodes; RDF representation 
+    more relationship-oriented</li>
+  <li>RDF language interop means only core terms needed, extensions can come from 
+    other vocabs</li>
+  <li>Serializations come free : RDF/XML for machines, N3 for humans (@@TODO need 
+    N3 example)</li>
+  <li>(triple) statements aspect useful - reasoning tools available</li>
+  <li>Semantic Web-compatible 
+    <h2 align="left">2. Namespace<a name="namespace"></a></h2>
+    <p align="left">The XML namespace for this vocabulary is <strong>http://purl.org/ibis</strong># 
+      and the recommended prefix is <strong>ibis</strong>. i.e. in RDF/XML documents the 
+      following attribute should be included in the<strong> rdf:RDF</strong> element :</p>
+    <p align="left"><strong>xmlns:ibis=&quot;http://purl.org/ibis#&quot;</strong></p>
+    <h3>&nbsp;</h3>
+    <h2>3. Published Subject Indicators<a name="psis"></a></h2>
+    <p><em>@@ could do with the advice of a TM'er on these!</em></p>
+    <table width="50%" cellpadding="5">
+      <tr> 
+        <td> 
+          <p>http://purl.org/ibis#Idea</p>
+          <p>http://purl.org/ibis#Question</p>
+          <p>http://purl.org/ibis#Argument</p>
+          <p>http://purl.org/ibis#Decision</p>
+          <p>http://purl.org/ibis#Reference</p>
+          <p>http://purl.org/ibis#Note</p>
+          <p>http://purl.org/ibis#Map</p>
+          <p>http://purl.org/ibis#refersTo</p>
+          <p>http://purl.org/ibis#pro</p>
+          <p>http://purl.org/ibis#con</p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <h2>4. RDF Classes<a name="classes"></a></h2>
+    <h3>Idea</h3>
+    <p>The top-level class in the IBIS vocabulary. </p>
+    <p>may propose a possible resolution for a question</p>
+    <h3>Question</h3>
+    <p>states a question<br/>
+    </p>
+    <h3>Argument</h3>
+    <p>states an opinion or judgment that either supports or objects to one or 
+      more Ideas. </p>
+    <p><em>used as GRL:Belief</em></p>
+    <p><em>Beliefs are used to represent design rationale. Beliefs make it possible 
+      for domain characteristics to be considered and properly reflected into 
+      the decision making process, hence facilitating later review, justification 
+      and change of the system, as well as enhancing traceability. </em></p>
+    <h3>Decision</h3>
+    <h3>Reference</h3>
+    <h3>Note</h3>
+    <h3>Map</h3>
+    <h2>5. RDF Properties<a name="properties"></a></h2>
+    <h3>pro</h3>
+    <p>subclass of refersTo</p>
+    <h3>con</h3>
+    <p>subclass of refersTo</p>
+    <h3>refersTo</h3>
+    <p>subProperty of dcterms:reference</p>
+    <p>@@ Graph examples : human version, RDF version</p>
+    <p>&nbsp;</p>
+    <h2>6. Applications<a name="uses"></a></h2>
+    <h3>RSS Syndication</h3>
+    <pre>[@@TODO example]</pre>
+    <h3>&nbsp;</h3>
+    <h3>Email Discussions</h3>
+    <p>One area that might benefit from the use of this vocabulary is the familiar 
+      email debate, such as found on mailing lists and usenet. A possible approach 
+      would be to include a tag within the body of a post that could be interpreted 
+      by recipients. For example, a discussion might start with a mail like this 
+      :</p>
+    <table width="42%" cellpadding="5">
+      <tr> 
+        <td width="26%" bgcolor="#99FFCC"><strong>From:</strong></td>
+        <td width="74%" bgcolor="#CCFFFF">joe@example.com</td>
+      </tr>
+      <tr> 
+        <td width="26%" bgcolor="#99FFCC"><strong>To:</strong></td>
+        <td width="74%" bgcolor="#CCFFFF">arg-list@listserv.org</td>
+      </tr>
+      <tr> 
+        <td width="26%" bgcolor="#99FFCC"><strong>Subject: </strong></td>
+        <td width="74%" bgcolor="#CCFFFF">Open Source Solutions</td>
+      </tr>
+      <tr> 
+        <td width="26%" valign="top" bgcolor="#99FFCC"><strong>Message Body: </strong></td>
+        <td width="74%" bgcolor="#CCFFFF"> 
+          <p>I believe open source software helps the industry as a whole...</p>
+          <p>Yours,<br/>
+            Joe. </p>
+          <p>ibis:Position</p>
+        </td>
+      </tr>
+    </table>
+    <p>A response that contradicted this might then appear :</p>
+    <table width="42%" cellpadding="5">
+      <tr> 
+        <td width="26%" bgcolor="#99FFCC"><strong>From:</strong></td>
+        <td width="74%" bgcolor="#CCFFFF">dave@example2.com</td>
+      </tr>
+      <tr> 
+        <td width="26%" bgcolor="#99FFCC"><strong>To:</strong></td>
+        <td width="74%" bgcolor="#CCFFFF">arg-list@listserv.org</td>
+      </tr>
+      <tr> 
+        <td width="26%" bgcolor="#99FFCC"><strong>Subject: </strong></td>
+        <td width="74%" bgcolor="#CCFFFF">re: Open Source Solutions</td>
+      </tr>
+      <tr> 
+        <td width="26%" valign="top" bgcolor="#99FFCC"><strong>Message Body: </strong></td>
+        <td width="74%" bgcolor="#CCFFFF"> 
+          <p>Many vendors will be put out of business if products superior to 
+            their own are available free...</p>
+          <p>Yours,<br/>
+            Dave. </p>
+          <p>ibis:con</p>
+        </td>
+      </tr>
+    </table>
+    <p>Either on receipt or after archiving, the necessary metadata can be extracted 
+      with relative ease - the discussion thread provides the link from the second 
+      post to the first, and the special text inserted provides the IBIS information.</p>
+    <p>Assuming the posts were archived as pages http://listserv.org/123456.html 
+      and http://listserv/1234569.html, we have the following RDF statements :</p>
+    <p>&nbsp;</p>
+    <p></p>
+    <h2>6. Acknowledgements<a name="acks"></a></h2>
+    <p>Jack Park</p>
+    <p>OHS</p>
+    <p>&nbsp;</p>
+    <h2>&nbsp;</h2>
+    <h2><a id="section-References"
+
+    name="section-References">References</a></h2>
+    <p>[Rittel1970]<a name="rittel"></a> <a href="http://www-iurd.ced.berkeley.edu/pub/abstract_wp131.htm">Issues 
+      as Elements of Information Systems</a>, Werner Kunz and Horst W. J. Rittel 
+      1970. </p>
+    <p>gIBIS<a name="gIBIS"></a> - A Hypertext Tool for Exploratory Policy Discussion<br/>
+      Jeff Conklin &amp; Michael Begeman, Proceedings of CSCW88, 140-152, 1998 
+    </p>
+    <h2>Appendix A : RDF Schema<a name="schema"></a></h2>
+    <p>As a separate document : <a href="ibis.rdfs">ibis.rdfs</a></p>
+    <table cellpadding="5" border="1" width="95%" summary="Schema">
+      <tr> 
+        <td valign="top"> <code>&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+          </code><code><br/>
+          &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; 
+          <br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:rdfs=&quot;http://www.w3.org/2000/01/rdf-schema#&quot;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlns:owl=&quot;http://www.w3.org/2002/07/owl#&quot; 
+          xmlns=&quot;http://purl.org/ibis#&quot;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xml:base=&quot;http://purl.org/ibis#&quot;&gt;<br/>
+          </code><code><br/>
+          &lt;owl:Ontology rdf:about=&quot;http://purl.org/ibis&quot;&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;IBIS&lt;/rdfs:label&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;IBIS Dialogue Vocabulary&lt;/rdfs:comment&gt;<br/>
+          &lt;/owl:Ontology&gt;<b/>r>
+          </code> 
+          <p><code>&lt;!-- Classes --&gt;<br/>
+            </code><code><br/>
+            &lt;rdfs:Class rdf:ID=&quot;Idea&quot;&gt;<br/>
+            </code><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;Idea&lt;/rdfs:label&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:subClassOf rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot; 
+            /&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;An idea&lt;/rdfs:comment&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt;<br/>
+            &lt;/rdfs:Class&gt;<br/>
+            </code><code><br/>
+            &lt;rdfs:Class rdf:ID=&quot;Argument&quot;&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;Argument&lt;/rdfs:label&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&lt;rdfs:subClassOf rdf:resource=&quot;#Idea&quot; 
+            /&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;An argument&lt;/rdfs:comment&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdfs:Class&gt;<br/>
+            </code><code><br/>
+            &lt;rdfs:Class rdf:ID=&quot;Question&quot;&gt;<br/>
+            &nbsp;&nbsp;&nbsp; </code><code>&lt;rdfs:label&gt;Question&lt;/rdfs:label&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:subClassOf rdf:resource=&quot;#Idea&quot; 
+            /&gt; <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:comment&gt;A question&lt;/rdfs:comment&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdfs:Class&gt;</code></p>
+          <p><code>&lt;rdfs:Class rdf:ID=&quot;Decision&quot;&gt; <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:label&gt;Decision&lt;/rdfs:label&gt; <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:subClassOf rdf:resource=&quot;#Idea&quot; 
+            /&gt; <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:comment&gt;A decision&lt;/rdfs:comment&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdfs:Class&gt;<br/>
+            </code><code><br/>
+            &lt;rdfs:Class rdf:ID=&quot;Reference&quot;&gt; <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:label&gt;Reference&lt;/rdfs:label&gt;  <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:comment&gt;A reference&lt;/rdfs:comment&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp; &lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdfs:Class&gt;<br/>
+            </code><code><br/>
+            &lt;rdfs:Class rdf:ID=&quot;Note&quot;&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;Note&lt;/rdfs:label&gt; 
+           <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;An annotation&lt;/rdfs:comment&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdfs:Class&gt;</code></p>
+          <p><code>&lt;rdfs:Class rdf:ID=&quot;Map&quot;&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;Map&lt;/rdfs:label&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:subClassOf rdf:resource=&quot;#Idea&quot; 
+            /&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;A collection of Ideas&lt;/rdfs:comment&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdfs:Class&gt;<br/>
+            </code></p>
+          <p><code>&lt;!-- Properties --&gt;<br/>
+            </code><code><br/>
+            &lt;rdf:Property rdf:ID=&quot;refersTo&quot;&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;refersTo&lt;/rdfs:label&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;Used to denote that an 
+            argument refers to a particular proposition&lt;/rdfs:comment&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot;/&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:range rdf:resource=&quot;#Argument&quot;/&gt; 
+            &lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdf:Property&gt;<br/>
+            <br/>
+            &lt;rdf:Property rdf:ID=&quot;pro&quot;&gt; &lt;rdfs:label&gt;pro&lt;/rdfs:label&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;Used to denote that an 
+            argument supports a proposition&lt;/rdfs:comment&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:subClassOf rdf:resource=&quot;#refersTo&quot; 
+            /&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot;/&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:range rdf:resource=&quot;#Argument&quot;/&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdf:Property&gt;<br/>
+            </code><code><br/>
+            &lt;rdf:Property rdf:ID=&quot;con&quot;&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:label&gt;con&lt;/rdfs:label&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:comment&gt;Used to denote that an 
+            argument counters a proposition&lt;/rdfs:comment&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:subClassOf rdf:resource=&quot;#refersTo&quot; 
+            /&gt; <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:domain rdf:resource=&quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot;/&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:range rdf:resource=&quot;#Argument&quot;/&gt; 
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;rdfs:isDefinedBy rdf:resource=&quot;http://purl.org/ibis&quot; 
+            /&gt; <br/>
+            &lt;/rdf:Property&gt;<br/>
+            </code><code><br/>
+            &lt;/rdf:RDF&gt;</code></p>
+        </td>
+      </tr>
+    </table>
+    <h2>Appendix B<a name="appendixa"></a>: Mapping to gIBIS Terms</h2>
+    <h4>Node Types</h4>
+    <table width="39%" cellpadding="5" border="1">
+      <tr> 
+        <td height="37" width="28%"> 
+          <div><strong>gIBIS</strong></div>
+        </td>
+        <td height="37" width="72%"> 
+          <div><strong>IBIS-T</strong></div>
+        </td>
+      </tr>
+      <tr> 
+        <td height="37" width="28%">issue</td>
+        <td height="37" width="72%">ibis:Idea</td>
+      </tr>
+      <tr> 
+        <td width="28%">position</td>
+        <td width="72%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="28%">argument</td>
+        <td width="72%">ibis:Argument, ibis:pro, ibis:con</td>
+      </tr>
+    </table>
+    <h4>Link Types</h4>
+    <p></p>
+    <table width="39%" cellpadding="5" border="1">
+      <tr> 
+        <td height="37" width="14%"> 
+          <div><strong>gIBIS</strong></div>
+        </td>
+        <td height="37" width="86%"> 
+          <div><strong>IBIS-T</strong></div>
+        </td>
+      </tr>
+      <tr> 
+        <td width="14%">generalises </td>
+        <td width="86%">rdf/owl?</td>
+      </tr>
+      <tr> 
+        <td width="14%">specialises </td>
+        <td width="86%">rdf/owl?</td>
+      </tr>
+      <tr> 
+        <td width="14%">replaces </td>
+        <td width="86%">rdf/owl?</td>
+      </tr>
+      <tr> 
+        <td width="14%">questions </td>
+        <td width="86%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="14%">is_suggested_by </td>
+        <td width="86%">rdf/owl?</td>
+      </tr>
+      <tr> 
+        <td width="14%">responds_to </td>
+        <td width="86%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="14%">objects_to </td>
+        <td width="86%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="14%">supports </td>
+        <td width="86%">&nbsp;</td>
+      </tr>
+    </table>
+    <h2>&nbsp;</h2>
+    <h2>Appendix C Tools<a name="tools"></a></h2>
+    <p>&nbsp;</p>
+    <h3>See Also</h3>
+    <p><a href="http://www.touchstone.com/tr/wp/IBIS.html">A Short Course in IBIS 
+      Methodology</a></p>
+    <p><a href="http://www.ehm.kun.nl/mi/project/wibis/">Web-IBIS</a></p>
+    <p><a href="http://www.weblogkitchen.com/wiki.cgi?GraphicalIbis">gIBIS entry 
+      at weblogkitchen Wiki</a> </p>
+    <p>ClaimMaker</p>
+    <p><a href="http://cognexus.org">CogNexus Institute</a> (Jeff Conklin's current 
+      IBIS consultancy) </p>
+    <p><br/>
+      <a href="http://www.compendiuminstitute.org">Compendium Institute</a> (The 
+      Compendium Institute have rewritten QuestMap from the ground up in Java, 
+      and a release is available for free download. There are also lots of papers 
+      describing serious case studies with it, and experiences in using/extending 
+      IBIS. Also a DTD for Compendium IBIS-based nodes. </p>
+    <p>// @@TODO - find a good overview of Grice &amp; conversation as used <a href="http://www.les.aston.ac.uk/lsu/diss/abest-ch3.html">here</a></p>
+    <h2>Appendix X</h2>
+    <h3>License and Copyright</h3>
+    <p>The RDFS will be placed in the public domain under a Creative Commons license, 
+      with the usual software disclaimers. </p>
+    <h2><a id="section-Changes"
+
+    name="section-Changes">Changes</a></h2>
+<p><strong>2006-01-06</strong></p>
+<p>removed <code>ibis:reference rdfs:subClassOf rdfs:seeAlso</code> etc. (Thanks <a href="http://www.xam.de">Max Volkel</a>)</p>
+
+    <p><strong>2003-12-15</strong></p>
+    <p>Added term status flags</p>
+    <p>Added properties :</p>
+    <p><code>respondsTo</code> (= refersTo)<br/>
+      <code>supports</code> (= pro)<br/>
+      <code>objectsTo</code> (= con)<br/>
+      <code>source</code> (new) the documentary source of the Argument<br/>
+      <code>label</code> (new) the visual label of the IBIS entity</p>
+    <p>See also : <a href="http://dannyayers.com/archives/002111.html">weblog 
+      entry</a></p>
+    <p><strong>2003-09-30</strong> : inserted refersTo property; added missing xml:base 
+      to schema; # to namespace; minor changes to this text</p>
+    <p><strong>2003-02-05</strong> : added license note &amp; namespace description</p>
+    <p><strong>2003-08-24</strong> : deleted a couple of dead links, remove copyright comment</p>
+    <p><strong>2002-10-22</strong> : First draft</p>
+  </li>
+</ul>
+</body>
+</html>
+

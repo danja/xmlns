@@ -1,0 +1,171 @@
+<?xml version='1.0'?>
+<xsl:stylesheet version="1.0" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+      	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      	xmlns:pet="http://purl.org/stuff/pets/"
+      	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      	xmlns:admin="http://webns.net/mvcb/"
+      	xmlns="http://www.w3.org/1999/xhtml">
+	
+  <xsl:output indent="yes" method="html"/>
+  
+<!-- ************** Top Level ************** --> 
+    <xsl:template match="rdf:RDF">
+ 	<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<title>Pet Profile</title>
+     	<link href="pet.css" rel="stylesheet" type="text/css" />
+    	</head><body>   
+    		<div id="rdf_RDF">
+      			<xsl:apply-templates/>
+		</div>
+    	</body></html>
+  </xsl:template>
+
+<!-- ************************************* -->
+  
+<!-- ************** Pet ************** --> 
+  <xsl:template match="pet:Pet">
+    <div id="pet_Pet" class="pet_Pet">
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+  
+<!-- * Name ****** -->  
+ <xsl:template match="pet:Pet/foaf:name">
+    <div id="pet_name"><xsl:value-of select="."/></div>
+  </xsl:template>
+  
+<!-- * Has ID ****** --> 
+  <xsl:template match="pet:hasID">
+    <div id="pet_hasID">ID : 
+    <xsl:value-of select="."/></div>
+  </xsl:template>
+  
+<!-- * Depiction ****** -->  
+  <xsl:template match="foaf:depiction">
+    <div id="foaf_depiction"><img src="{@rdf:resource}" /></div>
+  </xsl:template>
+
+<!-- * Species ****** --> 
+  <xsl:template match="pet:species">
+  	<xsl:variable name="Species"><xsl:value-of select="@rdf:resource" /></xsl:variable>
+	<div id="pet_species">Species : <xsl:value-of select="substring-after($Species,'/pets/')"/>
+	</div>
+	
+  </xsl:template>
+    
+<!-- * Order ****** --> 
+  <xsl:template match="pet:order">
+	<xsl:variable name="Order"><xsl:value-of select="@rdf:resource" /></xsl:variable>
+	<div id="pet_order">Order : <xsl:value-of select="substring-after($Order,'/pets/')"/></div>
+  </xsl:template>
+
+<!-- * Breed ****** --> 
+  <xsl:template match="pet:breed">
+    <div id="pet_breed">Breed : <xsl:value-of select="." /></div>
+  </xsl:template>
+
+<!-- * Gender ****** --> 
+  <xsl:template match="foaf:gender">
+    <div id="foaf_gender">Gender : <xsl:value-of select="." /></div>
+  </xsl:template>
+ 
+<!-- * Neutered ****** -->    
+  <xsl:template match="pet:neutered">
+    <div id="pet_neutered">Neutered : <xsl:value-of select="." /></div>
+  </xsl:template>
+ 
+<!-- * Primary Color ****** -->  
+  <xsl:template match="pet:primaryColor">
+    <div id="pet_primaryColor">Primary color : <xsl:value-of select="." /></div>
+  </xsl:template>
+  
+<!-- * Secondary Colors ****** -->  
+  <xsl:template match="pet:secondaryColors">
+    <div id="pet_secondaryColors">Secondary colors : <xsl:value-of select="." /></div>
+  </xsl:template>
+
+<!-- * Fur Style ****** -->    
+  <xsl:template match="pet:furStyle">
+    <div id="pet_furStyle">Fur Style : <xsl:value-of select="." /></div>
+  </xsl:template>
+  
+<!-- * Fed By ****** --> 
+  <xsl:template match="pet:fedBy/foaf:Person/foaf:name">
+    <div id="pet_fedBy">Fed by : <xsl:value-of select="."/></div>
+  </xsl:template>
+  
+<!-- * In Pack ****** --> 
+  <xsl:template match="pet:inPack[pet:Pack]">
+    <div id="pet_inPack">In Pack : <xsl:value-of select="."/></div>
+  </xsl:template>
+ 
+<!-- * Favourite Food ****** --> 
+  <xsl:template match="pet:favoriteFood">
+    <div id="pet_favoriteFood">Favourite Food : <xsl:value-of select="." /></div>
+  </xsl:template> 
+
+<!-- * Likes ****** --> 
+  <xsl:template match="pet:likes">
+    <div id="pet_likes">Likes : <xsl:value-of select="." /></div>
+  </xsl:template>
+  
+<!-- * Dislikes ****** --> 
+  <xsl:template match="pet:dislikes">
+    <div id="pet_dislikes">Dislikes : <xsl:value-of select="." /></div>
+  </xsl:template>
+  
+<!-- * Peculiarities ****** --> 
+  <xsl:template match="pet:peculiarities">
+    <div id="pet_peculiarities">Peculiarities : <xsl:value-of select="." /></div>
+  </xsl:template>
+  
+<!-- ************** PetProfileDocument ************** --> 
+  <xsl:template match="pet:PetProfileDocument">
+    <div id="pet_PetProfileDocument" class="pet_PetProfileDocument">
+    <div id="ppdLabel">Pet Profile</div>
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+  
+<!-- * Maker ****** --> 
+  <xsl:template match="foaf:maker">
+    <xsl:variable name="seeAlso"><xsl:value-of select="//rdfs:seeAlso/@rdf:resource" /></xsl:variable>
+    <div class="foaf_maker">
+    <div class="admin-label">Maker : </div>
+    <a href="{$seeAlso}">
+    <xsl:apply-templates/>
+    </a></div>
+  </xsl:template>
+  
+<!-- * Generator Agent ****** --> 
+  <xsl:template match="admin:generatorAgent">
+    <div id="admin_generatorAgent">
+    <div class="admin-label">Generator : </div>
+    <a href="{@rdf:resource}">
+      <xsl:value-of select="@rdf:resource"/>
+      </a>
+    </div>
+  </xsl:template>
+  
+<!-- * Error Reports to ****** --> 
+  <xsl:template match="admin:errorReportsTo">
+    <xsl:variable name="mail"><xsl:value-of select="@rdf:resource" /></xsl:variable>
+    <div id="admin_errorReportsTo">
+    <div class="admin-label">Admin contact : </div>
+    <a href="{@rdf:resource}">
+    <xsl:value-of select="substring-after($mail,':')"/>
+    </a>
+    </div>
+  </xsl:template>
+  
+  <xsl:template match="foaf:primaryTopic">
+      <xsl:apply-templates/>
+  </xsl:template>  
+  
+  <xsl:template match="//foaf:mbox_sha1sum" />
+        
+</xsl:stylesheet>

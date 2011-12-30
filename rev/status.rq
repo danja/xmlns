@@ -1,0 +1,16 @@
+http://xmlarmyknife.org/api/rdf/sparql/query?default-graph-uri=http://xmlns.com/foaf/0.1/index.rdf&query=PREFIX+rdf:+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX+rdfs:+<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX+vs:+<http://www.w3.org/2003/06/sw-vocab-status/ns#>
+SELECT+DISTINCT+?status+?x+?label
+WHERE+{
+{
+++?x+a+rdf:Property+.
+++?x+rdfs:label+?label+.
+++?x+vs:term_status+?status+.
+}+UNION+{
+++?x+a+rdfs:Class+.
+++?x+rdfs:label+?label+.
+++?x+vs:term_status+?status+.
+}
+}
+ORDER+BY+?status&format=html

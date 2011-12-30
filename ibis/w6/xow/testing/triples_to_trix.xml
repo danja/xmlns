@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns="http://jena.sourceforge.net/TriX/" xmlns:t="http://www.schemaweb.info/2003/types/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	
+	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+	
+	<xsl:template match="/">
+	
+		<graphset>
+
+			<graph>
+
+				<xsl:for-each select="t:statements/t:statement">
+					
+					<triple>
+						<xsl:choose>
+							<xsl:when test="t:subject/@type='uri'">
+								<uri><xsl:value-of select="t:subject" /></uri>
+							</xsl:when>
+							<xsl:otherwise>
+								<id><xsl:call-template name="GetId"><xsl:with-param name="String"><xsl:value-of select="t:subject" /></xsl:with-param></xsl:call-template></id>
+							</xsl:otherwise>
+						</xsl:choose>
+						<uri><xsl:value-of select="t:predicate" /></uri>
+						<xsl:choose>
+							<xsl:when test="t:object/@type='uri'">
+								<uri><xsl:value-of select="t:object" /></uri>
+							</xsl:when>
+							<xsl:when test="t:object/@type='anonymous' or t:object/@type='blank'">
+								<id><xsl:call-template name="GetId"><xsl:with-param name="String"><xsl:value-of select="t:object" /></xsl:with-param></xsl:call-template></id>
+							</xsl:when>
+							<xsl:when test="t:object/@data-type">
+								<typedLiteral datatype="{t:object/@data-type}">
+									<xsl:value-of select="t:object" />
+								</typedLiteral>
+							</xsl:when>
+							<xsl:otherwise>
+								<plainLiteral>
+									<xsl:if test="t:object/@lang">
+										<xsl:attribute name="xml:lang"><xsl:value-of select="t:object/@lang" /></xsl:attribute>
+									</xsl:if>
+									<xsl:value-of select="t:object" />
+								</plainLiteral>
+							</xsl:otherwise>
+						</xsl:choose>
+					</triple>
+						
+				</xsl:for-each>
+			
+			</graph>
+			
+		</graphset>
+	
+	</xsl:template>
+	
+	<xsl:template name="GetId"><xsl:param name="String"></xsl:param>_<xsl:value-of select="substring-after(substring-after($String, ':'), ':')"/></xsl:template>
+	
+</xsl:stylesheet>

@@ -1,0 +1,237 @@
+/* Standard HTML */
+
+body{
+	background: #ffffff
+}
+
+h1{
+	font-family: arial, sans-serif;
+	padding-left: 20px
+}
+
+h2, h3, h4{
+	font-family: arial, sans-serif
+}
+
+/* Non-DOAP hDOAP selectors */
+.project-details{
+	padding-left: 30px;
+	border-bottom: 3px solid #600
+}
+
+.literal-label{
+	font-family: arial, sans-serif;
+	font-style: normal;	
+	font-weight: bold
+}
+
+.literal-value{
+	font-family: courier, serif;
+	font-style: normal;	
+	font-weight: normal;
+}
+
+.resource-label{
+	font-family: arial, sans-serif;
+	font-style: normal;	
+	font-weight: bold;
+}
+
+.resource-value{
+	font-family: courier, serif;
+	font-style: italic;	
+	font-weight: normal;
+} 
+
+/* hDOAP Selectors */
+
+.Project{
+	border: 2px solid;
+    border-color: #660000;
+    /* top, right, bottom, left */
+    margin: 10px 10px 10px 10px; 
+	padding: 10px 10px 10px 10px;
+} 
+
+.Version{
+	padding-left: 10px
+}
+
+.Repository{
+}
+
+.SVNRepository{
+}
+
+.BKRepository{
+
+}
+
+.CVSRepository{
+
+}
+
+.ArchRepository{
+
+}
+
+.name{
+
+}
+
+.homepage{
+
+}
+
+.old-homepage{
+
+}
+
+.created{
+
+}
+
+.shortdesc{
+
+}
+
+.description{
+
+}
+
+.release{
+	border-left: 3px solid #600;
+	border-bottom: 3px solid #600;
+	padding-left: 10px
+}
+
+.mailing-list{
+
+}
+
+.category{
+
+}
+
+.license{
+
+}
+
+.repository{
+	border-left: 3px solid #600;
+	border-bottom: 3px solid #600;
+	padding-left: 10px
+}
+
+.anon-root{
+
+}
+
+.browse{
+
+}
+
+.module{
+
+}
+
+.location{
+
+}
+
+.download-page{
+
+}
+
+.download-mirror{
+
+}
+
+.revision{
+
+}
+
+.wiki{
+
+}
+
+.bug-database{
+
+}
+
+.screenshots{
+
+}
+
+.maintainer{
+	border-left: 3px solid #600;
+	border-bottom: 3px solid #600;
+	padding-left: 10px
+}
+
+.developer{
+
+}
+
+.documenter{
+
+}
+
+.translator{
+
+}
+
+.tester{
+
+}
+
+.helper{
+
+}
+
+.programming-language{
+
+}
+
+.os{
+
+}
+
+/* From other vocabularies */
+
+.Person{
+
+}
+
+/*
+.name{
+
+}
+*/
+
+.mbox_sha1sum{
+
+}
+
+.seeAlso{
+
+}
+
+.maker{
+	background: #fffafa;
+	border: 1px dashed;
+    border-color: #660000;
+    /* top, right, bottom, left */
+    margin: 10px 10px 10px 10px; 
+	padding: 10px 10px 10px 10px;
+}
+
+.mbox{
+
+}
+
+/*
+.Description{
+
+}
+*/

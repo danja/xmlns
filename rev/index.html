@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head
+profile="http://www.w3.org/2003/g/data-view http://purl.org/stuff/glink/ http://gmpg.org/xmdp/">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Review Vocabulary</title>
+  <link media="screen" href="../css/spec-rec.css" type="text/css"
+  rel="stylesheet" />
+  <link rel="transformation" href="http://www.w3.org/2003/g/glean-profile" />
+</head>
+
+<body>
+
+<div style="float: right">
+<a href="http://n2.talis.com"><img alt="N-Squared" title="N-Squared"
+src="../images/n2.jpg" width="42" height="42"
+style="padding: 1em; border-width:0; color: #FFF; background: transparent"
+/></a> <a href="http://www.w3.org/2001/sw/"><img alt="Semantic Web"
+title="Semantic Web"
+style="padding: 1em; border-width:0; color: #FFF; background: transparent"
+src="../images/sw-cube.png" /></a> 
+
+<p></p>
+</div>
+
+<h1 style="padding-bottom: 1em; border-bottom: solid #666">RDF Review
+Vocabulary</h1>
+<strong>Please note the vocabulary is currently under revision (2008-12-23), for the latest version please see <a href="http://www.purl.org/stuff/rev">http://www.purl.org/stuff/rev</a></strong>
+<div class="toc">
+
+<div style="float: right">
+<a href="review.rdf" style="text-align: center; text-decoration: none">RDF
+Schema <img alt="RDFS" src="../images/rdf_flyer.24.gif" width="22"
+height="24" style="border-style: none; vertical-align: middle" /> </a> </div>
+
+<h2 class="nonum"><a id="contents" name="contents">Contents</a></h2>
+<ol>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#Terms">Terms</a></li>
+  <li><a href="#hReview">hReview Profile</a></li>
+  <li><a href="#uses">Examples</a></li>
+  <li><a href="#schema">RDF Schema</a> </li>
+  <li><a href="#Contributo">Contributors &amp; Colophon</a></li>
+  <li><a href="#license">License &amp; Copyright</a></li>
+  <li><a href="#section-References">See Also</a></li>
+  <li><a href="#section-Changes">Changes</a></li>
+</ol>
+
+<p><strong>Vocabulary Status</strong> : <em>stable</em> (core) /
+<em>testing</em> (auxiliary elements) </p>
+
+<p>Schema updated; this doc and XSLT in process of revision 2007-11-12</p>
+
+<p><em>First version 2003-06-26, latest revision : 2007-11-12. Maintainers:
+<a href="http://dannyayers.com">Danny Ayers</a></em>, <em><em><a
+href="http://kmi.open.ac.uk/people/tom/html">Tom Heath</a></em></em></p>
+</div>
+<hr />
+
+<h2><a id="section-Introduction" name="section-Introduction">1
+Introduction</a></h2>
+
+<p>This document provides a vocabulary specification for the purpose of
+creating sharable reviews and ratings of blogs, CDs, books, software,
+anything identifiable. It includes the definition of an RDF vocabulary as
+well as a GRDDL-enabled HTML meta data profile for the <a
+href="http://microformats.org/wiki/hreview">hReview</a> microformat.</p>
+
+<p>This specification aims to define the minimum terms needed to provide a
+review/rating capability, generally leaving the rest of the resource
+description to existing, more domain-appropriate vocabularies. The core terms
+are stable with several deployments (e.g. see <a
+href="http://revyu.com">Revyu</a>), certain new terms are provisionally
+included while testing in deployment (see <a
+href="http://www.iterating.com/">ITerating</a>). </p>
+
+<p>The vocabulary is suitable for use in any RDF-compatible language : FOAF,
+DOAP, RSS etc. It is also compatible with the hReview microformat, The
+vocabulary's OWL species is <em>Ninja</em>.</p>
+
+<h3>Namespaces</h3>
+
+<p>To use with microformats, see <a href="#hReview">hReview Profile</a></p>
+
+<p class="c1">The XML namespace for this vocabulary is
+<strong><code>http://www.purl.org/stuff/rev#</code></strong> </p>
+
+<p class="c1">i.e. in RDF/XML documents the following attribute should be
+included in the <strong>rdf:RDF</strong> element :</p>
+
+<p
+class="c1"><strong><code>xmlns:rev="http://www.purl.org/stuff/rev#"</code></strong></p>
+
+<p>Reviews written using the <em>RDF Review Vocabulary</em> will typically
+also use terms from the Dublin Core and FOAF namespaces :</p>
+
+<p><code><strong>xmlns:dc="http://purl.org/dc/elements/1.1/"</strong><br />
+</code><code><br />
+<strong>xmlns:foaf="http://xmlns.com/foaf/0.1/"</strong></code></p>
+
+<h2>2. <a name="Terms" id="Terms">Terms</a></h2>
+
+<h2>Classes</h2>
+<dl>
+  <dt class="class"><a href="http://www.purl.org/stuff/rev#Review">Review</a>
+  </dt>
+    <dd>A review of a work </dd>
+    <dd><a href="http://www.purl.org/stuff/rev#hasComment">hasComment</a>
+      =&gt; <a href="http://www.purl.org/stuff/rev#Comment">Comment</a> </dd>
+    <dd><a href="http://www.purl.org/stuff/rev#hasFeedback">hasFeedback</a>
+      =&gt; <a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a>
+    </dd>
+    <dd><a
+      href="http://www.purl.org/stuff/rev#positiveVotes">positiveVotes</a>
+      =&gt; rdfs:<a
+      href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a> </dd>
+    <dd><a href="http://www.purl.org/stuff/rev#reviewer">reviewer</a> =&gt;
+      foaf:<a href="http://xmlns.com/foaf/0.1/Person">Person</a> </dd>
+    <dd><a href="http://www.purl.org/stuff/rev#title">title</a> =&gt; rdfs:<a
+      href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a> </dd>
+    <dd><a href="http://www.purl.org/stuff/rev#totalVotes">totalVotes</a>
+      =&gt; rdfs:<a
+      href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a> </dd>
+    <dd><a
+      href="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">vs:term_status</a>
+      : stable</dd>
+</dl>
+<dl>
+  <dt class="class"><a
+  href="http://www.purl.org/stuff/rev#Feedback">Feedback</a> </dt>
+    <dd>Feedback on the review. Expresses whether the review was useful or
+      not </dd>
+    <dd><a href="http://www.purl.org/stuff/rev#commenter">commenter</a> =&gt;
+      foaf:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a> 
+      <p></p>
+    </dd>
+  <dt class="class"><a
+  href="http://www.purl.org/stuff/rev#Comment">Comment</a> </dt>
+    <dd>A comment on a review </dd>
+    <dd>rev:<a href="http://www.purl.org/stuff/rev#commenter">commenter</a>
+      =&gt; foaf:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a> </dd>
+</dl>
+
+<h2>Properties</h2>
+<dl>
+  <dt class="property"><a href="http://www.purl.org/stuff/rev#text">text</a>
+  </dt>
+    <dd>The text of the review 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#hasReview">hasReview</a> </dt>
+    <dd>Used to associate a work with a a review </dd>
+    <dd>domain: rdfs:<a
+      href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> </dd>
+    <dd>range: <a href="http://www.purl.org/stuff/rev#Review">Review</a> 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#rating">rating</a> </dt>
+    <dd>A numeric value expressing the reviewer's value judgement on the
+    work</dd>
+    <dd><p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#maxRating">maxRating</a></dt>
+    <dd>The maximum value of the rating scale used for this review 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#minRating">minRating</a> </dt>
+    <dd>The minimum value of the rating scale used for this review 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#reviewer">reviewer</a> </dt>
+    <dd>The person that has written the review </dd>
+    <dd>domain: <a href="http://www.purl.org/stuff/rev#Review">Review</a>
+    </dd>
+    <dd>range: foaf:<a href="http://xmlns.com/foaf/0.1/Person">Person</a> 
+      <p></p>
+    </dd>
+  <dt class="property"><a href="http://www.purl.org/stuff/rev#type">type</a>
+  </dt>
+    <dd>The type of media of a work under review 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#commenter">commenter</a> </dt>
+    <dd>The commenter on the review </dd>
+    <dd>domain: rev:<a
+      href="http://www.purl.org/stuff/rev#Comment">Comment</a>, rev:<a
+      href="http://www.purl.org/stuff/rev#Feedback">Feedback</a> </dd>
+    <dd>range: foaf:<a href="http://xmlns.com/foaf/0.1/Agent">Agent</a> 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#hasComment">hasComment</a> </dt>
+    <dd>Used to associate a review with a comment on the review </dd>
+    <dd>domain: <a href="http://www.purl.org/stuff/rev#Review">Review</a>
+    </dd>
+    <dd>range: <a href="http://www.purl.org/stuff/rev#Comment">Comment</a> 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#hasFeedback">hasFeedback</a> </dt>
+    <dd>Associates a review with a feedback on the review </dd>
+    <dd>domain: <a href="http://www.purl.org/stuff/rev#Review">Review</a>
+    </dd>
+    <dd>range: <a href="http://www.purl.org/stuff/rev#Feedback">Feedback</a> 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#positiveVotes">positiveVotes</a> </dt>
+    <dd>Number of positive usefulness votes (integer) </dd>
+    <dd>domain: <a href="http://www.purl.org/stuff/rev#Review">Review</a>
+    </dd>
+    <dd>range: rdfs:<a
+      href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a> 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#title">title</a> </dt>
+    <dd>The title of the review </dd>
+    <dd>domain: <a href="http://www.purl.org/stuff/rev#Review">Review</a>
+    </dd>
+    <dd>range: rdfs:<a
+      href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a> 
+      <p></p>
+    </dd>
+  <dt class="property"><a
+  href="http://www.purl.org/stuff/rev#totalVotes">totalVotes</a> </dt>
+    <dd>Number of usefulness votes (integer) </dd>
+    <dd>domain: <a href="http://www.purl.org/stuff/rev#Review">Review</a>
+    </dd>
+    <dd>range: rdfs:<a
+      href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a> </dd>
+</dl>
+
+<h2><a name="hReview" id="hReview">3. hReview Profile</a></h2>
+
+<p>This is a <em>provisional</em> <a href="http://gmpg.org/xmdp/">XMDP</a>
+profile for the <a
+href="http://www.microformats.org/wiki/hreview">hReview</a> specification.</p>
+
+<p>Use of this profile licenses RDF data extracted using <a
+rel="profileTransformation"
+href="http://danja.talis.com/xmlns/rev_2007-11-09/hreview2rdfxml.xsl">hreview2rdfxml.xsl</a>.
+</p>
+
+<p>To apply this profile to a document (and GRDD-enable them), add the
+following profile attribute to its head element:</p>
+
+<p><code>&lt;head
+<strong>profile="http://www.purl.org/stuff/rev#"</strong><code>&gt;</code></code></p>
+
+<p>Note multiple profiles can be used, space-separated, e.g.</p>
+
+<p><code>&lt;head profile="http://www.purl.org/stuff/rev#
+http://www.w3.org/2006/03/hcard http://purl.org/stuff/glink/"&gt;</code></p>
+
+<p><a
+href="http://danja.talis.com/xmlns/rev_2007-11-09/hreview-sample.html">Sample
+hReview</a>, <a
+href="http://triplr.org/turtle/danja.talis.com/xmlns/rev_2007-11-09/hreview-sample.html">GRDDL
+output</a> (Turtle view)</p>
+
+<h3>Terms</h3>
+<dl class="profile">
+  <dt>class</dt>
+    <dd><p><a rel="help"
+      href="http://www.w3.org/TR/html401/struct/global.html#adef-class">HTML4
+      definition of the 'class' attribute.</a> This meta data profile defines
+      some 'class' attribute values (class names) and their meanings as
+      suggested by a <a
+      href="http://www.w3.org/TR/WD-htmllink-970328#profile">draft of
+      "Hypertext Links in HTML"</a>. All values are defined according to the
+      semantics defined in the <a
+      href="http://microformats.org/wiki/hreview">hReview
+      specification</a>.</p>
+      <dl>
+        <dt id="hreview">hreview</dt>
+          <dd>hReview container</dd>
+        <dt id="version">version</dt>
+          <dd>Version of hReview, semantics as in RFC2426 section "3.6.9
+            VERSION Type Definition"</dd>
+        <dt id="summary">summary</dt>
+          <dd>a title for the review</dd>
+        <dt id="item">item</dt>
+          <dd>item info : name and URI(s) of the item <em>(fn || url || photo
+            ) | hCard (for person or business) | hCalendar (for
+          event)</em></dd>
+        <dt id="type">type</dt>
+          <dd>the type of the item being reviewed <em>product | business |
+            event | person | place | website | url</em></dd>
+        <dt id="reviewer">reviewer</dt>
+          <dd>the person who authored the review</dd>
+        <dt id="dtreviewed">dtreviewed</dt>
+          <dd>date time of when the review was written (ISO8601)</dd>
+        <dt id="rating">rating</dt>
+          <dd>decimal number from 1.0 to 5.0 inclusive indicating a rating
+            for the item, higher indicating a better rating</dd>
+        <dt id="description">description</dt>
+          <dd>the full text representing the written opinion of the
+          reviewer</dd>
+        <dt id="tags">tags</dt>
+          <dd>a list of keywords or phrases that the reviewer associates with
+            the item</dd>
+        <dt id="permalink">permalink</dt>
+          <dd>url of the review</dd>
+        <dt id="license">license</dt>
+          <dd>links to the license under which the contents of the hReview is
+            licensed, using the rel-license microformat</dd>
+      </dl>
+    </dd>
+</dl>
+
+<h2>4. Examples</h2>
+
+<p>For live current usage examples see <a href="http://revyu.com">Revyu</a>
+and <a href="http://iterating.com">ITerating</a></p>
+
+<p><a
+href="http://danja.talis.com/xmlns/rev_2007-11-09/hreview-sample.html">Sample
+hReview</a>, <a
+href="http://triplr.org/turtle/danja.talis.com/xmlns/rev_2007-11-09/hreview-sample.html">GRDDL
+output</a> (Turtle view)</p>
+
+<h3>4.1 Album Review</h3>
+Snippet of a profile generated by FOAF-o-matic <br />
+(<code>mm</code> is the MusicBrainz namespace
+(<code>http://musicbrainz.org/mm/mm-2.1#</code>),
+<code>rdf:nodeID="A0"</code> points to a <code>foaf:Person</code> elsewhere
+in the file) 
+<pre>   <code>  &lt;mm:Album rdf:about="http://mm.musicbrainz.org/album/37b9a29b-2d39-441b-9ac6-81770916e5b5"&gt;
+  
+      &lt;dc:title&gt;Aftermath&lt;/dc:title&gt;
+  
+      &lt;review:hasReview&gt;
+          &lt;review:Review&gt;
+              &lt;review:rating&gt;8&lt;/review:rating&gt;
+              &lt;review:reviewer rdf:nodeID="A0"/&gt;
+              &lt;dc:description&gt;Classic.&lt;/dc:description&gt;
+          &lt;/review:Review&gt;
+      &lt;/review:hasReview&gt;
+  
+      &lt;dc:creator&gt;
+          &lt;mm:Artist rdf:about="http://mm.musicbrainz.org/artist/b071f9fa-14b0-4217-8e97-eb41da73f598"/&gt;
+      &lt;/dc:creator&gt;
+  
+  &lt;/mm:Album&gt;
+  
+  &lt;mm:Artist rdf:about="http://mm.musicbrainz.org/artist/b071f9fa-14b0-4217-8e97-eb41da73f598"&gt;
+      &lt;dc:title&gt;The Rolling Stones&lt;/dc:title&gt;
+  &lt;/mm:Artist&gt;</code></pre>
+
+<h3>4.2 Review Embedded in RSS Feed</h3>
+<pre>   <code>&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:dc="http://purl.org/dc/elements/1.1/"
+                     xmlns="http://www.purl.org/stuff/rev#"
+                     xmlns="http://purl.org/rss/1.0/"&gt;
+
+  &lt;item rdf:about="http://mm.musicbrainz.org/album/bb4d834e-c21a-4288-bbee-d9b86c6c3f8b"&gt;
+
+      &lt;dc:title&gt;Every Day&lt;/dc:title&gt;
+      &lt;description&gt;&lt;/description&gt;
+      &lt;dc:creator&gt;
+          &lt;mm:Artist rdf:about="http://mm.musicbrainz.org/artist/7c158ea8-c0aa-410e-bdc1-20bba9759577"&gt;
+              &lt;dc:title&gt;The Cinematic Orchestra&lt;/dc:title&gt;
+          &lt;/mm:Artist&gt;
+      &lt;/dc:creator&gt;
+
+     &lt;review:hasReview&gt;
+          &lt;review:Review&gt;
+              &lt;review:rating&gt;9&lt;/review:rating&gt;
+              &lt;dc:description&gt;Blinding&lt;/dc:description&gt;
+              &lt;review:reviewer&gt;
+                  &lt;foaf:Person&gt;
+                      &lt;foaf:name&gt;Leigh Dodds&lt;/foaf:name&gt;
+                  &lt;/foaf:Person&gt;
+          &lt;/review:Review&gt;
+      &lt;/review:hasReview&gt;
+
+  &lt;/item&gt;
+
+  &lt;/rdf:RDF&gt;</code></pre>
+
+<h2>5. RDF Schema<a id="schema" name="schema"></a></h2>
+
+<p>The following is the vocabulary expressed in Turtle, for informative
+purposes. The normative schema (which contains additional OWL compatibility
+statements) is available as a separate document : <a
+href="review.rdf">review.rdf</a></p>
+<pre><code>@prefix : &lt;http://www.purl.org/stuff/rev#&gt; .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix vs: &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt; . 
+
+# core (stable) terms
+   
+    :Review     a rdfs:Class;
+         rdfs:comment "A review of an artistic work";
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "Review";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+    :hasReview     a rdf:Property;
+         rdfs:comment "Used to associate a work of art with a a review";
+         rdfs:domain rdfs:Resource;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "hasReview";
+         rdfs:range &lt;http://www.purl.org/stuff/rev#Review&gt;;
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+    :rating     a rdf:Property;
+         rdfs:comment "A numeric value";
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "rating";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+    
+    :reviewer     a rdf:Property;
+         rdfs:comment "The person that has written the review";
+         rdfs:domain &lt;http://www.purl.org/stuff/rev#Review&gt;;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "reviewer";
+         rdfs:range foaf:Person;
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+    
+    :text     a rdf:Property;
+         rdfs:comment "The text of the review";
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "text";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+    :type     a rdf:Property;
+         rdfs:comment "The type of media of a work under review";
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "type";
+         vs:moreinfo "core term";
+         vs:term_status "stable" .
+
+# Auxiliary (testing) terms
+
+    :Comment     a rdfs:Class;
+         rdfs:comment "A comment on a review";
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "Comment";
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :Feedback     a rdfs:Class;
+         rdfs:comment "Feedback on the review. Expresses whether the review was useful or not";
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "Feedback";
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :commenter     a rdf:Property;
+         rdfs:comment "The commenter on the review";
+         rdfs:domain &lt;http://www.purl.org/stuff/rev#Comment&gt;,
+                &lt;http://www.purl.org/stuff/rev#Feedback&gt;;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "commenter";
+         rdfs:range foaf:Agent;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :hasComment     a rdf:Property;
+         rdfs:comment "Used to associate a review with a comment on the review";
+         rdfs:domain &lt;http://www.purl.org/stuff/rev#Review&gt;;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "hasComment";
+         rdfs:range &lt;http://www.purl.org/stuff/rev#Comment&gt;;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :hasFeedback     a rdf:Property;
+         rdfs:comment "Associates a review with a feedback on the review";
+         rdfs:domain &lt;http://www.purl.org/stuff/rev#Review&gt;;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "hasFeedback";
+         rdfs:range &lt;http://www.purl.org/stuff/rev#Feedback&gt;;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :positiveVotes     a rdf:Property;
+         rdfs:comment "Number of positive usefulness votes (integer)";
+         rdfs:domain &lt;http://www.purl.org/stuff/rev#Review&gt;;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "positiveVotes";
+         rdfs:range rdfs:Literal;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+        
+    :title     a rdf:Property;
+         rdfs:comment "The title of the review";
+         rdfs:domain &lt;http://www.purl.org/stuff/rev#Review&gt;;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "title";
+         rdfs:range rdfs:Literal;
+         rdfs:subPropertyOf dc:title;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+    
+    :totalVotes     a rdf:Property;
+         rdfs:comment "Number of usefulness votes (integer)";
+         rdfs:domain &lt;http://www.purl.org/stuff/rev#Review&gt;;
+         rdfs:isDefinedBy &lt;http://www.purl.org/stuff/rev&gt;;
+         rdfs:label "totalVotes";
+         rdfs:range rdfs:Literal;
+         vs:moreinfo "proposed by iterating.com";
+         vs:term_status "testing" .
+ 
+# the full RDF/XML schema also contain OWL compatibility statements.
+
+# // @@TODO resync with RDF/XML, minRating/maxRating aren't here</code></pre>
+
+<h2><a name="Contributo" id="Contributo">6. Contributors</a> &amp;
+Colophon</h2>
+
+<p>Contributions to, and feedback on these documents have been provided by:
+Leigh Dodds, Victor Lindsay, Alf Eaton, Tom Heath, <a
+href="http://bnode.org/blog">Benjamin Nowack</a>, Morten Frederikson, <a
+href="http://iterating.com">Nicolas Vandenberghe</a></p>
+
+<p>Tools used in the creation of these documents include: Amaya,
+schemadoc.py, nxml-mode, Pellet</p>
+
+<h2>7. License and Copyright</h2>
+
+<div style="float: right; clear: left">
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img
+alt="Creative Commons License" style="border-width:0" src="../images/cc.png"
+/></a></div>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons 3.0
+Attribution</a> : you are free to copy, adapt, distribute and transmit this
+document and associated schemas. The required attribution is a link back to
+this document (or the schema), ideally following <a
+href="http://en.wikipedia.org/wiki/Linked_Data">linked data</a> principles.
+</p>
+
+<h2><a id="section-References" name="section-References">8. See Also</a></h2>
+
+<h3>Docs</h3>
+<ul>
+  <li><a href="http://www.w3.org/2001/sw/">W3C Semantic Web Activity</a></li>
+  <li><a href="http://www.foaf-project.org/">FOAF Project</a></li>
+  <li><a href="http://microformats.org">Microformats</a></li>
+  <li><a href="http://www.w3.org/TR/grddl-primer/">GRDDL Primer</a></li>
+  <li><a href="http://www.w3.org/TR/swbp-vocab-pub/">Best Practice Recipes
+    for Publishing RDF Vocabularies</a></li>
+  <li><a href="http://www.pmbrowser.info/wiki.pl?RVW">Review (RVW) Module for
+    RSS 2.0</a> (Alf Eaton)</li>
+  <li><a href="../ssr/modules.htm">SSR-Enabling an RSS 2.0 Module</a> (uses
+    this vocabulary)</li>
+</ul>
+
+<h3>Deployments</h3>
+<ul>
+  <li><a href="http://trust.mindswap.org">Film Trust</a></li>
+  <li>Leigh stuff?</li>
+  <li><a href="http://iterating.com">ITerating</a></li>
+  <li><a href="http://revyu.com">Revyu</a></li>
+</ul>
+
+<h2><a id="section-Changes" name="section-Changes">9. Changes</a></h2>
+
+<p>2007-10/2007-11 :</p>
+<ul>
+  <li>added iterating.com terms</li>
+  <li>added minRating/maxRating from revyu.com</li>
+  <li>added DL-compatibility statements</li>
+  <li>added GRDDL profile </li>
+  <li>applied CC licence</li>
+  <li>lots of editorial on this doc</li>
+  <li>changed references to "artistic work" to "art"</li>
+</ul>
+
+<p>2006 :</p>
+<ul>
+  <li>tidied up RDFS (with Tom Heath)</li>
+</ul>
+
+<p>2005-05-10 :</p>
+<ul>
+  <li>shifted to different server, dud dns (report - Morten)</li>
+  <li>changed ns/base in RDFS (linked &amp; in text) &amp; RSS example to
+    http://www.purl.org/stuff/rev#</li>
+  <li>changed examples to use dc:description rather than review:text</li>
+  <li>various minor editorial changes (report - Benjamin Nowack)</li>
+</ul>
+
+<p><em>First Draft 26th September 2003</em></p>
+
+<p>---------------------------------------------------------------------------------</p>
+
+<p class="nonum"><em><del>[@@TODO add a bit of OWL and vocabulary status
+markers]</del></em></p>
+
+<p class="nonum"><em>[@@TODO update XSLT in <a
+href="http://ideagraph.net/xmlns/ssr/">SSR example</a> to use this and <a
+href="http://www.pmbrowser.info/wiki.pl?RVW">RVW</a>]</em></p>
+
+<p><em>[@@TODO put review:type values in] ??? what did I mean???</em></p>
+
+<p><em>[@@TODO make dc:description in RSS feed describe the media - e.g. 'CD
+single'?] ???check what I meant???</em></p>
+
+<p><a href="http://dannyayers.com">Danny Ayers</a></p>
+<!-- #EndEditable -->
+<!-- #EndTemplate -->
+</body>
+</html>
