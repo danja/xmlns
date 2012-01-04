@@ -14,196 +14,196 @@
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <meta.ttl> .
 <meta.ttl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<meta.ttl> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<meta.ttl> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <glink/temp.rdf> .
 <glink/temp.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<glink/temp.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<glink/temp.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <dogmood/index.ttl> .
 <dogmood/index.ttl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<dogmood/index.ttl> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<dogmood/index.ttl> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <dogmood/index.rdf> .
 <dogmood/index.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<dogmood/index.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<dogmood/index.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <opensocial/person.rdf> .
 <opensocial/person.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<opensocial/person.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<opensocial/person.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <products/2008-04-10.rdf> .
 <products/2008-04-10.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<products/2008-04-10.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<products/2008-04-10.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <products/2008-04-10.n3> .
 <products/2008-04-10.n3>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<products/2008-04-10.n3> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<products/2008-04-10.n3> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <products/products.n3> .
 <products/products.n3>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<products/products.n3> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<products/products.n3> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <products/frbr-core-20050810.rdf> .
 <products/frbr-core-20050810.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<products/frbr-core-20050810.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<products/frbr-core-20050810.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <atom/memes.rdf> .
 <atom/memes.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<atom/memes.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<atom/memes.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ssr/output.rdf> .
 <ssr/output.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ssr/output.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ssr/output.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ssr/source/review.rdf> .
 <ssr/source/review.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ssr/source/review.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ssr/source/review.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <dsp/index.ttl> .
 <dsp/index.ttl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<dsp/index.ttl> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<dsp/index.ttl> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/ibis-instance.rdf> .
 <ibis/ibis-instance.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/ibis-instance.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/ibis-instance.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/samples/sample.rdf> .
 <ibis/samples/sample.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/samples/sample.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/samples/sample.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/w6-dl.owl> .
 <ibis/w6/w6-dl.owl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/w6-dl.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/w6-dl.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/w6_2004-01-01.owl> .
 <ibis/w6/w6_2004-01-01.owl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/w6_2004-01-01.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/w6_2004-01-01.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/w6.owl> .
 <ibis/w6/w6.owl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/w6.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/w6.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/pretty.rdf> .
 <ibis/w6/xow/pretty.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/pretty.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/pretty.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/output.rdf> .
 <ibis/w6/xow/output.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/output.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/output.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/testing/pretty.rdf> .
 <ibis/w6/xow/testing/pretty.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/testing/pretty.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/testing/pretty.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/testing/output.rdf> .
 <ibis/w6/xow/testing/output.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/testing/output.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/testing/output.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/testing/xo-meta.rdf> .
 <ibis/w6/xow/testing/xo-meta.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/testing/xo-meta.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/testing/xo-meta.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/testing/meta.rdf> .
 <ibis/w6/xow/testing/meta.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/testing/meta.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/testing/meta.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/testing/xo.rdf> .
 <ibis/w6/xow/testing/xo.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/testing/xo.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/testing/xo.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <ibis/w6/xow/testing/xo-raw.rdf> .
 <ibis/w6/xow/testing/xo-raw.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<ibis/w6/xow/testing/xo-raw.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<ibis/w6/xow/testing/xo-raw.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <studio/tracks.rdf> .
 <studio/tracks.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<studio/tracks.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<studio/tracks.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <studio/tracks.n3> .
 <studio/tracks.n3>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<studio/tracks.n3> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<studio/tracks.n3> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <project/project-owl.n3> .
 <project/project-owl.n3>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<project/project-owl.n3> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<project/project-owl.n3> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <project/doap.rdf> .
 <project/doap.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<project/doap.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<project/doap.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <project/project_2007-09-03.owl> .
 <project/project_2007-09-03.owl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<project/project_2007-09-03.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<project/project_2007-09-03.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <project/project.owl> .
 <project/project.owl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<project/project.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<project/project.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <project/project.rdf> .
 <project/project.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<project/project.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<project/project.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <pets/sambuca.rdf> .
 <pets/sambuca.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<pets/sambuca.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<pets/sambuca.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <rev/review.rdf> .
 <rev/review.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<rev/review.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<rev/review.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <rev/review.n3> .
 <rev/review.n3>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<rev/review.n3> format:format <http://purl.org/stuff/formats/text/turtle> ;
-            rdfs:label "text/turtle" .
+<rev/review.n3> format:format <http://purl.org/stuff/formats/text/turtle> .
+<http://purl.org/stuff/formats/text/turtle> rdfs:label "text/turtle" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <rev/2009/review.rdf> .
 <rev/2009/review.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<rev/2009/review.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<rev/2009/review.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <all-rdf/project.owl> .
 <all-rdf/project.owl>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<all-rdf/project.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<all-rdf/project.owl> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 
 <http://hyperdata.org/xmlns/meta.ttl>  rdfs:seeAlso <hdoap/samples/redland-doap.rdf> .
 <hdoap/samples/redland-doap.rdf>  rdfs:seeAlso <http://hyperdata.org/xmlns/meta.ttl> .
-<hdoap/samples/redland-doap.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> ;
-            rdfs:label "application/rdf+xml" .
+<hdoap/samples/redland-doap.rdf> format:format <http://purl.org/stuff/formats/application/rdf%2Bxml> .
+<http://purl.org/stuff/formats/application/rdf%2Bxml> rdfs:label "application/rdf+xml" .
 

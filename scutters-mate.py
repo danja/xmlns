@@ -40,6 +40,6 @@ for root, dirs, files in os.walk('.'):
 			path = path[2:]
 		turtle = turtle + "\n<"+this+">  rdfs:seeAlso <" + path +"> .\n"
 		turtle = turtle + "<"+path+">  rdfs:seeAlso <" + this +"> .\n"
-		turtle = turtle +"<"+path+"> format:format " + "<http://purl.org/stuff/formats/" + formats[ext].replace("+","%2B") + "> ;\n"
-		turtle = turtle + "            rdfs:label \"" + formats[ext] + "\" .\n"
+		turtle = turtle +"<"+path+"> format:format " + "<http://purl.org/stuff/formats/" + formats[ext].replace("+","%2B") + "> .\n"
+		turtle = turtle + "<http://purl.org/stuff/formats/" + formats[ext].replace("+","%2B") + "> rdfs:label \"" + formats[ext] + "\" .\n"
 print turtle

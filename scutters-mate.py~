@@ -4,7 +4,7 @@
 # creates rdf:seeAlso links
 #
 # URIs should be set for base and this
-#
+# you may want to tweak media types in formats
 import os
 from os.path import join
 
