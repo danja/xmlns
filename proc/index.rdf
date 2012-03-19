@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:proc="http://purl.org/stuff/proc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/">
+    <dc:creator rdf:resource="http://danny.ayers.name/index.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/">
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danny Ayers</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/">
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-03-19T22:30:52+01:00</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/">
+    <dc:description xml:lang="en">Processing Vocabulary</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/">
+    <dc:title xml:lang="en">Processing Vocabulary</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/System">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/System">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/System">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/stuff/proc/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/System">
+    <rdfs:label xml:lang="en">System</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/System">
+    <rdfs:comment xml:lang="en">A processing system.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/System">
+    <dc:description xml:lang="en">A processing system</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Component">
+    <rdfs:label>Component</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Component">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Component">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Component">
+    <rdfs:comment xml:lang="en">A component of a processing system.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Component">
+    <dc:description xml:lang="en">A part of a processing system</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Signal">
+    <rdfs:label>Signal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Signal">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Signal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Signal">
+    <rdfs:comment xml:lang="en">An ordered set of numeric data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Signal">
+    <dc:description xml:lang="en">An ordered set of numeric data.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <rdfs:label>Processor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/Component"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <rdfs:comment xml:lang="en">A component which applies a process to an input to produce an output.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <dc:description xml:lang="en">A component which applies a process to an input to produce an output</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
+    <rdfs:label>Pipeline</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/Component"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
+    <rdfs:comment xml:lang="en">An ordered list of processors.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
+    <dc:description xml:lang="en">An ordered list of processors</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Converter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Converter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Converter">
+    <rdfs:label>Converter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Converter">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/Processor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Converter">
+    <rdfs:comment xml:lang="en">A processor with differing input and output data types.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Converter">
+    <dc:description xml:lang="en">A processor with differing input and output data types.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
+    <rdfs:label>Parameter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
+    <rdfs:comment xml:lang="en">A characteristic (named, datatyped value) associated with a component</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
+    <dc:description xml:lang="en">A characteristic (named, datatyped value) associated with a component</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/parameter">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/parameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/parameter">
+    <rdfs:comment xml:lang="en">parameter</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/parameter">
+    <rdfs:label xml:lang="en">parameter</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
