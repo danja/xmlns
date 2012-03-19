@@ -30,8 +30,8 @@
 anyoneone needs something urgently - in which case please <a
 href="mailto:danny.ayers@gmail.com">mail me</a>)</em></p>
 
-<p><strike>DSP</strike><a href="proc/index.html"></a> xmlns:dsp="http://purl.org/stuff/proc/" processing pipeline DSP etc.</p>
-
+<p><a href="dsp/index.html">DSP</a> xmlns:dsp="http://purl.org/stuff/dsp/"</p>
+<!-- test comment ignoriree -->
 
 <p><a href="studio/">Studio</a>
 -<code>xmlns:prj="http://purl.org/stuff/studio/"</code></p>
