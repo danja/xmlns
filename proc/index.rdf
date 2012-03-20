@@ -82,10 +82,52 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/Component"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/DataSource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/DataSink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
     <rdfs:comment xml:lang="en">A component which applies a process to an input to produce an output.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Processor">
     <dc:description xml:lang="en">A component which applies a process to an input to produce an output</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSource">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSource">
+    <rdfs:label>DataSource</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSource">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/Component"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSource">
+    <rdfs:comment xml:lang="en">A component which produces data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSource">
+    <dc:description xml:lang="en">A component which produces data.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSink">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSink">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSink">
+    <rdfs:label>DataSink</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSink">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/Component"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSink">
+    <rdfs:comment xml:lang="en">A component which consumes data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSink">
+    <dc:description xml:lang="en">A component which consumes data.</dc:description>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>

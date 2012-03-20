@@ -51,13 +51,30 @@ proc:Processor
     a rdfs:Class, owl:Class ;
 	rdfs:label "Processor" ;
    rdfs:subClassOf proc:Component ;
+   rdfs:subClassOf proc:DataSource ;
+   rdfs:subClassOf proc:DataSink ;
     rdfs:comment "A component which applies a process to an input to produce an output."@en ;
    dc:description "A component which applies a process to an input to produce an output"@en .
+
+proc:DataSource
+    a rdfs:Class, owl:Class ;
+	rdfs:label "DataSource" ;
+   rdfs:subClassOf proc:Component ;
+    rdfs:comment "A component which produces data."@en ;
+   dc:description "A component which produces data."@en .
+
+proc:DataSink
+    a rdfs:Class, owl:Class ;
+	rdfs:label "DataSink" ;
+   rdfs:subClassOf proc:Component ;
+    rdfs:comment "A component which consumes data."@en ;
+   dc:description "A component which consumes data."@en .
 
 proc:Pipeline 
     a rdfs:Class, owl:Class ;
 	rdfs:label "Pipeline" ;
    rdfs:subClassOf proc:Component ;
+
     rdfs:comment "An ordered list of processors."@en ;
    dc:description "An ordered list of processors"@en .
 
