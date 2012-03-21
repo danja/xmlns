@@ -106,15 +106,29 @@ proc:components
 proc:Parameter 
     a rdfs:Class, owl:Class ;
 	rdfs:label "Parameter" ;
-    rdfs:comment "A characteristic (named, datatyped value) associated with a component"@en ;
-   dc:description "A characteristic (named, datatyped value) associated with a component"@en .
+    rdfs:comment "A characteristic associated with a component"@en ;
+   dc:description "A characteristic (named, with datatyped value) associated with a component. It is expressed as a dimensionless value, though a consumer of this data may associate the value with units."@en .
 
 proc:parameter
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "parameter"@en ;
 	rdfs:label "parameter"@en .
 
+proc:minValue
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "minValue"@en ;
+	rdfs:label "minValue"@en .
 
+proc:maxValue
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "maxValue"@en ;
+	rdfs:label "maxValue"@en .
+
+proc:scale
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "scale"@en ;
+	rdfs:label "scale"@en ;
+	dc:description "A hint to a preferred value generation law, typically lin (linear), log (logarithmic) or exp (exponential)." .
 
 # proc:name a rdf:Property ;
 #   dc:description "A simple name" .

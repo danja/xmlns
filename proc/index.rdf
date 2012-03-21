@@ -205,10 +205,10 @@
     <rdfs:label>Parameter</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
-    <rdfs:comment xml:lang="en">A characteristic (named, datatyped value) associated with a component</rdfs:comment>
+    <rdfs:comment xml:lang="en">A characteristic associated with a component</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
-    <dc:description xml:lang="en">A characteristic (named, datatyped value) associated with a component</dc:description>
+    <dc:description xml:lang="en">A characteristic (named, with datatyped value) associated with a component. It is expressed as a dimensionless value, though a consumer of this data may associate the value with units.</dc:description>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/parameter">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -221,5 +221,44 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/parameter">
     <rdfs:label xml:lang="en">parameter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/minValue">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/minValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/minValue">
+    <rdfs:comment xml:lang="en">minValue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/minValue">
+    <rdfs:label xml:lang="en">minValue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/maxValue">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/maxValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/maxValue">
+    <rdfs:comment xml:lang="en">maxValue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/maxValue">
+    <rdfs:label xml:lang="en">maxValue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/scale">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/scale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/scale">
+    <rdfs:comment xml:lang="en">scale</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/scale">
+    <rdfs:label xml:lang="en">scale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/scale">
+    <dc:description>A hint to a preferred value generation law, typically lin (linear), log (logarithmic) or exp (exponential).</dc:description>
   </rdf:Description>
 </rdf:RDF>

@@ -96,9 +96,9 @@ alt="The ordered list concept as graph with relations" /></div>
 
 <p>An a-z index of <em>Ordered List Ontology</em> terms, by class (categories or types) and by property.</p>
 <div class="azlist">
-<p>Classes: | <a href="#Component">Component</a> |  <a href="#Converter">Converter</a> |  <a href="#DataSink">DataSink</a> |  <a href="#DataSource">DataSource</a> |  <a href="#Parameter">Parameter</a> |  <a href="#Pipeline">Pipeline</a> |  <a href="#Processor">Processor</a> |  <a href="#Signal">Signal</a> |  <a href="#System">System</a> | 
+<p>Classes: | <a href="#Component">Component</a> |  <a href="#ComponentList">ComponentList</a> |  <a href="#Converter">Converter</a> |  <a href="#DataSink">DataSink</a> |  <a href="#DataSource">DataSource</a> |  <a href="#Parameter">Parameter</a> |  <a href="#Pipeline">Pipeline</a> |  <a href="#Processor">Processor</a> |  <a href="#Signal">Signal</a> |  <a href="#System">System</a> | 
 </p>
-<p>Properties: | <a href="#parameter">parameter</a> | 
+<p>Properties: | <a href="#components">components</a> |  <a href="#maxValue">maxValue</a> |  <a href="#minValue">minValue</a> |  <a href="#parameter">parameter</a> |  <a href="#scale">scale</a> | 
 </p>
 </div> 
 
@@ -267,9 +267,9 @@ link at the top of this document to the RDF/XML and RDF/N3 versions.</p>
 <!-- the following is the script-generated list of classes and properties -->
 <!-- this is the a-z listing -->
 <div class="azlist">
-<p>Classes: | <a href="#Component">Component</a> |  <a href="#Converter">Converter</a> |  <a href="#DataSink">DataSink</a> |  <a href="#DataSource">DataSource</a> |  <a href="#Parameter">Parameter</a> |  <a href="#Pipeline">Pipeline</a> |  <a href="#Processor">Processor</a> |  <a href="#Signal">Signal</a> |  <a href="#System">System</a> | 
+<p>Classes: | <a href="#Component">Component</a> |  <a href="#ComponentList">ComponentList</a> |  <a href="#Converter">Converter</a> |  <a href="#DataSink">DataSink</a> |  <a href="#DataSource">DataSource</a> |  <a href="#Parameter">Parameter</a> |  <a href="#Pipeline">Pipeline</a> |  <a href="#Processor">Processor</a> |  <a href="#Signal">Signal</a> |  <a href="#System">System</a> | 
 </p>
-<p>Properties: | <a href="#parameter">parameter</a> | 
+<p>Properties: | <a href="#components">components</a> |  <a href="#maxValue">maxValue</a> |  <a href="#minValue">minValue</a> |  <a href="#parameter">parameter</a> |  <a href="#scale">scale</a> | 
 </p>
 </div> <!-- and this is the bulk of the vocab descriptions --><div class="termlist"><h3>Classes and Properties (full detail)</h3>
 <div class='termdetails'><br />
@@ -285,7 +285,8 @@ link at the top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<td><span property="vs:status" >unknown</span></td></tr>
   			
   			<tr><th>Has sub class</th>
- <td>  <a href="#DataSink">DataSink</a>
+ <td>  <a href="#ComponentList">ComponentList</a>
+ <a href="#DataSink">DataSink</a>
  <a href="#Pipeline">Pipeline</a>
  <a href="#Processor">Processor</a>
  <a href="#DataSource">DataSource</a>
@@ -295,6 +296,21 @@ link at the top of this document to the RDF/XML and RDF/N3 versions.</p>
   			</table>
   			
   			<p style="float: right; font-size: small;">[<a href="#Component">#</a>] <!-- Component --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="ComponentList" about="http://purl.org/stuff/proc/ComponentList" typeof="rdfs:Class">
+  			<h3>Class: proc:ComponentList</h3> 
+  			<em property="rdfs:label" >ComponentList</em> - <span property="rdfs:comment" >An unordered list (set) of components.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Status:</th>
+  			<td><span property="vs:status" >unknown</span></td></tr>
+  			
+  			<tr><th>Sub class of</th>
+ <td>  <span rel="rdfs:subClassOf" href="http://purl.org/stuff/proc/Component"><a href="#Component">Component</a></span>
+ </td></tr><tr><th colspan="2">OWL Class</th>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#Class"></span> </td></tr><tr><th colspan="2">RDFS Class</th>
+ <td>  </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#ComponentList">#</a>] <!-- ComponentList --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="Converter" about="http://purl.org/stuff/proc/Converter" typeof="rdfs:Class">
   			<h3>Class: proc:Converter</h3> 
@@ -347,7 +363,7 @@ link at the top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<br/>
   			</div><div class="specterm" id="Parameter" about="http://purl.org/stuff/proc/Parameter" typeof="rdfs:Class">
   			<h3>Class: proc:Parameter</h3> 
-  			<em property="rdfs:label" >Parameter</em> - <span property="rdfs:comment" >A characteristic (named, datatyped value) associated with a component</span> <br /><table style="th { float: top; }">
+  			<em property="rdfs:label" >Parameter</em> - <span property="rdfs:comment" >A characteristic associated with a component</span> <br /><table style="th { float: top; }">
   			<tr><th>Status:</th>
   			<td><span property="vs:status" >unknown</span></td></tr>
   			
@@ -424,7 +440,46 @@ link at the top of this document to the RDF/XML and RDF/N3 versions.</p>
  
 
 
-<div class="specterm" id="parameter" about="http://purl.org/stuff/proc/parameter" typeof="owl:ObjectProperty">
+<div class="specterm" id="components" about="http://purl.org/stuff/proc/components" typeof="owl:ObjectProperty">
+  			<h3>Property: proc:components</h3> 
+  			<em property="rdfs:label" >components</em> - <span property="rdfs:comment" >components</span> <br /><table style="th { float: top; }">
+  			<tr><th>Status:</th>
+  			<td><span property="vs:status" >unknown</span></td></tr>
+  			
+  			<tr><th colspan="2">RDF Property</th>
+ <td> <span rel="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"></span> </td></tr><tr><th colspan="2">Object Property</th>
+ <td>  </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#components">#</a>] <!-- components --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="maxValue" about="http://purl.org/stuff/proc/maxValue" typeof="rdf:Property">
+  			<h3>Property: proc:maxValue</h3> 
+  			<em property="rdfs:label" >maxValue</em> - <span property="rdfs:comment" >maxValue</span> <br /><table style="th { float: top; }">
+  			<tr><th>Status:</th>
+  			<td><span property="vs:status" >unknown</span></td></tr>
+  			
+  			<tr><th colspan="2">RDF Property</th>
+ <td>  </td></tr><tr><th colspan="2">Datatype Property</th>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#DatatypeProperty"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#maxValue">#</a>] <!-- maxValue --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="minValue" about="http://purl.org/stuff/proc/minValue" typeof="rdf:Property">
+  			<h3>Property: proc:minValue</h3> 
+  			<em property="rdfs:label" >minValue</em> - <span property="rdfs:comment" >minValue</span> <br /><table style="th { float: top; }">
+  			<tr><th>Status:</th>
+  			<td><span property="vs:status" >unknown</span></td></tr>
+  			
+  			<tr><th colspan="2">RDF Property</th>
+ <td>  </td></tr><tr><th colspan="2">Datatype Property</th>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#DatatypeProperty"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#minValue">#</a>] <!-- minValue --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="parameter" about="http://purl.org/stuff/proc/parameter" typeof="owl:ObjectProperty">
   			<h3>Property: proc:parameter</h3> 
   			<em property="rdfs:label" >parameter</em> - <span property="rdfs:comment" >parameter</span> <br /><table style="th { float: top; }">
   			<tr><th>Status:</th>
@@ -437,7 +492,21 @@ link at the top of this document to the RDF/XML and RDF/N3 versions.</p>
   			
   			<p style="float: right; font-size: small;">[<a href="#parameter">#</a>] <!-- parameter --> [<a href="#glance">back to top</a>]</p>
   			<br/>
+  			</div><div class="specterm" id="scale" about="http://purl.org/stuff/proc/scale" typeof="rdf:Property">
+  			<h3>Property: proc:scale</h3> 
+  			<em property="rdfs:label" >scale</em> - <span property="rdfs:comment" >scale</span> <br /><table style="th { float: top; }">
+  			<tr><th>Status:</th>
+  			<td><span property="vs:status" >unknown</span></td></tr>
+  			
+  			<tr><th colspan="2">RDF Property</th>
+ <td>  </td></tr><tr><th colspan="2">Datatype Property</th>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#DatatypeProperty"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#scale">#</a>] <!-- scale --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
   			</div>
+
 
 
 
