@@ -129,6 +129,24 @@
   <rdf:Description rdf:about="http://purl.org/stuff/proc/DataSink">
     <dc:description xml:lang="en">A component which consumes data.</dc:description>
   </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/ComponentList">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/ComponentList">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/ComponentList">
+    <rdfs:label>ComponentList</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/ComponentList">
+    <rdfs:subClassOf rdf:resource="http://purl.org/stuff/proc/Component"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/ComponentList">
+    <rdfs:comment xml:lang="en">An unordered list (set) of components.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/ComponentList">
+    <dc:description xml:lang="en">An unordered list (set) of components</dc:description>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Pipeline">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
@@ -164,6 +182,18 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Converter">
     <dc:description xml:lang="en">A processor with differing input and output data types.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/components">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/components">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/components">
+    <rdfs:comment xml:lang="en">components</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/stuff/proc/components">
+    <rdfs:label xml:lang="en">components</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/stuff/proc/Parameter">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>

@@ -70,6 +70,14 @@ proc:DataSink
     rdfs:comment "A component which consumes data."@en ;
    dc:description "A component which consumes data."@en .
 
+proc:ComponentList 
+    a rdfs:Class, owl:Class ;
+	rdfs:label "ComponentList" ;
+   rdfs:subClassOf proc:Component ;
+
+    rdfs:comment "An unordered list (set) of components."@en ;
+   dc:description "An unordered list (set) of components"@en .
+
 proc:Pipeline 
     a rdfs:Class, owl:Class ;
 	rdfs:label "Pipeline" ;
@@ -85,6 +93,13 @@ proc:Converter
     rdfs:comment "A processor with differing input and output data types."@en ;
    dc:description "A processor with differing input and output data types."@en .
 
+
+
+proc:components
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "components"@en ;
+	rdfs:label "components"@en .
+
 #
 # parameters
 #
@@ -98,6 +113,8 @@ proc:parameter
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "parameter"@en ;
 	rdfs:label "parameter"@en .
+
+
 
 # proc:name a rdf:Property ;
 #   dc:description "A simple name" .
