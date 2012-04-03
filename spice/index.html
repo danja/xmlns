@@ -33,6 +33,9 @@ href="http://www.w3.org/RDF/">RDF</a>.</p>
 href="https://workflowy.com/shared/36d7c6c7-ae01-81bc-c738-0f2eae4e31cb/">Resource
 List</a></strong> (editable)</p>
 
+<p>The current plan is to create the RDF Vocabulary as a direct mapping of the
+SPICE notation language.</p>
+
 <p></p>
 
 <p><strong>Status: surveying for background resources and
@@ -66,15 +69,57 @@ the components used and circuit topologies are "visible" in the RDF model, and
 can be pattern-matched using the <a
 href="http://www.w3.org/TR/sparql11-query/">SPARQL</a> query language.</p>
 
-<p></p>
-
-<p></p>
-
-<p>see: <a
+<p>See also : <a
 href="http://dannyayers.com/2011/02/23/Adding-SPICE-to-the-Semantic-Web">Adding
 SPICE to the Semantic Web</a></p>
 
 <p></p>
+
+<h3>Use Cases</h3>
+
+<p><em>purely informative</em></p>
+<ul>
+  <li>the Web as circuit repository using Linked Data discovery &amp;
+  search</li>
+  <li>Web-based simulation - decoupled from the circuit descriptions</li>
+  <li>distributed circuits : the I/O of one circuit make be connected to the
+    I/O of any other circuit on the Web</li>
+  <li>collaborative development : possibly layered over existing distributed
+    version control</li>
+  <li>social net : Facebook-like community infrastructure over the topic of
+    electronics</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>Vocabulary</h3>
+<ul>
+  <li>basic modeling of circuit structure</li>
+  <li>vocabulary of core SPICE terms</li>
+  <li>extension model for additional terms</li>
+  <li>correspondences with existing vocabularies</li>
+</ul>
+
+<h3>Tools</h3>
+<ul>
+  <li>SPICE notation to Turtle notation converter(s)</li>
+  <li>Turtle to SPICE converter(s)</li>
+  <li>testbed repository (online triplestore with UI optimised for
+  circuits)</li>
+  <li>testbed simulator (server-side and/or client side, derived from existing
+    tools)</li>
+</ul>
+
+<h3>Documentation</h3>
+<ul>
+  <li>documentation for all the above</li>
+  <li>examples</li>
+  <li>guidelines for integration</li>
+</ul>
+
+<p></p>
+
+<p><em><strong>Misc. Notes</strong></em></p>
 
 <p>NB. by default circuit nodes (as numbered in SPICE) should probably be blank
 nodes</p>
