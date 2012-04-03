@@ -1,0 +1,426 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix shadow-rdf: <http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix service: <http://www.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix process: <http://www.daml.org/services/owl-s/1.2/Process.owl#> .
+@prefix : <http://www.daml.org/services/owl-s/1.2/Grounding.owl#> .
+
+<http://www.daml.org/services/owl-s/1.2/Grounding.owl>
+    a owl:Ontology ;
+    rdfs:comment """
+    Upper-level OWL ontology for Groundings that employ WSDL.
+    Part of the OWL-S ontology; see http://www.daml.org/services/.
+
+    This version is intended for use with WSDL 1.1.  The OWL-S
+    Coalition plans to produce a future version for use with WSDL 2.0,
+    when it has been finalized (or nearly so).
+
+    Note that other approaches to grounding may be accommodated
+    within the OWL-S framework.  This is the only approach produced
+    to date by the OWL-S Coalition.
+
+    For notes on version history, see 
+        http://www.daml.org/services/owl-s/1.2/status.html.    
+  """ ;
+    owl:imports <http://www.daml.org/services/owl-s/1.2/Process.owl> ;
+    owl:versionInfo """
+    $Id: Grounding.owl,v 1.38 2006/01/04 21:41:56 martin Exp $
+  """ .
+
+:AtomicProcessGrounding
+    a owl:Class ;
+    rdfs:comment """
+    A class that relates elements of a OWL-S atomic process to a
+    WSDL specification.
+
+    Each instance of AtomicProcessGrounding must have exactly one
+    value for owlsProcess. Rest of the AtomicProcessGrounding depends
+    on the specifics of the grounding type. 
+  """ ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :owlsProcess
+    ] .
+
+:DirectInputMessageMap
+    a owl:Class ;
+    rdfs:subClassOf :WsdlInputMessageMap, [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :owlsParameter
+    ], [
+        a owl:Restriction ;
+        owl:cardinality "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :xsltTransformation
+    ] ;
+    owl:disjointWith :XSLTInputMessageMap .
+
+:DirectOutputMessageMap
+    a owl:Class ;
+    rdfs:subClassOf :WsdlOutputMessageMap, [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :wsdlMessagePart
+    ], [
+        a owl:Restriction ;
+        owl:cardinality "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :xsltTransformation
+    ] ;
+    owl:disjointWith :XSLTOutputMessageMap .
+
+:Grounding
+    a owl:Class ;
+    rdfs:comment """
+    A Grounding is just a collection of AtomicProcessGrounding
+    instances, one for each atomic process in the process model.    
+  """ ;
+    rdfs:subClassOf service:ServiceGrounding .
+
+:InputMessageMap
+    a owl:Class ;
+    rdfs:comment """
+    A MessageMap that maps inputs to grounding specification
+  """ ;
+    rdfs:subClassOf :MessageMap, [
+        a owl:Restriction ;
+        owl:allValuesFrom process:Input ;
+        owl:onProperty :owlsParameter
+    ] .
+
+:MessageMap
+    a owl:Class ;
+    rdfs:comment """
+    A class used to map parameters in OWL-S to the parameters
+    in the grounded operation. owlsParamater property is used
+    to specify the OWL-S parameter. 
+  """ .
+
+:OutputMessageMap
+    a owl:Class ;
+    rdfs:comment """
+    A MessageMap that maps outputs to grounding specification
+  """ ;
+    rdfs:subClassOf :MessageMap, [
+        a owl:Restriction ;
+        owl:allValuesFrom process:Output ;
+        owl:onProperty :owlsParameter
+    ] .
+
+:WsdlAtomicProcessGrounding
+    a owl:Class ;
+    rdfs:comment """
+    A class that relates elements of a OWL-S atomic process to a
+    WSDL specification.
+  """, """
+    Each instance of WsdlAtomicProcessGrounding must have exactly one
+    value for owlsProcess and exactly one for wsdlOperation, which sets up
+    a one-to-one correspondence between an atomic process and a WSDL
+    operation.
+
+    In addition, for each message part of the relevant WSDL input message,
+    there must be exactly one value of wsdlInput.  For each output of the
+    atomic process, there must be exactly one value of wsdlOutput. These
+    property instances show the correspondences between OWL-S
+    inputs/outputs and WSDL message parts.  In addition, single values are
+    recommended (but not required) for wsdlInputMessage and
+    wsdlOutputMessage.
+
+    Note that the value of wsdlOperation may or may not uniquely identify
+    a particular WSDL port with which to interact.  If there are multiple
+    such ports offering the specified operation, an OWL-S enactment engine
+    is free to choose any of these ports.  If it is desired to further
+    constrain the choice of ports, a WsdlAtomicProcessGrounding may do so
+    by specifying any number of values for wsdlService and/or wsdlPort.
+  """ ;
+    rdfs:subClassOf :AtomicProcessGrounding, [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :wsdlOperation
+    ] .
+
+:WsdlGrounding
+    a owl:Class ;
+    rdfs:comment """
+    WsdlGrounding is A Grounding that grounds every process to 
+    a WSDL operation.    
+  """ ;
+    rdfs:subClassOf :Grounding, [
+        a owl:Restriction ;
+        owl:allValuesFrom :WsdlAtomicProcessGrounding ;
+        owl:onProperty :hasAtomicProcessGrounding
+    ] .
+
+:WsdlInputMessageMap
+    a owl:Class ;
+    rdfs:comment """
+	The purpose of a WsdlInputMessageMap is to show how to derive the WSDL
+	input message parts from the OWL-S Parameter values. There should be
+	one WsdlInputMessageMap for each WSDL input message part.
+	
+	There are two different kinds of input message maps:
+	
+	(1) DirectInputMessageMap - This is used when we have a 1-1 mapping between
+	Inputs in the AtomicProcess and WSDL message parts. There are two cases:
+	
+	(a) The parameterType of the Input is an OWL class.  The OWL class is
+	used as the message part type in the WSDL document.  (Note: for this
+	case to be fully general, further work may be needed to establish
+	conventions for serializing arbitrary OWL instances).
+	
+	(b) The parameterType is an XSD simple type, and the WSDL message part
+	has the same type.
+	
+	(2) XSLTInputMessageMap - This is used when the the parameterType and
+	the WSDL message part type is not the same. The WSDL type can be
+	either simple or complex.  In this case, a WSDL message part can be
+	derived from multiple Inputs.
+  """ ;
+    rdfs:subClassOf :InputMessageMap, :WsdlMessageMap, [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :wsdlMessagePart
+    ] ;
+    owl:unionOf (:DirectInputMessageMap
+        :XSLTInputMessageMap
+    ) .
+
+:WsdlMessageMap
+    a owl:Class ;
+    rdfs:comment """
+    MessageMap for WSDL inputs and outputs
+  """ ;
+    rdfs:subClassOf :MessageMap .
+
+:WsdlOperationRef
+    a owl:Class ;
+    rdfs:comment """
+    Restricting the cardinality of operation to one
+  """, """
+    Restricting the cardinality of portType to one
+  """, """
+    This class provides a unique specification of a WSDL operation.
+    WSDL 1.1, on which this version of the grounding is based, does 
+    not have a way to uniquely identify an operation with a single URI.  
+    Uniqueness is achieved using a pair (portType, operation).
+  """ ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :portType
+    ], [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :operation
+    ] .
+
+:WsdlOutputMessageMap
+    a owl:Class ;
+    rdfs:comment """
+	The purpose of WsdlOutputMessageMap is to show how to derive OWL-S
+	Parameter values from the WSDL output message parts. There should be
+	one WsdlOutputMessageMap for each Output of the corresponding
+	AtomicProcess.
+	
+	There are two kinds of output message maps, similarly to input message maps.
+	
+	(1) DirectOutputMessageMap - This is used when we have a 1-1 mapping between
+	WSDL message parts and Outputs in the Atomic Process. There are two cases:
+	
+	(a) The parameterType of the Output is an OWL class, and the OWL class
+	is used as the message part type in the WSDL document.  (Note: for
+	this case to be fully general, further work may be needed to establish
+	conventions for serializing arbitrary OWL instances).
+	
+	(b) The parameterType is an XSD simple type, and the WSDL message part
+	has the same type.
+	
+	(2) XSLTOutputMessageMap - This is used when the the parameterType and
+	the WSDL message part type is not the same. The WSDL type can be
+	either simple or complex.  In this case, an OWL Output can be derived
+	from multiple WSDL message parts.  
+  """ ;
+    rdfs:subClassOf :OutputMessageMap, :WsdlMessageMap, [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :owlsParameter
+    ] ;
+    owl:unionOf (:DirectOutputMessageMap
+        :XSLTOutputMessageMap
+    ) .
+
+:XSLTInputMessageMap
+    a owl:Class ;
+    rdfs:subClassOf :WsdlInputMessageMap, [
+        a owl:Restriction ;
+        owl:cardinality "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :owlsParameter
+    ], [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :xsltTransformation
+    ] .
+
+:XSLTOutputMessageMap
+    a owl:Class ;
+    rdfs:subClassOf :WsdlOutputMessageMap, [
+        a owl:Restriction ;
+        owl:cardinality "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :wsdlMessagePart
+    ], [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :xsltTransformation
+    ] .
+
+:hasAtomicProcessGrounding
+    a owl:ObjectProperty ;
+    rdfs:domain :Grounding ;
+    rdfs:range :AtomicProcessGrounding .
+
+:operation
+    a owl:DatatypeProperty ;
+    rdfs:domain :WsdlOperationRef ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:owlsParameter
+    a owl:ObjectProperty ;
+    rdfs:comment """
+    An input or output property of an atomic process.
+  """ ;
+    rdfs:domain :MessageMap ;
+    rdfs:range process:Parameter .
+
+:owlsProcess
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:comment """
+    The atomic process to which this grounding applies.
+  """ ;
+    rdfs:domain :AtomicProcessGrounding ;
+    rdfs:range process:AtomicProcess .
+
+:portType
+    a owl:DatatypeProperty ;
+    rdfs:domain :WsdlOperationRef ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:wsdlDocument
+    a owl:DatatypeProperty ;
+    rdfs:comment """
+    A URI indicating a WSDL document to
+    which this grounding refers.  This isn't
+    essential; primarily for convenience as documentation.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:wsdlInput
+    a owl:ObjectProperty ;
+    rdfs:comment """
+    There should be one instance of this property for each
+    message part of the WSDL input message.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range :WsdlInputMessageMap .
+
+:wsdlInputMessage
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment """
+    A URI for the WSDL input message element corresponding
+    to the inputs of the atomic process.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:wsdlMessagePart
+    a owl:DatatypeProperty ;
+    rdfs:comment """
+    A URI for a WSDL message part element.
+  """ ;
+    rdfs:domain :WsdlMessageMap ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:wsdlOperation
+    a owl:ObjectProperty ;
+    rdfs:comment """
+    A WSDL operation to which the atomic process
+    (referenced by owlsProcess) corresponds.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range :WsdlOperationRef .
+
+:wsdlOutput
+    a owl:ObjectProperty ;
+    rdfs:comment """
+    There should be one instance of this property for each
+    output of the atomic process.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range :WsdlOutputMessageMap .
+
+:wsdlOutputMessage
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment """
+    A URI for the WSDL message element corresponding
+    to the outputs of the atomic process.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:wsdlPort
+    a owl:DatatypeProperty ;
+    rdfs:comment """
+    A URI for a WSDL Port that provides the operation to which 
+    this atomic process is grounded.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:wsdlService
+    a owl:DatatypeProperty ;
+    rdfs:comment """
+    A URI for a WSDL Service that provides the operation to which 
+    this atomic process is grounded.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:wsdlVersion
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:comment """
+    A URI indicating the version of WSDL being used.
+  """ ;
+    rdfs:domain :WsdlAtomicProcessGrounding ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> .
+
+:xsltTransformation
+    a owl:DatatypeProperty ;
+    rdfs:comment """
+    XSLT Tranformation to transform OWL-S parameters (inputs and outputs) 
+    to and from WSDL messages.  This property exists mainly for declaring
+    a cardinality restriction, and should not be instantiated
+    directly.  Instantiate xsltTransformationString or xsltTransformationURI.
+    (Ranges are specified with the sub properties.)
+  """ ;
+    rdfs:domain :WsdlMessageMap .
+
+:xsltTransformationString
+    a owl:DatatypeProperty ;
+    rdfs:comment """
+    A string giving an XSLT Tranformation.
+  """ ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#string> ;
+    rdfs:subPropertyOf :xsltTransformation .
+
+:xsltTransformationURI
+    a owl:DatatypeProperty ;
+    rdfs:comment """
+    A URI for an XSLT Tranformation.
+  """ ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#anyURI> ;
+    rdfs:subPropertyOf :xsltTransformation .
+
+<http://www.daml.org/services/owl-s/1.2/Process.owl>
+    a owl:Ontology .
+

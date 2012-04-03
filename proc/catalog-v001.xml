@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Process.owl" uri="owl-s/Process.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1332584994808" name="http://www.daml.org/services/owl-s/1.2/Grounding.owl" uri="owl-s/Grounding.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1332584994808" name="http://www.daml.org/services/owl-s/1.2/Process.owl" uri="owl-s/Process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1332584994808" name="http://www.daml.org/services/owl-s/1.2/Profile.owl" uri="owl-s/Profile.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1332584994808" name="http://www.daml.org/services/owl-s/1.2/Service.owl" uri="owl-s/Service.owl"/>
+    </group>
+</catalog>

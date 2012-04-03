@@ -1,0 +1,91 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix service: <http://www.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix process: <http://www.daml.org/services/owl-s/1.2/Process.owl#> .
+@prefix : <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+
+<http://www.daml.org/services/owl-s/1.2/Process.owl>
+    a owl:Ontology .
+
+<http://www.daml.org/services/owl-s/1.2/Profile.owl>
+    a owl:Ontology ;
+    rdfs:comment """
+      OWL ontology for Advertisements (i.e. Profiles).
+      This file belongs to the OWL-S Release.
+      Initial version created by Terry Payne (trp@ecs.soton.ac.uk).
+      Modified by Massimo Paolucci (paolucci@cs.cmu.edu)
+      Modified by David Martin and other members of the OWL-S Coalition.
+
+    """ ;
+    rdfs:seeAlso <http://www.daml.org/services/owl-s/1.2/ActorDefault.owl>, <http://www.daml.org/services/owl-s/1.2/ProfileAdditionalParameters.owl>, <http://www.daml.org/services/owl-s/1.2/ProfileDeprecatedElements.owl>, <http://www.daml.org/services/owl-s/1.2/ServiceCategory.owl>, <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl> ;
+    owl:imports <http://www.daml.org/services/owl-s/1.2/Process.owl>, <http://www.daml.org/services/owl-s/1.2/Service.owl> ;
+    owl:versionInfo """
+      $Id: Profile.owl,v 1.55 2006/12/15 01:39:55 martin Exp $
+    """ .
+
+:Profile
+    a owl:Class ;
+    rdfs:comment """
+      Definition of Profile
+    """, """
+    A profile can have only one name
+    """, """
+    A profile can have only one text description
+    """ ;
+    rdfs:label "Profile" ;
+    rdfs:subClassOf service:ServiceProfile, [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :serviceName
+    ], [
+        a owl:Restriction ;
+        owl:cardinality "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+        owl:onProperty :textDescription
+    ] .
+
+:contactInformation
+    a owl:ObjectProperty ;
+    rdfs:domain :Profile .
+
+:hasInput
+    a owl:ObjectProperty ;
+    rdfs:range process:Input ;
+    rdfs:subPropertyOf :hasParameter .
+
+:hasOutput
+    a owl:ObjectProperty ;
+    rdfs:range process:Output ;
+    rdfs:subPropertyOf :hasParameter .
+
+:hasParameter
+    a owl:ObjectProperty ;
+    rdfs:domain :Profile ;
+    rdfs:range process:Parameter .
+
+:hasPrecondition
+    a owl:ObjectProperty ;
+    rdfs:domain :Profile ;
+    rdfs:range <http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#Condition> .
+
+:hasResult
+    a owl:ObjectProperty ;
+    rdfs:domain :Profile ;
+    rdfs:range process:Result .
+
+:has_process
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Profile ;
+    rdfs:range process:Process .
+
+:serviceName
+    a owl:DatatypeProperty ;
+    rdfs:domain :Profile .
+
+:textDescription
+    a owl:DatatypeProperty ;
+    rdfs:domain :Profile .
+
+<http://www.daml.org/services/owl-s/1.2/Service.owl>
+    a owl:Ontology .
+
