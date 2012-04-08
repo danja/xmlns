@@ -1,108 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:bs="http://purl.org/stuff/BigSleep"
+   xmlns:bs="http://purl.org/stuff/BigSleep/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:s="http://schema.org/">
-  <rdf:Description rdf:about="http://purl.org/stuff/BigSleep/Characters">
+  <rdf:Description rdf:about="http://purl.org/stuff/BigSleep/">
     <s:image rdf:resource="http://www.isleyunruh.com/wp-content/uploads/2011/09/The-Big-Sleep-Character-Connections-Graph-Chart.jpg"/>
   </rdf:Description>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepAgnes_Lozelle">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepJoe_Brodie"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Agnes_Lozelle">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Joe_Brodie"/>
     <s:name>Agnes Lozelle</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleepArthur_Geiger">
-    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleepCarmen_Sternwood"/>
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepCarol_Lundgren"/>
+  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleep/Arthur_Geiger">
+    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleep/Carmen_Sternwood"/>
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Carol_Lundgren"/>
     <s:name>Arthur Geiger</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:DeadCharacter>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepBookstore_Girl">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepPhilip_Marlowe"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Bookstore_Girl">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Philip_Marlowe"/>
     <s:name>Bookstore Girl</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepCarmen_Sternwood">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepOwen_Taylor"/>
-    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleepSean_Regan"/>
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepArthur_Geiger"/>
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepPhilip_Marlowe"/>
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepSean_Regan"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Carmen_Sternwood">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Owen_Taylor"/>
+    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleep/Sean_Regan"/>
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Arthur_Geiger"/>
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Philip_Marlowe"/>
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Sean_Regan"/>
     <s:name>Carmen Sternwood</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepCarol_Lundgren">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepArthur_Geiger"/>
-    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleepJoe_Brodie"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Carol_Lundgren">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Arthur_Geiger"/>
+    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleep/Joe_Brodie"/>
     <s:name>Carol Lundgren</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleepEddie_Mars">
-    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleepVivian_Rutledge"/>
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepMona_Mars"/>
+  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleep/Eddie_Mars">
+    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleep/Vivian_Rutledge"/>
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Mona_Mars"/>
     <s:name>Eddie Mars</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:DeadCharacter>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepGeneral_Sternwood">
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/General_Sternwood">
     <s:name>General Sternwood</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleepHarry_Jones">
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepAgnes_Lozelle"/>
+  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleep/Harry_Jones">
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Agnes_Lozelle"/>
     <s:name>Harry_ Jones</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:DeadCharacter>
-  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleepJoe_Brodie">
-    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleepGeneral_Sternwood"/>
-    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleepVivian_Rutledge"/>
+  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleep/Joe_Brodie">
+    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleep/General_Sternwood"/>
+    <bs:blackMailed rdf:resource="http://purl.org/stuff/BigSleep/Vivian_Rutledge"/>
     <s:name>Joe Brodie</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:DeadCharacter>
-  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleepLash_Canino">
-    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleepHarry_Jones"/>
+  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleep/Lash_Canino">
+    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleep/Harry_Jones"/>
     <s:name>Lash Canino</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:DeadCharacter>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepMars_Men">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepMars_Men"/>
-    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleepEddie_Mars"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Mars_Men">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Mars_Men"/>
+    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleep/Eddie_Mars"/>
     <s:name>Mars Men</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepMona_Mars">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepEddie_Mars"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Mona_Mars">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Eddie_Mars"/>
     <s:name>Mona Mars</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleepOwen_Taylor">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepCarmen_Sternwood"/>
-    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleepArthur_Geiger"/>
+  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleep/Owen_Taylor">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Carmen_Sternwood"/>
+    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleep/Arthur_Geiger"/>
     <s:name>Owen Taylor</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:DeadCharacter>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepPhilip_Marlowe">
-    <bs:did rdf:resource="http://purl.org/stuff/BigSleepBookstore_Girl"/>
-    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleepLash_Canino"/>
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepVivian_Rutledge"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Philip_Marlowe">
+    <bs:did rdf:resource="http://purl.org/stuff/BigSleep/Bookstore_Girl"/>
+    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleep/Lash_Canino"/>
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Vivian_Rutledge"/>
     <s:name>Philip Marlowe</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleepSean_Regan">
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepMona_Mars"/>
+  <bs:DeadCharacter rdf:about="http://purl.org/stuff/BigSleep/Sean_Regan">
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Mona_Mars"/>
     <s:name>Sean Regan</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:DeadCharacter>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepTaxi_Driver">
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepPhilip_Marlowe"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Taxi_Driver">
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Philip_Marlowe"/>
     <s:name>Taxi Driver</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
-  <bs:Character rdf:about="http://purl.org/stuff/BigSleepVivian_Rutledge">
-    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleepPhilip_Marlowe"/>
+  <bs:Character rdf:about="http://purl.org/stuff/BigSleep/Vivian_Rutledge">
+    <bs:wantedToDo rdf:resource="http://purl.org/stuff/BigSleep/Philip_Marlowe"/>
     <s:name>Vivian Rutledge</s:name>
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </bs:Character>
   <s:Person>
-    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleepOwen_Taylor"/>
+    <bs:murdered rdf:resource="http://purl.org/stuff/BigSleep/Owen_Taylor"/>
   </s:Person>
 </rdf:RDF>

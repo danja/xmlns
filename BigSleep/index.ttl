@@ -8,10 +8,10 @@
 # more triples!
 
 @prefix s: <http://schema.org/> .
-@prefix bs: <http://purl.org/stuff/BigSleep> .
-@prefix : <http://purl.org/stuff/BigSleep> .
+@prefix bs: <http://purl.org/stuff/BigSleep/> .
+@prefix : <http://purl.org/stuff/BigSleep/> .
 
-<http://purl.org/stuff/BigSleep/Characters>
+<http://purl.org/stuff/BigSleep/>
 s:image
 <http://www.isleyunruh.com/wp-content/uploads/2011/09/The-Big-Sleep-Character-Connections-Graph-Chart.jpg>  .
 
