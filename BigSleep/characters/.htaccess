@@ -1,0 +1,4 @@
+DirectoryIndex index.ttl
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule (.*) ../$1 [R=301,L]
