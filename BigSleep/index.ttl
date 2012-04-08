@@ -1,0 +1,107 @@
+@prefix s: <http://schema.org/> .
+@prefix bs: <http://purl.org/stuff/BigSleep> .
+@prefix : <http://purl.org/stuff/BigSleep/Characters> .
+
+<http://purl.org/stuff/BigSleep/Characters>
+s:image
+<http://www.isleyunruh.com/wp-content/uploads/2011/09/The-Big-Sleep-Character-Connections-Graph-Chart.jpg>  .
+
+:Owen_Taylor a :DeadCharacter ;
+a s:Person ;
+s:name "Owen Taylor" ;
+bs:murdered :Arthur_Geiger ;
+bs:did :Carmen_Sternwood .
+
+_:unknown bs:murdered :Owen_Taylor ;
+a s:Person .
+
+:Carmen_Sternwood a :Character ;
+a s:Person ;
+s:name "Carmen Sternwood" ;
+bs:did :Owen_Taylor ;
+bs:wantedToDo :Arthur_Geiger ;
+bs:wantedToDo :Philip_Marlowe ;
+bs:wantedToDo :Sean_Regan ;
+bs:murdered :Sean_Regan .
+
+:Arthur_Geiger a :DeadCharacter ;
+a s:Person ;
+s:name "Arthur Geiger" ;
+bs:blackMailed :Carmen_Sternwood ;
+bs:did :Carol_Lundgren .
+
+:Sean_Regan a :DeadCharacter ;
+a s:Person ;
+s:name "Sean Regan" ;
+bs:wantedToDo :Mona_Mars .
+
+:Vivian_Rutledge a :Character ;
+a s:Person ;
+s:name "Vivian Rutledge" ;
+bs:wantedToDo :Philip_Marlowe .
+
+:Mona_Mars a :Character ;
+a s:Person ;
+s:name "Mona Mars" ;
+bs:did :Eddie_Mars .
+
+:Philip_Marlowe a :Character ;
+a s:Person ;
+s:name "Philip Marlowe" ;
+bs:wantedToDo :Vivian_Rutledge ;
+bs:did :Bookstore_Girl ;
+bs:murdered :Lash_Canino .
+
+:Eddie_Mars a :DeadCharacter ;
+a s:Person ;
+s:name "Eddie Mars" ;
+bs:did :Mona_Mars ;
+bs:blackMailed :Vivian_Rutledge .
+
+:Joe_Brodie a :DeadCharacter ;
+a s:Person ;
+s:name "Joe Brodie" ;
+bs:blackMailed :Vivian_Rutledge ;
+bs:blackMailed :General_Sternwood .
+
+:Lash_Canino a :DeadCharacter ;
+a s:Person ;
+s:name "Lash Canino" ;
+bs:murdered :Harry_Jones .
+
+:Harry_Jones a :DeadCharacter ;
+a s:Person ;
+s:name "Harry_ Jones" ;
+bs:wantedToDo :Agnes_Lozelle .
+
+:Carol_Lundgren a :Character ;
+a s:Person ;
+s:name "Carol Lundgren" ;
+bs:murdered :Joe_Brodie ;
+bs:did :Arthur_Geiger .
+
+:General_Sternwood a :Character ;
+a s:Person ;
+s:name "General Sternwood" .
+
+:Taxi_Driver a :Character ;
+a s:Person ;
+s:name "Taxi Driver" ;
+bs:wantedToDo :Philip_Marlowe .
+
+:Bookstore_Girl a :Character ;
+a s:Person ;
+s:name "Bookstore Girl" ;
+bs:did :Philip_Marlowe .
+
+:Mars_Men a :Character ;
+a s:Person ;
+s:name "Mars Men" ;
+bs:did :Mars_Men ;
+bs:murdered :Eddie_Mars .
+
+:Agnes_Lozelle a :Character ;
+a s:Person ;
+s:name "Agnes Lozelle" ;
+bs:did :Joe_Brodie .
+
