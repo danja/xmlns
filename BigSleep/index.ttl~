@@ -1,3 +1,11 @@
+# The Big Sleep Character Connections
+
+# derived from s:image below
+# via @ebertchicago @zeldman
+
+# todo : add links to dbPedia etc
+# more triples!
+
 @prefix s: <http://schema.org/> .
 @prefix bs: <http://purl.org/stuff/BigSleep> .
 @prefix : <http://purl.org/stuff/BigSleep> .
