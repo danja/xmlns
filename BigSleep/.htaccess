@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule * index.ttl [R=301,L]
